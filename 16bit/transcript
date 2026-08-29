@@ -1,0 +1,1756 @@
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+vmap work work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying modelsim.ini
+ls
+# bhv_1p_sram.v
+# bhv_1w1r_sram.v
+# bhv_1w1r_sram_wp.v
+# bhvsrams.v
+# cnn.v
+# global.v
+# lenet.v
+# lenet_roms.v
+# lenet_tb.v
+# modelsim.ini
+# png_to_yuv.py
+# test_900.png
+# test_900f.yuv
+# transcript
+# work
+# xilinx
+vlog -sv -timescale=1ns/1ps bhv_1p_sram.v bhv_1w1r_sram.v bhv_1w1r_sram_wp.v bhvsrams.v cnn.v global.v lenet.v lenet_roms.v lenet_tb.v 
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:54 on Aug 09,2026
+# vlog -reportprogress 300 -sv -timescale=1ns/1ps bhv_1p_sram.v bhv_1w1r_sram.v bhv_1w1r_sram_wp.v bhvsrams.v cnn.v global.v lenet.v lenet_roms.v lenet_tb.v 
+# -- Compiling module bhv_1p_sram
+# -- Compiling module bhv_1w1r_sram
+# -- Compiling module bhv_1w1r_sram_wp
+# -- Compiling module rfdp1024x16
+# -- Compiling module rfdp1024x96
+# -- Compiling module rfdp256x96
+# -- Compiling module rfdp128x256
+# -- Compiling module rfdp32x256
+# -- Compiling module rfdp128x16
+# -- Compiling module rfdp2048x8
+# -- Compiling module rfdp1024x8
+# -- Compiling module iterator
+# -- Compiling module max_pool
+# -- Compiling module relu
+# -- Compiling module conv
+# -- Compiling module acc
+# -- Compiling module mac
+# -- Compiling module lenet
+# -- Compiling module bias_conv1_rom
+# -- Compiling module wieght_conv1_rom
+# -- Compiling module bias_conv2_rom
+# -- Compiling module wieght_conv2_rom
+# -- Compiling module bias_fc1_rom
+# -- Compiling module wieght_fc1_rom
+# -- Compiling module bias_fc2_rom
+# -- Compiling module wieght_fc2_rom
+# -- Compiling module bias_fc3_rom
+# -- Compiling module wieght_fc3_rom
+# -- Compiling module tb
+# -- Compiling module src_rom
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(145): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(144): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(143): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(142): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(141): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(140): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(139): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(138): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(137): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(136): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(135): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(134): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(133): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(132): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(131): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(130): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(129): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(128): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(127): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(126): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(125): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(124): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(123): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(122): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(121): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(120): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(119): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(118): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(117): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(116): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(115): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# ** Warning: lenet_tb.v(114): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# -- Compiling interface itf_frame_feed
+# 
+# Top level modules:
+# 	bhv_1p_sram
+# 	bhv_1w1r_sram_wp
+# 	rfdp1024x16
+# 	rfdp2048x8
+# 	rfdp1024x8
+# 	tb
+# End time: 19:19:54 on Aug 09,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1024
+vsim work.tb
+# vsim work.tb 
+# Start time: 19:20:08 on Aug 09,2026
+# Loading sv_std.std
+# Loading work.tb
+# Loading work.itf_frame_feed
+# Loading work.src_rom
+# Loading work.lenet
+# Loading work.wieght_conv1_rom
+# Loading work.bias_conv1_rom
+# Loading work.iterator
+# Loading work.conv
+# Loading work.rfdp1024x96
+# Loading work.bhv_1w1r_sram
+# Loading work.max_pool
+# Loading work.relu
+# Loading work.rfdp256x96
+# Loading work.wieght_conv2_rom
+# Loading work.bias_conv2_rom
+# Loading work.rfdp128x256
+# Loading work.rfdp32x256
+# Loading work.wieght_fc1_rom
+# Loading work.bias_fc1_rom
+# Loading work.rfdp128x16
+# Loading work.wieght_fc2_rom
+# Loading work.bias_fc2_rom
+# Loading work.wieght_fc3_rom
+# Loading work.bias_fc3_rom
+# Loading work.acc
+# Loading work.mac
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_conv1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3722) lenet.v(47): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv1 File: lenet.v Line: 82
+# ** Warning: (vsim-3722) lenet.v(82): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_pooling1'.  Expected 11, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling1 File: lenet.v Line: 133
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling1 File: lenet.v Line: 133
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'aa_bias'.
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'aa_weight'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'max_pooling1'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/max_pooling1 File: lenet.v Line: 165
+# ** Warning: (vsim-3722) lenet.v(165): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu1'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu1 File: lenet.v Line: 178
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_conv2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3722) lenet.v(249): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv2 File: lenet.v Line: 286
+# ** Warning: (vsim-3722) lenet.v(286): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_pooling2'.  Expected 11, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling2 File: lenet.v Line: 337
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling2 File: lenet.v Line: 337
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'aa_bias'.
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'aa_weight'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'max_pooling2'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/max_pooling2 File: lenet.v Line: 369
+# ** Warning: (vsim-3722) lenet.v(369): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu2'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu2 File: lenet.v Line: 383
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_FC1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (5) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (12) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3722) lenet.v(458): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc1 File: lenet.v Line: 493
+# ** Warning: (vsim-3722) lenet.v(493): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu_fc1'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu_fc1 File: lenet.v Line: 509
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_fc2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (14) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3722) lenet.v(579): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc2 File: lenet.v Line: 614
+# ** Warning: (vsim-3722) lenet.v(614): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu_fc2'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu_fc2 File: lenet.v Line: 630
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_fc3'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3722) lenet.v(700): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc3'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc3 File: lenet.v Line: 735
+# ** Warning: (vsim-3722) lenet.v(735): [TFMPC] - Missing connection for port 'go'.
+run -all
+# T                1000 rstn done#############################
+# T              186618==process a frame          0, digit  7 =============
+# T              371238==process a frame          1, digit  2 =============
+# T              555858==process a frame          2, digit  1 =============
+# T              740478==process a frame          3, digit  0 =============
+# T              925098==process a frame          4, digit  4 =============
+# T             1109718==process a frame          5, digit  1 =============
+add wave -position insertpoint  \
+sim:/tb/FRAME_WIDTH \
+sim:/tb/FRAME_HEIGHT \
+sim:/tb/SIM_FRAMES \
+sim:/tb/rstn \
+sim:/tb/clk \
+sim:/tb/ee_clk \
+sim:/tb/rstn_ee \
+sim:/tb/frame_width_0 \
+sim:/tb/frame_height_0 \
+sim:/tb/pic_to_sim \
+sim:/tb/sequence_name_0 \
+sim:/tb/digit \
+sim:/tb/ready \
+sim:/tb/go \
+sim:/tb/aa_src_rom \
+sim:/tb/qa_src_rom \
+sim:/tb/aa_weight \
+sim:/tb/cena_src_rom \
+sim:/tb/digit_cnt
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_conv1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3722) lenet.v(47): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv1 File: lenet.v Line: 82
+# ** Warning: (vsim-3722) lenet.v(82): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_pooling1'.  Expected 11, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling1 File: lenet.v Line: 133
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling1 File: lenet.v Line: 133
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'aa_bias'.
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'aa_weight'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'max_pooling1'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/max_pooling1 File: lenet.v Line: 165
+# ** Warning: (vsim-3722) lenet.v(165): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu1'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu1 File: lenet.v Line: 178
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_conv2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3722) lenet.v(249): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv2 File: lenet.v Line: 286
+# ** Warning: (vsim-3722) lenet.v(286): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_pooling2'.  Expected 11, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling2 File: lenet.v Line: 337
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling2 File: lenet.v Line: 337
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'aa_bias'.
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'aa_weight'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'max_pooling2'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/max_pooling2 File: lenet.v Line: 369
+# ** Warning: (vsim-3722) lenet.v(369): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu2'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu2 File: lenet.v Line: 383
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_FC1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (5) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (12) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3722) lenet.v(458): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc1 File: lenet.v Line: 493
+# ** Warning: (vsim-3722) lenet.v(493): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu_fc1'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu_fc1 File: lenet.v Line: 509
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_fc2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (14) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3722) lenet.v(579): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc2 File: lenet.v Line: 614
+# ** Warning: (vsim-3722) lenet.v(614): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu_fc2'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu_fc2 File: lenet.v Line: 630
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_fc3'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3722) lenet.v(700): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc3'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc3 File: lenet.v Line: 735
+# ** Warning: (vsim-3722) lenet.v(735): [TFMPC] - Missing connection for port 'go'.
+run -all
+# T                1000 rstn done#############################
+# T              186618==process a frame          0, digit  7 =============
+# T              371238==process a frame          1, digit  2 =============
+# T              555858==process a frame          2, digit  1 =============
+# T              740478==process a frame          3, digit  0 =============
+# T              925098==process a frame          4, digit  4 =============
+# T             1109718==process a frame          5, digit  1 =============
+# T             1294338==process a frame          6, digit  4 =============
+# T             1478958==process a frame          7, digit  9 =============
+# T             1663578==process a frame          8, digit  5 =============
+# T             1848198==process a frame          9, digit  9 =============
+# T             2032818==process a frame         10, digit  0 =============
+# T             2217438==process a frame         11, digit  6 =============
+# T             2402058==process a frame         12, digit  9 =============
+# T             2586678==process a frame         13, digit  0 =============
+# T             2771298==process a frame         14, digit  1 =============
+# T             2955918==process a frame         15, digit  5 =============
+# T             3140538==process a frame         16, digit  9 =============
+# T             3325158==process a frame         17, digit  7 =============
+# T             3509778==process a frame         18, digit  3 =============
+# T             3694398==process a frame         19, digit  4 =============
+# T             3879018==process a frame         20, digit  9 =============
+# T             4063638==process a frame         21, digit  6 =============
+# T             4248258==process a frame         22, digit  6 =============
+# T             4432878==process a frame         23, digit  5 =============
+# T             4617498==process a frame         24, digit  4 =============
+# T             4802118==process a frame         25, digit  0 =============
+# T             4986738==process a frame         26, digit  7 =============
+# T             5171358==process a frame         27, digit  4 =============
+# T             5355978==process a frame         28, digit  0 =============
+# T             5540598==process a frame         29, digit  1 =============
+# T             5725218==process a frame         30, digit  3 =============
+# T             5909838==process a frame         31, digit  1 =============
+# T             6094458==process a frame         32, digit  3 =============
+# T             6279078==process a frame         33, digit  4 =============
+# T             6463698==process a frame         34, digit  7 =============
+# T             6648318==process a frame         35, digit  2 =============
+# T             6832938==process a frame         36, digit  7 =============
+# T             7017558==process a frame         37, digit  1 =============
+# T             7202178==process a frame         38, digit  2 =============
+# T             7386798==process a frame         39, digit  1 =============
+# T             7571418==process a frame         40, digit  1 =============
+# T             7756038==process a frame         41, digit  7 =============
+# T             7940658==process a frame         42, digit  4 =============
+# T             8125278==process a frame         43, digit  2 =============
+# T             8309898==process a frame         44, digit  3 =============
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_conv1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3722) lenet.v(47): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv1 File: lenet.v Line: 82
+# ** Warning: (vsim-3722) lenet.v(82): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_pooling1'.  Expected 11, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling1 File: lenet.v Line: 133
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling1 File: lenet.v Line: 133
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'aa_bias'.
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'aa_weight'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'max_pooling1'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/max_pooling1 File: lenet.v Line: 165
+# ** Warning: (vsim-3722) lenet.v(165): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu1'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu1 File: lenet.v Line: 178
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_conv2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3722) lenet.v(249): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv2 File: lenet.v Line: 286
+# ** Warning: (vsim-3722) lenet.v(286): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_pooling2'.  Expected 11, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling2 File: lenet.v Line: 337
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling2 File: lenet.v Line: 337
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'aa_bias'.
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'aa_weight'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'max_pooling2'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/max_pooling2 File: lenet.v Line: 369
+# ** Warning: (vsim-3722) lenet.v(369): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu2'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu2 File: lenet.v Line: 383
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_FC1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (5) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (12) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3722) lenet.v(458): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc1 File: lenet.v Line: 493
+# ** Warning: (vsim-3722) lenet.v(493): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu_fc1'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu_fc1 File: lenet.v Line: 509
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_fc2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (14) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3722) lenet.v(579): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc2 File: lenet.v Line: 614
+# ** Warning: (vsim-3722) lenet.v(614): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu_fc2'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu_fc2 File: lenet.v Line: 630
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_fc3'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3722) lenet.v(700): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc3'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc3 File: lenet.v Line: 735
+# ** Warning: (vsim-3722) lenet.v(735): [TFMPC] - Missing connection for port 'go'.
+run -all
+# T                1000 rstn done#############################
+# T              186618==process a frame          0, digit  7 =============
+# T              371238==process a frame          1, digit  2 =============
+# T              555858==process a frame          2, digit  1 =============
+# T              740478==process a frame          3, digit  0 =============
+# T              925098==process a frame          4, digit  4 =============
+# T             1109718==process a frame          5, digit  1 =============
+# T             1294338==process a frame          6, digit  4 =============
+# T             1478958==process a frame          7, digit  9 =============
+# T             1663578==process a frame          8, digit  5 =============
+# T             1848198==process a frame          9, digit  9 =============
+# T             2032818==process a frame         10, digit  0 =============
+# T             2217438==process a frame         11, digit  6 =============
+# T             2402058==process a frame         12, digit  9 =============
+# T             2586678==process a frame         13, digit  0 =============
+# T             2771298==process a frame         14, digit  1 =============
+# T             2955918==process a frame         15, digit  5 =============
+# T             3140538==process a frame         16, digit  9 =============
+# T             3325158==process a frame         17, digit  7 =============
+# T             3509778==process a frame         18, digit  3 =============
+# T             3694398==process a frame         19, digit  4 =============
+# T             3879018==process a frame         20, digit  9 =============
+# T             4063638==process a frame         21, digit  6 =============
+# T             4248258==process a frame         22, digit  6 =============
+# T             4432878==process a frame         23, digit  5 =============
+# T             4617498==process a frame         24, digit  4 =============
+# T             4802118==process a frame         25, digit  0 =============
+# T             4986738==process a frame         26, digit  7 =============
+# T             5171358==process a frame         27, digit  4 =============
+# T             5355978==process a frame         28, digit  0 =============
+# T             5540598==process a frame         29, digit  1 =============
+# T             5725218==process a frame         30, digit  3 =============
+# T             5909838==process a frame         31, digit  1 =============
+# T             6094458==process a frame         32, digit  3 =============
+# T             6279078==process a frame         33, digit  4 =============
+# T             6463698==process a frame         34, digit  7 =============
+# T             6648318==process a frame         35, digit  2 =============
+# T             6832938==process a frame         36, digit  7 =============
+# T             7017558==process a frame         37, digit  1 =============
+# T             7202178==process a frame         38, digit  2 =============
+# T             7386798==process a frame         39, digit  1 =============
+# T             7571418==process a frame         40, digit  1 =============
+# T             7756038==process a frame         41, digit  7 =============
+# T             7940658==process a frame         42, digit  4 =============
+# T             8125278==process a frame         43, digit  2 =============
+# T             8309898==process a frame         44, digit  3 =============
+# T             8494518==process a frame         45, digit  5 =============
+# T             8679138==process a frame         46, digit  1 =============
+# T             8863758==process a frame         47, digit  2 =============
+# T             9048378==process a frame         48, digit  4 =============
+# T             9232998==process a frame         49, digit  4 =============
+# T             9417618==process a frame         50, digit  6 =============
+# T             9602238==process a frame         51, digit  3 =============
+# T             9786858==process a frame         52, digit  5 =============
+# T             9971478==process a frame         53, digit  5 =============
+# T            10156098==process a frame         54, digit  6 =============
+# T            10340718==process a frame         55, digit  0 =============
+# T            10525338==process a frame         56, digit  4 =============
+# T            10709958==process a frame         57, digit  1 =============
+# T            10894578==process a frame         58, digit  9 =============
+# T            11079198==process a frame         59, digit  5 =============
+# T            11263818==process a frame         60, digit  7 =============
+# T            11448438==process a frame         61, digit  8 =============
+# T            11633058==process a frame         62, digit  9 =============
+# T            11817678==process a frame         63, digit  3 =============
+# T            12002298==process a frame         64, digit  7 =============
+# T            12186918==process a frame         65, digit  4 =============
+# T            12371538==process a frame         66, digit  6 =============
+# T            12556158==process a frame         67, digit  4 =============
+# T            12740778==process a frame         68, digit  3 =============
+# T            12925398==process a frame         69, digit  0 =============
+# T            13110018==process a frame         70, digit  7 =============
+# T            13294638==process a frame         71, digit  0 =============
+# T            13479258==process a frame         72, digit  2 =============
+# T            13663878==process a frame         73, digit  9 =============
+# T            13848498==process a frame         74, digit  1 =============
+# T            14033118==process a frame         75, digit  7 =============
+# T            14217738==process a frame         76, digit  3 =============
+# T            14402358==process a frame         77, digit  2 =============
+# T            14586978==process a frame         78, digit  9 =============
+# T            14771598==process a frame         79, digit  7 =============
+# T            14956218==process a frame         80, digit  7 =============
+# T            15140838==process a frame         81, digit  6 =============
+# T            15325458==process a frame         82, digit  2 =============
+# T            15510078==process a frame         83, digit  7 =============
+# T            15694698==process a frame         84, digit  8 =============
+# T            15879318==process a frame         85, digit  4 =============
+# T            16063938==process a frame         86, digit  7 =============
+# T            16248558==process a frame         87, digit  3 =============
+# T            16433178==process a frame         88, digit  6 =============
+# T            16617798==process a frame         89, digit  1 =============
+# T            16802418==process a frame         90, digit  3 =============
+# T            16987038==process a frame         91, digit  6 =============
+# T            17171658==process a frame         92, digit  9 =============
+# T            17356278==process a frame         93, digit  3 =============
+# T            17540898==process a frame         94, digit  1 =============
+# T            17725518==process a frame         95, digit  4 =============
+# T            17910138==process a frame         96, digit  1 =============
+# T            18094758==process a frame         97, digit  7 =============
+# T            18279378==process a frame         98, digit  6 =============
+# T            18463998==process a frame         99, digit  9 =============
+# T            18648618==process a frame        100, digit  6 =============
+# T            18833238==process a frame        101, digit  0 =============
+# T            19017858==process a frame        102, digit  5 =============
+# T            19202478==process a frame        103, digit  4 =============
+# T            19387098==process a frame        104, digit  9 =============
+# T            19571718==process a frame        105, digit  9 =============
+# T            19756338==process a frame        106, digit  2 =============
+# T            19940958==process a frame        107, digit  1 =============
+# T            20125578==process a frame        108, digit  9 =============
+# T            20310198==process a frame        109, digit  4 =============
+# T            20494818==process a frame        110, digit  8 =============
+# T            20679438==process a frame        111, digit  7 =============
+# T            20864058==process a frame        112, digit  3 =============
+# T            21048678==process a frame        113, digit  9 =============
+# T            21233298==process a frame        114, digit  7 =============
+# T            21417918==process a frame        115, digit  9 =============
+# T            21602538==process a frame        116, digit  4 =============
+# T            21787158==process a frame        117, digit  4 =============
+# T            21971778==process a frame        118, digit  9 =============
+# T            22156398==process a frame        119, digit  2 =============
+# T            22341018==process a frame        120, digit  5 =============
+# T            22525638==process a frame        121, digit  4 =============
+# T            22710258==process a frame        122, digit  7 =============
+# T            22894878==process a frame        123, digit  6 =============
+# T            23079498==process a frame        124, digit  7 =============
+# T            23264118==process a frame        125, digit  9 =============
+# T            23448738==process a frame        126, digit  0 =============
+# T            23633358==process a frame        127, digit  5 =============
+# T            23817978==process a frame        128, digit  8 =============
+# T            24002598==process a frame        129, digit  5 =============
+# T            24187218==process a frame        130, digit  6 =============
+# T            24371838==process a frame        131, digit  6 =============
+# T            24556458==process a frame        132, digit  5 =============
+# T            24741078==process a frame        133, digit  7 =============
+# T            24925698==process a frame        134, digit  8 =============
+# T            25110318==process a frame        135, digit  1 =============
+# T            25294938==process a frame        136, digit  0 =============
+# T            25479558==process a frame        137, digit  1 =============
+# T            25664178==process a frame        138, digit  6 =============
+# T            25848798==process a frame        139, digit  4 =============
+# T            26033418==process a frame        140, digit  6 =============
+# T            26218038==process a frame        141, digit  7 =============
+# T            26402658==process a frame        142, digit  3 =============
+# T            26587278==process a frame        143, digit  1 =============
+# T            26771898==process a frame        144, digit  7 =============
+# T            26956518==process a frame        145, digit  1 =============
+# T            27141138==process a frame        146, digit  8 =============
+# T            27325758==process a frame        147, digit  2 =============
+# T            27510378==process a frame        148, digit  0 =============
+# T            27694998==process a frame        149, digit  2 =============
+# T            27879618==process a frame        150, digit  9 =============
+# T            28064238==process a frame        151, digit  9 =============
+# T            28248858==process a frame        152, digit  5 =============
+# T            28433478==process a frame        153, digit  5 =============
+# T            28618098==process a frame        154, digit  1 =============
+# T            28802718==process a frame        155, digit  5 =============
+# T            28987338==process a frame        156, digit  6 =============
+# T            29171958==process a frame        157, digit  0 =============
+# T            29356578==process a frame        158, digit  3 =============
+# T            29541198==process a frame        159, digit  4 =============
+# T            29725818==process a frame        160, digit  4 =============
+# T            29910438==process a frame        161, digit  6 =============
+# T            30095058==process a frame        162, digit  5 =============
+# T            30279678==process a frame        163, digit  4 =============
+# T            30464298==process a frame        164, digit  6 =============
+# T            30648918==process a frame        165, digit  5 =============
+# T            30833538==process a frame        166, digit  4 =============
+# T            31018158==process a frame        167, digit  5 =============
+# T            31202778==process a frame        168, digit  1 =============
+# T            31387398==process a frame        169, digit  4 =============
+# T            31572018==process a frame        170, digit  4 =============
+# T            31756638==process a frame        171, digit  7 =============
+# T            31941258==process a frame        172, digit  2 =============
+# T            32125878==process a frame        173, digit  3 =============
+# T            32310498==process a frame        174, digit  2 =============
+# T            32495118==process a frame        175, digit  7 =============
+# T            32679738==process a frame        176, digit  1 =============
+# T            32864358==process a frame        177, digit  8 =============
+# T            33048978==process a frame        178, digit  1 =============
+# T            33233598==process a frame        179, digit  8 =============
+# T            33418218==process a frame        180, digit  1 =============
+# T            33602838==process a frame        181, digit  8 =============
+# T            33787458==process a frame        182, digit  5 =============
+# T            33972078==process a frame        183, digit  0 =============
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_conv1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv1 File: lenet.v Line: 47
+# ** Warning: (vsim-3722) lenet.v(47): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv1 File: lenet.v Line: 82
+# ** Warning: (vsim-3722) lenet.v(82): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_pooling1'.  Expected 11, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling1 File: lenet.v Line: 133
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling1 File: lenet.v Line: 133
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'aa_bias'.
+# ** Warning: (vsim-3722) lenet.v(133): [TFMPC] - Missing connection for port 'aa_weight'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'max_pooling1'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/max_pooling1 File: lenet.v Line: 165
+# ** Warning: (vsim-3722) lenet.v(165): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu1'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu1 File: lenet.v Line: 178
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(178): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_conv2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_conv2 File: lenet.v Line: 249
+# ** Warning: (vsim-3722) lenet.v(249): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv2 File: lenet.v Line: 286
+# ** Warning: (vsim-3722) lenet.v(286): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_pooling2'.  Expected 11, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling2 File: lenet.v Line: 337
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling2 File: lenet.v Line: 337
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'aa_bias'.
+# ** Warning: (vsim-3722) lenet.v(337): [TFMPC] - Missing connection for port 'aa_weight'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'max_pooling2'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/max_pooling2 File: lenet.v Line: 369
+# ** Warning: (vsim-3722) lenet.v(369): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu2'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu2 File: lenet.v Line: 383
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(383): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_FC1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (5) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (12) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 458
+# ** Warning: (vsim-3722) lenet.v(458): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc1 File: lenet.v Line: 493
+# ** Warning: (vsim-3722) lenet.v(493): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu_fc1'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu_fc1 File: lenet.v Line: 509
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(509): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_fc2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (14) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 579
+# ** Warning: (vsim-3722) lenet.v(579): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc2 File: lenet.v Line: 614
+# ** Warning: (vsim-3722) lenet.v(614): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu_fc2'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu_fc2 File: lenet.v Line: 630
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(630): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_fc3'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(26).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 700
+# ** Warning: (vsim-3722) lenet.v(700): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc3'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc3 File: lenet.v Line: 735
+# ** Warning: (vsim-3722) lenet.v(735): [TFMPC] - Missing connection for port 'go'.
+run -all
+# T                1000 rstn done#############################
+# T              186618==process a frame          0, digit  7 =============
+# Break key hit
+# Break in Module relu in file cnn.v
+# End time: 19:44:37 on Aug 09,2026, Elapsed time: 0:24:29
+# Errors: 0, Warnings: 60
