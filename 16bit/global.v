@@ -28,6 +28,22 @@
 //`define W_KERNEL   			2
 `define W_KERNEL   			3
 
+// ---------------------------------------------------------------------------
+// Systolic build switches.
+//
+// With SYSTOLIC_CONV1 defined, conv1 is built from pe.v / linebuf.v /
+// systolic_conv.v: 6 arrays of 5x5 weight-stationary PEs fed by a line buffer.
+// Undefine it to fall back to the baseline iterator + conv/acc/mac chain.
+//
+// Both paths compute the same integer sum in a different order, and
+// two's-complement addition is associative even through overflow, so the two
+// builds must agree bit for bit -- that equality is the regression test.
+// ---------------------------------------------------------------------------
+// SYSTOLIC_CONV2 does the same for conv2, which has six input channels and so
+// streams the plane once per channel with partial sums held between passes.
+`define SYSTOLIC_CONV1
+`define SYSTOLIC_CONV2
+
 `define OUTPUT_BATCH_CONV1  1
 `define OUTPUT_NUM_CONV1   	6
 `define KERNEL_SIZEX_CONV1  5

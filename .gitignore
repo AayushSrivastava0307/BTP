@@ -1,0 +1,18 @@
+# ModelSim build artifacts
+work_*/
+vsim.wlf
+*.wlf
+*.vstf
+vish_stacktrace.vstf
+
+# generated stimulus (rebuild with: python png_to_yuv.py)
+test_900f.yuv
+
+# simulation output
+result_*.log
+predictions.txt
+conv1_dump.txt
+
+# Python
+__pycache__/
+*.pyc

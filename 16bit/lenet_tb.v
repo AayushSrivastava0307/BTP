@@ -46,13 +46,20 @@ module tb();
 	wire				go =  itf.go;
 	assign 				itf.ready = ready;
 	
+	// How many frames to classify.  Defaults to the full 900-frame stimulus;
+	// shorten a development run from the command line with
+	//     vsim +NFRAMES=20 work.tb
+	int nframes;
 	initial begin
+		if (!$value$plusargs("NFRAMES=%d", nframes))
+			nframes = 900;
 		#(`RESET_DELAY)
 		#(`RESET_DELAY)
-		itf.drive_frame(900);
+		$display("=== classifying %0d frames ===", nframes);
+		itf.drive_frame(nframes);
 		#(100000* `TIME_COEFF)
 		$finish();
-	end	
+	end
 	
 	
 	wire	[9:0]			aa_src_rom;

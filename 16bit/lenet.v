@@ -32,6 +32,44 @@ module lenet(
 		.qa				(qa_bias_conv1)
 		);
 	wire	conv1_go = go;
+
+`ifdef SYSTOLIC_CONV1
+	//------------------------------------------------------------------------
+	// conv1 as a systolic array.
+	//
+	// Six arrays, one per output channel, each five systolic_row chains of
+	// five PEs.  Weights are loaded once per frame and held; the source plane
+	// is then read ONCE per pixel in raster order and marched through the
+	// arrays, instead of being re-addressed 25 times per output pixel.
+	//
+	//   baseline : 784 positions x 25 taps = 19600 clocks, 6 multipliers
+	//   systolic : ~1034 clocks,                          150 multipliers
+	//------------------------------------------------------------------------
+	wire	[`WDP*`OUTPUT_NUM_CONV1 -1:0] q_conv1;
+
+	systolic_conv #(
+		.INPUT_NUM		(`INPUT_NUM),
+		.OUTPUT_NUM		(`OUTPUT_NUM),
+		.K				(`KERNEL_SIZE_CONV1),
+		.IN_W			(`INPUT_WIDTH),
+		.IN_H			(`INPUT_HEIGHT),
+		.WIGHT_SHIFT	(`WIGHT_SHIFT)
+		)conv1(
+		.clk			(clk),
+		.rstn			(rstn),
+		.go				(conv1_go),
+		.aa_weight		(aa_weight_conv1),
+		.qa_weight		(qa_weight_conv1),
+		.aa_bias		(aa_bias_conv1),
+		.qa_bias		(qa_bias_conv1),
+		.aa_data		(aa_src),
+		.cena_data		(cena_src),
+		.qa_data		(qa_src),
+		.q				(q_conv1),
+		.q_en			(q_conv1_en),
+		.ready			(conv1_ready)
+		);
+`else
 	iterator  #(
 		.OUTPUT_BATCH	(`OUTPUT_BATCH_CONV1),
 		.KERNEL_SIZEX	(`KERNEL_SIZEX_CONV1),
@@ -86,7 +124,8 @@ module lenet(
 		.q              (q_conv1),
 		.q_en           (q_conv1_en)
 		);
-	
+`endif
+
 	reg		[9:0]	aa_conv1_buf;
 	reg				cena_conv1_buf;
 	reg		[9:0]	ab_conv1_buf;
@@ -234,6 +273,44 @@ module lenet(
 		);
 	
 	wire	conv2_go = pooling1_ready;
+
+`ifdef SYSTOLIC_CONV2
+	//------------------------------------------------------------------------
+	// conv2 as systolic arrays.
+	//
+	// Sixteen arrays, one per output channel, each five systolic_row chains of
+	// five PEs = 400 multipliers.  Six input channels cannot share a 5x5 array
+	// at once, so the 14x14 plane is streamed once per channel with partial
+	// sums carried between passes.
+	//
+	//   baseline : 2500 clocks,   96 multipliers
+	//   systolic : ~1260 clocks, 400 multipliers
+	//------------------------------------------------------------------------
+	wire	[`WDP*`OUTPUT_NUM_CONV2 -1:0] q_conv2;
+
+	systolic_conv2 #(
+		.INPUT_NUM		(`OUTPUT_NUM_CONV1),
+		.OUTPUT_NUM		(`OUTPUT_NUM_CONV2),
+		.K				(`KERNEL_SIZE_CONV2),
+		.IN_W			(`INPUT_WIDTH_CONV2),
+		.IN_H			(`INPUT_HEIGHT_CONV2),
+		.WIGHT_SHIFT	(`WIGHT_SHIFT)
+		)conv2(
+		.clk			(clk),
+		.rstn			(rstn),
+		.go				(conv2_go),
+		.aa_weight		(aa_weight_conv2),
+		.qa_weight		(qa_weight_conv2),
+		.aa_bias		(aa_bias_conv2),
+		.qa_bias		(qa_bias_conv2),
+		.aa_data		(aa_relu1_buf),
+		.cena_data		(cena_relu1_buf),
+		.qa_data		(qa_relu1_buf),
+		.q				(q_conv2),
+		.q_en			(q_conv2_en),
+		.ready			(conv2_ready)
+		);
+`else
 	iterator  #(
 		.OUTPUT_BATCH	(`OUTPUT_BATCH_CONV2),
 		.KERNEL_SIZEX	(`KERNEL_SIZEX_CONV2),
@@ -290,7 +367,8 @@ module lenet(
 		.q              (q_conv2),
 		.q_en           (q_conv2_en)
 		);
-	
+`endif
+
 	// 10*10*16
 	reg		[6:0]	aa_conv2_buf;
 	reg				cena_conv2_buf;
