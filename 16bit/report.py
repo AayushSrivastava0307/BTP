@@ -44,6 +44,32 @@ def parse(path):
     return preds, times
 
 
+def parse_env(path):
+    """Pull the simulator's own provenance out of the transcript, so the
+    report evidences the run rather than just asserting numbers."""
+    env = {"tool": None, "sources": [], "modules": [], "elapsed": None,
+           "errors": None, "warnings": None, "started": None}
+    with open(path, "r", errors="replace") as f:
+        for line in f:
+            s = line.lstrip("# ").rstrip()
+            if env["tool"] is None and "Model Technology ModelSim" in s:
+                env["tool"] = s.split(" vlog")[0].split(" vmap")[0].strip()
+            if s.startswith("vlog ") and not env["sources"]:
+                env["sources"] = [w for w in s.split() if w.endswith(".v")]
+            if s.startswith("Loading ") and "." in s:
+                m = s.split(".", 1)[1]
+                if m not in env["modules"]:
+                    env["modules"].append(m)
+            if s.startswith("Start time:") and env["started"] is None:
+                env["started"] = s[len("Start time:"):].strip()
+            if "Elapsed time:" in s:
+                env["elapsed"] = s.split("Elapsed time:")[1].strip()
+            m = re.match(r"Errors: (\d+), Warnings: (\d+)", s)
+            if m:
+                env["errors"], env["warnings"] = m.group(1), m.group(2)
+    return env
+
+
 def clocks_per_frame(times):
     """Frame-to-frame delta, which excludes reset and first-frame setup."""
     if len(times) < 3:
@@ -83,11 +109,49 @@ def main():
     total = ok + wrong
     scpf = clocks_per_frame(st)
 
+    env = parse_env(sys_log)
+    syst = [m for m in env["modules"]
+            if m in ("systolic_conv", "systolic_conv2", "linebuf",
+                     "systolic_row", "pe")]
+
     L = []
     L.append("# LeNet-5 simulation report")
     L.append("")
+    L.append("16-bit LeNet-5 CNN accelerator with conv1 and conv2 implemented "
+             "as weight-stationary systolic arrays fed by line buffers.")
+    L.append("")
     L.append(f"Generated {datetime.now():%Y-%m-%d %H:%M} from `{sys_log}`.")
     L.append("")
+
+    L.append("## Simulation environment")
+    L.append("")
+    L.append("| | |")
+    L.append("|---|---|")
+    if env["tool"]:
+        L.append(f"| simulator | {env['tool']} |")
+    if env["started"]:
+        L.append(f"| run started | {env['started']} |")
+    if env["elapsed"]:
+        L.append(f"| wall-clock | {env['elapsed']} |")
+    if env["errors"] is not None:
+        L.append(f"| compile/sim errors | **{env['errors']}** |")
+        L.append(f"| warnings | {env['warnings']} |")
+    L.append(f"| source files compiled | {len(env['sources'])} |")
+    L.append("")
+
+    if syst:
+        L.append("Systolic modules confirmed elaborated into the simulation: "
+                 + ", ".join(f"`{m}`" for m in syst) + ".")
+        L.append("")
+    if env["sources"]:
+        L.append("<details><summary>Source files</summary>")
+        L.append("")
+        L.append("```")
+        L.append("\n".join(env["sources"]))
+        L.append("```")
+        L.append("</details>")
+        L.append("")
+
     L.append("## Accuracy")
     L.append("")
     L.append("| | |")
