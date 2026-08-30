@@ -1,33 +1,19 @@
 `include "global.v"
 
-//=============================================================================
-// systolic_conv2 -- convolution layer with more than one input channel
-//
-// conv1 has a single input channel, so systolic_conv.v streams the plane once
-// and is done.  conv2 has six, and a K*K array per output channel can only
-// hold one input channel's taps at a time.
-//
-// Interleaving the six channels cycle by cycle would break the systolic chain,
-// which assumes consecutive clocks carry consecutive columns of ONE stream.
-// So the plane is streamed once per input channel instead -- INPUT_NUM passes,
-// weights reloaded each pass, partial sums held between passes:
+// conv2: same systolic structure as systolic_conv.v, but with six input
+// channels.  A K*K array holds one channel's taps at a time, and interleaving
+// channels clock by clock would break the chain -- it assumes consecutive
+// clocks carry consecutive columns of one stream.  So the plane is streamed
+// once per channel, weights reloaded each pass, partial sums held between:
 //
 //     for c in 0..INPUT_NUM-1:
-//         load w[*][c][*][*] into the arrays      (K*K clocks)
-//         raster-scan the plane, channel c only   (IN_W*IN_H clocks)
+//         load w[*][c][*][*]                  (K*K clocks)
+//         raster-scan the plane, channel c    (IN_W*IN_H clocks)
 //         psum[position] += array result
 //     emit (psum + bias) >> WIGHT_SHIFT on the final pass
 //
-//   baseline conv2 : 100 positions * 25 taps * ... = 2500 clocks,  96 multipliers
-//   systolic conv2 : 6 * ~210                     = ~1260 clocks, 400 multipliers
-//
-// Only one channel is muxed into the line buffer, so the buffer stays NCH=1
-// (four rows of 14 pixels) rather than carrying all six.
-//
-// Bit exactness holds for the same reason as conv1: this forms the identical
-// integer sum in a different order, and two's-complement addition is
-// associative even through overflow.
-//=============================================================================
+// Only one channel enters the line buffer, so it stays NCH=1.
+// Timing, tap ordering and the bit-exactness argument are as systolic_conv.v.
 module systolic_conv2 #(
 	parameter INPUT_NUM   = 6,
 	parameter OUTPUT_NUM  = 16,
@@ -62,9 +48,6 @@ module systolic_conv2 #(
 	localparam	STREAM_N = NPIX + 2*K + 2;
 	localparam	LAT      = 2*(K-1);
 
-	//=========================================================================
-	// control -- one weight-load + stream cycle per input channel
-	//=========================================================================
 	localparam	S_IDLE = 2'd0,
 				S_WLD  = 2'd1,
 				S_RUN  = 2'd2,
@@ -99,9 +82,6 @@ module systolic_conv2 #(
 		if (`RST)	ready <= 0;
 		else		ready <= (state == S_DONE);
 
-	//=========================================================================
-	// weight preload for the current input channel
-	//=========================================================================
 	always @(`CLK_RST_EDGE)
 		if (`RST)					aa_weight <= 0;
 		else if (state == S_WLD)	aa_weight <= cnt[15:0];
@@ -125,11 +105,6 @@ module systolic_conv2 #(
 	wire	[0:OUTPUT_NUM-1][0:INPUT_NUM-1][`WD:0]	w_rom   = qa_weight;
 	wire	[0:OUTPUT_NUM-1][`WD_BIAS:0]			bias_in = qa_bias;
 
-	//=========================================================================
-	// raster scan.  Same two-cycle address+SRAM latency as conv1, and the
-	// enable must cover S_WLD because lenet.v gates the conv2 weight and bias
-	// ROMs with this signal too.
-	//=========================================================================
 	wire	run = (state == S_RUN);
 
 	always @(`CLK_RST_EDGE)
@@ -137,6 +112,7 @@ module systolic_conv2 #(
 		else if (run)	aa_data <= (cnt < NPIX) ? cnt[15:0] : 16'd0;
 		else			aa_data <= 0;
 
+	// must cover S_WLD: lenet.v gates the conv2 weight and bias ROMs with this
 	always @(`CLK_RST_EDGE)
 		if (`RST)		cena_data <= 1;
 		else			cena_data <= ~(run || (state == S_WLD));
@@ -158,9 +134,6 @@ module systolic_conv2 #(
 	wire	[0:INPUT_NUM-1][`WD:0]	din_ch = qa_data;
 	wire	[`WDP-1:0]				pix    = (n < NPIX) ? din_ch[pass] : {`WDP{1'b0}};
 
-	//=========================================================================
-	// line buffer -> K vertical taps (single channel)
-	//=========================================================================
 	wire	[`WDP*K-1:0]		lb_q;
 	wire	[0:K-1][`WD:0]		tap = lb_q;
 
@@ -177,10 +150,6 @@ module systolic_conv2 #(
 		.d_out	(lb_q)
 		);
 
-	//=========================================================================
-	// OUTPUT_NUM arrays of K systolic rows.  Tap ordering as in conv1: PE j
-	// holds kernel column K-1-j, systolic row r holds kernel row r.
-	//=========================================================================
 	wire	[0:OUTPUT_NUM-1][0:K-1][`WDP*2-1:0]	row_q;
 
 	genvar o, ky, j;
@@ -188,7 +157,6 @@ module systolic_conv2 #(
 		for (o = 0; o < OUTPUT_NUM; o = o + 1) begin : gen_out
 			for (ky = 0; ky < K; ky = ky + 1) begin : gen_ky
 
-				// the tap currently on the ROM output, for this pass's channel
 				wire	[`WDP*K-1:0]	w_row = {K{w_rom[o][pass]}};
 				wire	[0:K-1]			w_ld_row;
 
@@ -209,9 +177,6 @@ module systolic_conv2 #(
 		end
 	endgenerate
 
-	//=========================================================================
-	// vertical reduction
-	//=========================================================================
 	reg	[0:OUTPUT_NUM-1][`WDP*2-1:0]	rsum;
 	integer	oi;
 	always @(`CLK_RST_EDGE)
@@ -223,9 +188,6 @@ module systolic_conv2 #(
 				          + $signed(row_q[oi][2]) + $signed(row_q[oi][3])
 				          + $signed(row_q[oi][4]);
 
-	//=========================================================================
-	// window validity
-	//=========================================================================
 	wire	[15:0]	base    = n - LAT;
 	wire			base_ok = feed_v && (n >= LAT);
 	wire	[15:0]	ocol    = base % IN_W;
@@ -238,12 +200,8 @@ module systolic_conv2 #(
 		if (`RST)	win_v_d <= 0;
 		else		win_v_d <= {win_v_d[0], win_v};
 
-	//=========================================================================
-	// partial sums across passes
-	//
-	// Output positions come out in raster order every pass, so opos is just a
-	// counter.  One entry is read, updated and rewritten per valid window.
-	//=========================================================================
+	// Positions come out in raster order every pass, so opos is just a counter;
+	// one entry is read, updated and rewritten per valid window.
 	reg	[0:OUTPUT_NUM-1][`WDP*2-1:0]	psum	[0:OUT_POS-1];
 	reg	[15:0]							opos;
 
@@ -254,7 +212,7 @@ module systolic_conv2 #(
 	integer	pi;
 	always @(`CLK_RST_EDGE)
 		if (`RST)					opos <= 0;
-		else if (state == S_WLD)	opos <= 0;		// restart each pass
+		else if (state == S_WLD)	opos <= 0;
 		else if (acc_v)				opos <= opos + 1'b1;
 
 	always @(`CLK_RST_EDGE)
@@ -265,9 +223,6 @@ module systolic_conv2 #(
 				                : $signed(psum_rd[pi]) + $signed(rsum[pi]);
 		end
 
-	//=========================================================================
-	// output -- only on the final pass, once every channel has contributed
-	//=========================================================================
 	reg	[0:OUTPUT_NUM-1][`WD:0]	qv;
 	always @(`CLK_RST_EDGE)
 		if (`RST)

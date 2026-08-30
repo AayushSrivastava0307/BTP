@@ -34,17 +34,8 @@ module lenet(
 	wire	conv1_go = go;
 
 `ifdef SYSTOLIC_CONV1
-	//------------------------------------------------------------------------
-	// conv1 as a systolic array.
-	//
-	// Six arrays, one per output channel, each five systolic_row chains of
-	// five PEs.  Weights are loaded once per frame and held; the source plane
-	// is then read ONCE per pixel in raster order and marched through the
-	// arrays, instead of being re-addressed 25 times per output pixel.
-	//
-	//   baseline : 784 positions x 25 taps = 19600 clocks, 6 multipliers
-	//   systolic : ~1034 clocks,                          150 multipliers
-	//------------------------------------------------------------------------
+	// six arrays of 5x5 weight-stationary PEs fed by a line buffer, replacing
+	// the iterator + conv/acc/mac path.  See systolic_conv.v.
 	wire	[`WDP*`OUTPUT_NUM_CONV1 -1:0] q_conv1;
 
 	systolic_conv #(
@@ -275,17 +266,8 @@ module lenet(
 	wire	conv2_go = pooling1_ready;
 
 `ifdef SYSTOLIC_CONV2
-	//------------------------------------------------------------------------
-	// conv2 as systolic arrays.
-	//
-	// Sixteen arrays, one per output channel, each five systolic_row chains of
-	// five PEs = 400 multipliers.  Six input channels cannot share a 5x5 array
-	// at once, so the 14x14 plane is streamed once per channel with partial
-	// sums carried between passes.
-	//
-	//   baseline : 2500 clocks,   96 multipliers
-	//   systolic : ~1260 clocks, 400 multipliers
-	//------------------------------------------------------------------------
+	// sixteen arrays of 5x5 PEs; the six input channels cannot share one array
+	// at once, so the plane is streamed once per channel.  See systolic_conv2.v.
 	wire	[`WDP*`OUTPUT_NUM_CONV2 -1:0] q_conv2;
 
 	systolic_conv2 #(
