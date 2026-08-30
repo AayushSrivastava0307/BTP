@@ -12,6 +12,7 @@ test_900f.yuv
 result_*.log
 predictions.txt
 conv1_dump.txt
+simulation_report.md
 
 # Python
 __pycache__/
