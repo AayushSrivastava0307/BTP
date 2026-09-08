@@ -19,11 +19,18 @@ with the number of PEs; memory traffic does not. That is the whole point.
 
 | | baseline | systolic | |
 |---|---|---|---|
-| conv1 clocks | 19,600 | ~1,060 | **18.5×** |
-| conv2 clocks | 2,500 | ~1,260 | **2.0×** |
-| whole network | 36,924 | 17,299 | **2.1×** |
+| conv1 clocks | 19,601 | 1,065 | **18.4×** |
+| conv2 clocks | 2,501 | 1,412 | **1.77×** |
+| whole network | 36,924 | 17,299 | **2.13×** |
 | conv1 multipliers | 6 | 150 | |
 | conv2 multipliers | 96 | 400 | |
+
+Measured in ModelSim, not estimated. Per-layer counts are `go` to `ready` on each
+layer engine; the network row is the interval between successive frames, constant
+across every frame of the run. One clock is 5 ns (`CLOCK_PERIOD` in `global.v`).
+
+Subtracting the conv layers leaves the same non-conv remainder in both builds —
+**14,822 clocks either way** — which is the check that nothing outside conv moved.
 
 Predictions are **bit-identical** to the baseline — see *Verification*.
 
