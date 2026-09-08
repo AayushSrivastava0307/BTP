@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="A clock-by-clock simulation of the weight-stationary systolic array computing LeNet-5's conv1 layer, with a hand-checkable 6x6 worked example. Timing verified against the RTL in ModelSim.">
+<title>Conv1 in 1,065 Clocks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F9; --surface:#FFFFFF; --sunk:#EEF0F4;
+  --ink:#12161C; --muted:#59626F; --faint:#8B94A2;
+  --rule:#DBDFE6; --rule-strong:#C3C9D4;
+  --accent:#C1440E; --accent-wash:#FBEBE2; --accent-soft:#E0743A;
+  --cell-empty:#E7EAEF; --cell-streamed:#C0C9D6; --cell-buffer:#F3D8C4;
+  --cell-live:#C1440E; --cell-valid:#D9722F; --cell-masked:#C6CCD6;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0E1116; --surface:#161A21; --sunk:#1B2029;
+  --ink:#E5E9EF; --muted:#98A2B0; --faint:#6E7887;
+  --rule:#262C36; --rule-strong:#39424F;
+  --accent:#F0834C; --accent-wash:#2A1B14; --accent-soft:#C25A28;
+  --cell-empty:#1E242D; --cell-streamed:#3C4756; --cell-buffer:#4C2C1A;
+  --cell-live:#F0834C; --cell-valid:#B85527; --cell-masked:#333B46;
+}}
+:root[data-theme="dark"]{
+  --paper:#0E1116; --surface:#161A21; --sunk:#1B2029;
+  --ink:#E5E9EF; --muted:#98A2B0; --faint:#6E7887;
+  --rule:#262C36; --rule-strong:#39424F;
+  --accent:#F0834C; --accent-wash:#2A1B14; --accent-soft:#C25A28;
+  --cell-empty:#1E242D; --cell-streamed:#3C4756; --cell-buffer:#4C2C1A;
+  --cell-live:#F0834C; --cell-valid:#B85527; --cell-masked:#333B46;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.page{max-width:1180px;margin:0 auto;padding:36px 22px 72px;display:flex;flex-direction:column;gap:26px}
+p{margin:0}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(26px,4vw,38px);font-weight:700;letter-spacing:-.022em;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:15px;font-weight:600;letter-spacing:.01em;margin:0}
+.m{font-family:var(--mono)}
+.dim{color:var(--faint)}
+
+header{border-bottom:2px solid var(--ink);padding-bottom:18px;display:flex;flex-direction:column;gap:9px}
+.lede{font-family:var(--serif);font-size:17px;color:var(--muted);max-width:660px}
+
+/* ---- clock bar ---- */
+.clockbar{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:18px 22px;display:flex;flex-direction:column;gap:14px}
+.clockrow{display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 30px}
+.bigclk{display:flex;flex-direction:column;gap:1px}
+.bigclk .lab{font-size:10.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--faint)}
+.bigclk .val{font-family:var(--mono);font-size:38px;font-weight:600;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.bigclk .val small{font-size:17px;color:var(--muted);font-weight:400}
+.phase{font-family:var(--mono);font-size:13px;padding:5px 11px;border-radius:2px;background:var(--accent-wash);color:var(--accent);font-weight:500;align-self:center}
+.counters{display:flex;flex-wrap:wrap;gap:8px 26px;margin-left:auto}
+.ctr{display:flex;flex-direction:column;gap:0}
+.ctr .lab{font-size:10.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+.ctr .val{font-family:var(--mono);font-size:19px;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* ---- progress ---- */
+.track{position:relative;height:30px;border:1px solid var(--rule-strong);border-radius:2px;overflow:hidden;background:var(--sunk);display:flex}
+.seg{height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-right:1px solid var(--rule-strong);overflow:hidden;white-space:nowrap}
+.seg:last-child{border-right:0}
+.seg.s1{background:var(--accent-wash)}
+.seg.s3{background:var(--accent-wash)}
+.playhead{position:absolute;top:0;bottom:0;width:2px;background:var(--accent);pointer-events:none}
+.trackcap{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--faint)}
+
+/* ---- controls ---- */
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+button{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink);background:var(--surface);border:1px solid var(--rule-strong);border-radius:2px;padding:7px 13px;cursor:pointer;line-height:1.2}
+button:hover{border-color:var(--accent);color:var(--accent)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff;min-width:92px}
+button.primary:hover{opacity:.88;color:#fff}
+button.on{border-color:var(--accent);color:var(--accent);background:var(--accent-wash)}
+.ctrlgroup{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.ctrllab{font-size:10.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+.sep{width:1px;height:22px;background:var(--rule)}
+.kbd{font-family:var(--mono);font-size:11px;color:var(--faint);border:1px solid var(--rule);border-radius:2px;padding:4px 8px;white-space:nowrap}
+
+/* ---- flow ---- */
+.flow{display:flex;flex-wrap:wrap;gap:14px;align-items:stretch}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:15px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.ptitle{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.ptitle .n{font-family:var(--mono);font-size:10.5px;color:#fff;background:var(--accent);border-radius:2px;padding:1px 5px;font-weight:500}
+.pnote{font-size:12px;color:var(--muted);line-height:1.45}
+.arrow{align-self:center;color:var(--faint);font-size:20px;line-height:1}
+canvas{display:block;image-rendering:pixelated;max-width:100%;height:auto}
+
+/* ---- line buffer ---- */
+.lb{display:flex;flex-direction:column;gap:4px}
+.lbrow{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;padding:5px 8px;border:1px solid var(--rule);border-radius:2px;background:var(--sunk);white-space:nowrap}
+.lbrow.cur{background:var(--accent-wash);border-color:var(--accent)}
+.lbrow .tag{font-size:10px;color:var(--faint);width:42px;flex:none}
+.lbrow .pix{font-weight:600;font-variant-numeric:tabular-nums}
+.lbrow .src{color:var(--muted);font-size:10.5px;margin-left:auto}
+
+/* ---- PE array ---- */
+.arr{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.pe{background:var(--sunk);border:1px solid var(--rule);border-radius:2px;padding:5px 4px;text-align:center;min-height:46px;display:flex;flex-direction:column;justify-content:center;gap:1px}
+.pe.load{background:var(--accent);border-color:var(--accent)}
+.pe.load .w,.pe.load .d{color:#fff}
+.pe.act{border-color:var(--accent);background:var(--accent-wash)}
+.pe .w{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--accent)}
+.pe .d{font-family:var(--mono);font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pe.idle .d{color:var(--faint)}
+.rowlab{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);text-align:center}
+.arrwrap{display:flex;gap:8px;align-items:stretch}
+.tapcol{display:flex;flex-direction:column;gap:4px;justify-content:space-between}
+.taplab{font-family:var(--mono);font-size:10px;color:var(--faint);height:46px;display:flex;align-items:center;white-space:nowrap}
+.chan{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:9px}
+.chips{display:flex;gap:3px}
+.chip{width:13px;height:13px;border:1px solid var(--rule-strong);border-radius:1px;background:var(--sunk)}
+.chip.on{background:var(--accent);border-color:var(--accent)}
+
+/* ---- legend + ledger ---- */
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:11.5px;color:var(--muted)}
+.lg{display:flex;align-items:center;gap:5px}
+.sw{width:12px;height:12px;border-radius:1px;border:1px solid var(--rule-strong);flex:none}
+.ledger{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:20px 24px;display:flex;flex-direction:column;gap:14px}
+table{border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:420px}
+td{padding:6px 16px 6px 0;font-family:var(--mono);font-size:14px}
+td.num{text-align:right;width:74px;font-weight:500}
+td.why{font-family:var(--sans);font-size:13px;color:var(--muted);padding-right:0}
+tr.tot td{border-top:1.5px solid var(--rule-strong);padding-top:9px;font-weight:600;color:var(--accent)}
+tr.now td{color:var(--accent)}
+.tablewrap{overflow-x:auto}
+.kicker{font-family:var(--serif);font-size:16px;line-height:1.5;max-width:680px}
+.kicker b{font-family:var(--sans);font-weight:600;color:var(--accent)}
+footer{border-top:1px solid var(--rule);padding-top:16px;font-size:12px;color:var(--faint);line-height:1.6;max-width:760px}
+
+/* ---- small worked example ---- */
+.mini{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:22px 24px;display:flex;flex-direction:column;gap:18px}
+.minihead{display:flex;flex-direction:column;gap:6px}
+.steps{display:flex;flex-wrap:wrap;gap:14px}
+.stepcard{border:1px solid var(--rule);border-radius:3px;padding:12px 14px;display:flex;flex-direction:column;gap:9px;background:var(--paper)}
+.stepcard h3{margin:0;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.grid{display:grid;gap:2px;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.cell{width:32px;height:30px;display:flex;align-items:center;justify-content:center;font-size:12.5px;background:var(--sunk);border:1px solid transparent;border-radius:1px;color:var(--muted)}
+.cell.done{background:var(--cell-streamed);color:var(--ink)}
+.cell.buf{background:var(--cell-buffer);color:var(--ink)}
+.cell.win{background:var(--cell-buffer);color:var(--ink);border-color:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent-soft)}
+.cell.hot{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600}
+.cell.kw{background:var(--accent-wash);color:var(--accent);font-weight:600;border-color:var(--rule)}
+.cell.kw.hot{background:var(--accent);color:#fff}
+.cell.odone{background:var(--cell-valid);color:#fff}
+.cell.ocur{background:var(--accent);color:#fff;font-weight:600}
+.cell.owide{width:40px}
+.pegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.pcell{border:1px solid var(--rule);border-radius:2px;padding:6px 4px;text-align:center;background:var(--sunk);display:flex;flex-direction:column;gap:1px;min-width:86px}
+.pcell.dim{opacity:.32}
+.pcell.fire{background:var(--accent-wash);border-color:var(--accent)}
+.pcell .tag{font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
+.pcell .mul{font-family:var(--mono);font-size:13px}
+.pcell .mul .w{color:var(--accent);font-weight:600}
+.pcell .prod{font-family:var(--mono);font-size:13px;font-weight:600}
+.perow{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.perow .rl{font-family:var(--mono);font-size:10.5px;color:var(--faint);width:74px;flex:none}
+.perow .rs{font-family:var(--mono);font-size:12.5px;width:78px;flex:none;text-align:right;color:var(--muted)}
+.perow .rs b{color:var(--accent)}
+.sums{font-family:var(--mono);font-size:13.5px;line-height:1.9;font-variant-numeric:tabular-nums}
+.sums .tot{font-size:19px;font-weight:600;color:var(--accent)}
+.check{background:var(--paper);border:1px dashed var(--rule-strong);border-radius:2px;padding:10px 13px;font-family:var(--mono);font-size:12px;color:var(--muted);line-height:1.7}
+.check b{color:var(--accent)}
+.sched{width:100%;border-collapse:collapse;min-width:520px}
+.sched th{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);text-align:left;padding:0 14px 7px 0;border-bottom:1px solid var(--rule-strong)}
+.sched td{font-family:var(--mono);font-size:12.5px;padding:7px 14px 7px 0;border-bottom:1px solid var(--rule);color:var(--muted)}
+.sched tr.on td{color:var(--accent);font-weight:500}
+.sched tr.on td:first-child{font-weight:600}
+/* ---- narration + delay lines + faq ---- */
+.narr{background:var(--accent-wash);border-left:3px solid var(--accent);border-radius:0 3px 3px 0;padding:14px 18px;display:flex;flex-direction:column;gap:4px}
+.narr h4{margin:0;font-size:14px;font-weight:600;color:var(--accent)}
+.narr p{font-size:13.5px;line-height:1.58;color:var(--ink);max-width:780px}
+.narr .m{font-weight:500}
+.dline{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+.dtag{font-family:var(--mono);font-size:9.5px;color:var(--faint);width:62px;flex:none;line-height:1.25}
+.dcells{display:flex;gap:2px}
+.dcell{width:25px;height:25px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11.5px;background:var(--sunk);border:1px solid var(--rule);border-radius:1px;color:var(--muted);font-variant-numeric:tabular-nums}
+.dcell.full{background:var(--cell-buffer);color:var(--ink)}
+.dcell.out{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600}
+.tapout{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap}
+.tapout b{color:var(--accent);font-size:12.5px}
+.faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(296px,1fr));gap:13px;border-top:1px solid var(--rule);padding-top:18px}
+.qa{border:1px solid var(--rule);border-radius:3px;padding:13px 15px;background:var(--paper);display:flex;flex-direction:column;gap:5px}
+.qa h4{margin:0;font-size:12.5px;font-weight:600;color:var(--accent);line-height:1.4}
+.qa p{font-size:12.5px;line-height:1.6;color:var(--muted)}
+.overlap{border-top:1px solid var(--rule);padding-top:18px;display:flex;flex-direction:column;gap:12px}
+.sched td.pe0{color:var(--accent)}
+.sched td.pe1{color:var(--accent-soft)}
+.sched td.pe2{color:var(--muted)}
+.sched td.blank{color:var(--faint)}
+.sched td.fin{font-weight:600;color:var(--accent)}
+.sched tr.here td{background:var(--accent-wash)}
+.pcell .src{font-family:var(--mono);font-size:8.5px;color:var(--faint);letter-spacing:.02em}
+.pcell.fire .src{color:var(--accent-soft)}
+.pcell .dest{font-family:var(--mono);font-size:9px;color:var(--faint)}
+.pcell.fire .dest{color:var(--accent)}
+@media(max-width:900px){.flow{flex-direction:column}.arrow{transform:rotate(90deg)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <p class="eyebrow">LeNet-5 FPGA Accelerator · Weight-Stationary Systolic Array</p>
+  <h1>Conv1 in 1,065 Clocks</h1>
+  <p class="lede">A fixed 5×5 array of processing elements, holding the kernel still while a 32×32 image streams past it one pixel per clock. Step it, play it, and watch all 784 output positions come out of 25 PEs.</p>
+</header>
+
+<div class="clockbar">
+  <div class="clockrow">
+    <div class="bigclk">
+      <span class="lab">Clock</span>
+      <span class="val"><span id="clk">340</span><small> / 1065</small></span>
+    </div>
+    <span class="phase" id="phase">streaming</span>
+    <div class="counters">
+      <div class="ctr"><span class="lab">Pixels in</span><span class="val" id="cPix">312 / 1024</span></div>
+      <div class="ctr"><span class="lab">Outputs done</span><span class="val" id="cOut">0 / 784</span></div>
+      <div class="ctr"><span class="lab">MACs / clock</span><span class="val" id="cMac">150</span></div>
+    </div>
+  </div>
+
+  <div class="track" id="track">
+    <div class="seg s1" style="flex:27 0 0">27</div>
+    <div class="seg s2" style="flex:1024 0 0">1024 — stream every pixel, one per clock</div>
+    <div class="seg s3" style="flex:12 0 0">12</div>
+    <div class="seg s3" style="flex:2 0 0">2</div>
+    <div class="playhead" id="playhead"></div>
+  </div>
+  <div class="trackcap"><span>clk 1</span><span>weight load → stream → flush → ready</span><span>clk 1065</span></div>
+
+  <div class="controls">
+    <button class="primary" id="play">▶ Play</button>
+    <div class="ctrlgroup"><button id="step-">− 1 clk</button><button id="step+">+ 1 clk</button></div>
+    <div class="sep"></div>
+    <div class="ctrlgroup"><span class="ctrllab">Speed</span>
+      <button data-sp="1">1×</button><button data-sp="8" class="on">8×</button><button data-sp="40">40×</button>
+    </div>
+    <div class="sep"></div>
+    <span class="kbd">← →  step</span>
+    <div class="sep"></div>
+    <div class="ctrlgroup"><span class="ctrllab">Jump to</span>
+      <button data-go="1">weight load</button>
+      <button data-go="30">first pixel</button>
+      <button data-go="158">buffer full</button>
+      <button data-go="169">first output</button>
+      <button data-go="197">row edge</button>
+      <button data-go="1053">last pixel</button>
+      <button data-go="1065">done</button>
+    </div>
+  </div>
+</div>
+
+<div class="flow">
+
+  <div class="panel" style="flex:0 0 auto">
+    <div class="ptitle"><span class="n">1</span><h2>Input · 32 × 32</h2></div>
+    <canvas id="cvIn" width="288" height="288" style="width:288px" aria-label="32 by 32 input image, showing which pixels have streamed in, the five rows held in the line buffer, and the 5 by 5 window currently being computed."></canvas>
+    <p class="pnote">One pixel enters per clock, in raster order. Each pixel is read from SRAM <b>exactly once</b> — never re-read for another window.</p>
+    <div class="legend">
+      <span class="lg"><span class="sw" style="background:var(--cell-streamed)"></span>streamed</span>
+      <span class="lg"><span class="sw" style="background:var(--cell-buffer)"></span>in line buffer</span>
+      <span class="lg"><span class="sw" style="background:var(--cell-live)"></span>entering now</span>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="panel" style="flex:0 0 auto;max-width:250px">
+    <div class="ptitle"><span class="n">2</span><h2>Line buffer</h2></div>
+    <div class="lb" id="lb"></div>
+    <p class="pnote">4 row-delays (each 32 deep) hold the previous rows, so all <b>5 vertical</b> pixels of the window are present on the same clock. This is the only memory the design adds.</p>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="panel" style="flex:1 1 340px">
+    <div class="ptitle"><span class="n">3</span><h2>Systolic array · 5 × 5 PEs</h2></div>
+    <div class="arrwrap">
+      <div class="tapcol" id="tapcol"></div>
+      <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px">
+        <div class="rowlab"><span>PE 0</span><span>PE 1</span><span>PE 2</span><span>PE 3</span><span>PE 4</span></div>
+        <div class="arr" id="arr"></div>
+      </div>
+    </div>
+    <p class="pnote">Each PE holds one kernel tap for the whole frame — <b>w<sub>ky,kx</sub></b> on top, the <b>pixel index</b> it is multiplying below. Taps load <b>reversed</b> (PE <i>j</i> holds kx = 4−<i>j</i>), because the first weight meets the newest pixel.</p>
+    <div class="chan">
+      <div class="chips" id="chips"></div>
+      <span>channel 0 shown · 6 identical arrays run in parallel = <b class="m">150 PEs</b></span>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="panel" style="flex:0 0 auto">
+    <div class="ptitle"><span class="n">4</span><h2>Output · 28 × 28</h2></div>
+    <canvas id="cvOut" width="280" height="280" style="width:252px" aria-label="28 by 28 output feature map filling in one pixel per clock as the array produces results."></canvas>
+    <p class="pnote">One result leaves the array <b>every clock</b>. At row boundaries 4 slots are masked — windows that would straddle two image rows.</p>
+    <div class="legend">
+      <span class="lg"><span class="sw" style="background:var(--cell-valid)"></span>computed</span>
+      <span class="lg"><span class="sw" style="background:var(--cell-empty)"></span>pending</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="ledger">
+  <h2 style="font-size:19px">Where the 1,065 clocks go</h2>
+  <div class="tablewrap">
+    <table>
+      <tbody>
+        <tr id="rowA"><td class="num">27</td><td>weight load</td><td class="why">25 kernel taps, one per clock, + 2 clocks of ROM latency</td></tr>
+        <tr id="rowB"><td class="num">1024</td><td>stream</td><td class="why">every pixel of the 32×32 image, one per clock — this is the whole cost</td></tr>
+        <tr id="rowC"><td class="num">12</td><td>flush</td><td class="why">2K+2, draining the last windows out of the pipeline</td></tr>
+        <tr id="rowD"><td class="num">2</td><td>ready</td><td class="why">the state machine's DONE state and its registered <span class="m">ready</span> flag</td></tr>
+        <tr class="tot"><td class="num">1065</td><td>total</td><td class="why">measured go→ready in ModelSim, against 19,601 for the baseline loop — <b>18.4× faster</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="kicker">The clock count is <b>set by the image, not the kernel</b>. A 5×5 kernel fires 25 multiplies per clock where a 2×2 would fire 4 — but both stream the image exactly once. That is what unrolling the kernel into hardware buys: <b>the kernel size decides how many PEs you spend, not how long you run.</b></p>
+</div>
+
+<div class="mini">
+  <div class="minihead">
+    <p class="eyebrow">Same machine, small enough to check by hand</p>
+    <h2 style="font-size:22px">A 6×6 image, a 3×3 kernel, 9 PEs</h2>
+    <p class="pnote" style="max-width:700px;font-size:13.5px">Identical structure to conv1 above — just K=3 instead of 5, one channel, and real numbers small enough to verify on a calculator. Step through <b>one output at a time</b>, then through the <b>three clocks</b> that build it, and watch each pixel meet its weight.</p>
+  </div>
+
+  <div class="clockbar" style="background:var(--paper)">
+    <div class="clockrow">
+      <div class="bigclk"><span class="lab">Clock</span><span class="val"><span id="mClk">1</span><small> / 57</small></span></div>
+      <span class="phase" id="mPhase">weight load</span>
+      <div class="counters">
+        <div class="ctr"><span class="lab">Pixels in</span><span class="val" id="mPix">0 / 36</span></div>
+        <div class="ctr"><span class="lab">Outputs done</span><span class="val" id="mDone">0 / 16</span></div>
+      </div>
+    </div>
+    <div class="track" id="mTrack">
+      <div class="seg s1" style="flex:11 0 0">11</div>
+      <div class="seg s2" style="flex:36 0 0">36 — stream every pixel, one per clock</div>
+      <div class="seg s3" style="flex:8 0 0">8</div>
+      <div class="seg s3" style="flex:2 0 0">2</div>
+      <div class="playhead" id="mHead"></div>
+    </div>
+    <div class="controls">
+      <button class="primary" id="mPlay">▶ Play</button>
+      <button id="mPrev">− 1 clk</button><button id="mNext">+ 1 clk</button>
+      <div class="sep"></div>
+      <div class="ctrlgroup"><span class="ctrllab">Speed</span>
+        <button data-msp="900" class="on">slow</button><button data-msp="320">fast</button></div>
+      <div class="sep"></div>
+      <span class="kbd">↑ ↓  step</span>
+      <div class="sep"></div>
+      <div class="ctrlgroup"><span class="ctrllab">Jump to</span>
+        <button data-mgo="1">load weights</button>
+        <button data-mgo="14">first pixel</button>
+        <button data-mgo="20">tap 1 wakes</button>
+        <button data-mgo="26">all taps live</button>
+        <button data-mgo="33">first output</button>
+        <button data-mgo="37">skipped slot</button>
+        <button data-mgo="49">last pixel</button>
+        <button data-mgo="50">flush starts</button>
+        <button data-mgo="57">done</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="narr" id="mNarr"><h4></h4><p></p></div>
+
+  <div class="steps">
+
+    <div class="stepcard">
+      <h3>1 · Input 6 × 6</h3>
+      <div class="grid" id="mImg" style="grid-template-columns:repeat(6,32px)"></div>
+      <p class="pnote" style="font-size:11.5px;max-width:206px">Grey = not yet read. Tinted = still remembered by the line buffer. Solid = entering this clock.</p>
+    </div>
+
+    <div class="stepcard" style="min-width:290px">
+      <h3>2 · Line buffer — the memory that makes it work</h3>
+      <div id="mLB"></div>
+      <p class="pnote" style="font-size:11.5px;max-width:290px">Each pixel enters the first delay line and shuffles along one box per clock. Six boxes = one image row, so what falls out the end is <b>the pixel directly above</b>. The lines are <b>chained</b>: the second one is fed by the first’s output, giving the pixel two rows up.<br><br><b>Total storage: 2 shift registers × 6 = 12 pixels.</b> tap 2 costs nothing — it is a direct wire off the incoming pixel, not stored. (conv1 is the same shape scaled: 4 × 32 = 128 pixels.)</p>
+    </div>
+
+    <div class="stepcard">
+      <h3>3 · Kernel</h3>
+      <div class="grid" id="mKer" style="grid-template-columns:repeat(3,32px)"></div>
+      <p class="pnote" style="font-size:11.5px;max-width:130px">Loaded once at the start, then held still for the whole image.</p>
+    </div>
+
+    <div class="stepcard" style="flex:1 1 400px">
+      <h3>4 · The 9 PEs — weight × pixel</h3>
+      <div id="mPE"></div>
+      <p class="pnote" style="font-size:11.5px">Each box: the weight it holds × the pixel arriving, and <b>which output that product is heading for</b>. The three PEs in a row are usually feeding <i>three different</i> outputs — that is the pipeline.</p>
+      <p class="pnote" style="font-size:11.5px"><b>Only PE0 is wired to the line buffer.</b> Read the “from” line in each box: PE1 takes its pixel from PE0, PE2 from PE1 — each hop costing the 2 clocks of the delay registers inside a PE. So the buffer needs just <b>3 output wires, not 9</b> (5, not 25, for conv1). Six of these nine PEs never touch it.</p>
+    </div>
+
+    <div class="stepcard" style="min-width:196px">
+      <h3>5 · Output 4 × 4</h3>
+      <div class="grid" id="mOut" style="grid-template-columns:repeat(4,42px)"></div>
+      <div class="check" id="mCheck"></div>
+    </div>
+
+  </div>
+
+  <div class="tablewrap">
+    <table class="sched" id="mSched">
+      <thead><tr><th>Clock</th><th>What happens</th><th>The nine multiplies</th><th>Running total</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="overlap">
+    <div class="minihead" style="gap:3px">
+      <h3 style="font-size:13px;letter-spacing:.06em">Who is each PE working for?</h3>
+      <p class="pnote" style="font-size:12.5px;max-width:740px">The answer to “how can output (0,0) use clocks 26–28 and output (0,1) use clocks 27–29?” — <b>they never share a PE.</b> Read the <b>diagonals</b>: each output walks PE0 → PE1 → PE2 on three consecutive clocks, and the moment PE0 passes its partial sum along it is free to start the next one. Reading <i>down</i> a column instead gives you one output’s three vertical rows, computed at the same instant.</p>
+    </div>
+    <div class="tablewrap">
+      <table class="sched" id="mOverlap">
+        <thead><tr><th>Clock</th><th>PE0 · kernel col 2</th><th>PE1 · kernel col 1</th><th>PE2 · kernel col 0</th><th>Finishes</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="pnote" style="font-size:12.5px;max-width:740px">Each row of this table is <b>one clock tick</b>, and every non-blank cell is <b>3 real multipliers firing at once</b> (one per kernel row). So a clock with two filled cells has 6 multipliers live, feeding two different answers. Nothing is time-shared — that is why an answer can leave <b>every clock</b> even though each one takes 3 clocks to assemble.</p>
+  </div>
+
+  <div class="faq">
+    <div class="qa"><h4>The first pixel arrives at clock 12 — why is there no answer until clock 30?</h4>
+      <p>A 3×3 answer needs three <i>rows</i> of the picture, and rows arrive one after another. Pixel 12 (start of row 2) doesn't turn up until clock 24. Then the pixels still have to walk along the chain of PEs, which takes a few more clocks. After that first answer, though, one comes out <b>every single clock</b> — the wait is paid once, not per answer.</p></div>
+    <div class="qa"><h4>Why are the weights loaded backwards?</h4>
+      <p>Pixels arrive newest-first as they march in, so the PE nearest the entrance meets the <i>rightmost</i> pixel of the window. To pair correctly it must therefore hold the <i>rightmost</i> weight. Reversing the load order is what makes weight and pixel line up; it is a fix, not a quirk.</p></div>
+    <div class="qa"><h4>Are all 9 PEs working on the same window at once?</h4>
+      <p><b>No</b> — and this is the bit people trip on. Look at the "heading for" line in each PE: at any instant the three PEs in a row are usually part-way through three <i>different</i> outputs. Each answer is assembled over three clocks as it slides along, while new ones start behind it. Like a car factory: several cars on the line at once, one rolling off per minute.</p></div>
+    <div class="qa"><h4>The last pixel goes in at clock 49 — why does it keep running to 57?</h4>
+      <p>That tail is the <b>flush</b>, and it exists because the machine is a pipeline. When the last pixel arrives, the last four answers are still <i>inside</i> the array: their pixels have to finish walking along the chain and their partial sums have to catch up. Stop the clock at 49 and you throw away outputs (3,0) to (3,3), which actually emerge on clocks <b>51–54</b>. With nothing left to feed, the design pushes in <b>zeros</b> to shove the real data out — harmless, because any window containing them lies outside the image and gets masked. The RTL budgets <span class="m">2K+2</span> for this: 8 clocks here, 12 for conv1. Add 2 more for the DONE state and its registered <span class="m">ready</span>, and you get 57.</p></div>
+    <div class="qa"><h4>Why are some clocks thrown away?</h4>
+      <p>When the sliding window reaches the right-hand edge, the next positions would wrap onto the following row and mix pixels that aren't neighbours. The hardware still computes them — it's a pipeline, it can't stop — so a valid flag simply discards them. Here that's 2 wasted slots per row.</p></div>
+    <div class="qa"><h4>Each pixel is read only once — how, when it belongs to up to 9 windows?</h4>
+      <p>That's exactly what the line buffer buys. Instead of going back to memory each time a pixel is needed again, the design keeps the last two rows in a small on-chip queue. The pixel is fetched once and re-used from the queue for every window it takes part in.</p></div>
+    <div class="qa"><h4>How do only 9 PEs produce 16 outputs?</h4>
+      <p>The 9 PEs are the <b>kernel</b>, not the picture. The same 9 weights apply at every position — that's what makes it a convolution — so you build the kernel in hardware once and slide the picture past it. Positions are handled by <i>time</i>, not by more hardware.</p></div>
+  </div>
+
+  <p class="kicker" style="font-size:15px">Nine multiplies per answer, but only <b>three clocks</b> of array time — and a new answer still emerges <b>every clock</b>, because the next window is already right behind. Same ledger shape at both scales: <span class="m">11 + 36 + 8 + 2 = 57</span> here, <span class="m">27 + 1024 + 12 + 2 = 1065</span> for conv1.</p>
+</div>
+
+<footer>
+  Timing derived from the RTL state machines in <span class="m">systolic_conv.v</span> — <span class="m">S_WLD</span> = NTAP+2 = 27, <span class="m">STREAM_N</span> = NPIX + 2K + 2 = 1036 — plus <span class="m">pe.v</span> and <span class="m">linebuf.v</span>. First output at clk 166, last valid output (27,27) at clk 1057. 784 valid results; 240 slots masked at row boundaries by the <span class="m">win_v</span> check. Pixel and window indices shown here are exact; pixel <i>values</i> are not simulated.
+</footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  // Constants below are the RTL's own timing, checked against ModelSim:
+  // first q_en at clk 169, 784 valid outputs, ready at clk 1065.
+  var W=32,H=32,K=5,OW=28,MAXCLK=1065;
+  var T_PIX0=30, T_PIXLAST=1053, T_OUT=41, T_WLD_FIRST=3;
+
+  var clk=340, playing=false, speed=8, acc=0, last=0;
+
+  var $=function(id){return document.getElementById(id);};
+  var cvIn=$("cvIn"), cvOut=$("cvOut");
+  var ctxIn=cvIn.getContext("2d"), ctxOut=cvOut.getContext("2d");
+  var CIN=9, COUT=10; // cell px in canvas space
+
+  // ---- palette (theme aware) ----
+  var P={};
+  function readPalette(){
+    var s=getComputedStyle(document.documentElement);
+    ["cell-empty","cell-streamed","cell-buffer","cell-live","cell-valid","cell-masked","rule","surface"]
+      .forEach(function(k){P[k]=s.getPropertyValue("--"+k).trim();});
+  }
+  readPalette();
+  try{
+    var mq=window.matchMedia("(prefers-color-scheme: dark)");
+    if(mq.addEventListener) mq.addEventListener("change",function(){readPalette();render();});
+  }catch(e){}
+  new MutationObserver(function(){readPalette();render();})
+    .observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+
+  // ---- model ----
+  function pixIn(c){ var n=c-T_PIX0; return (n>=0 && n<W*H)?n:-1; }        // pixel index entering at clock c
+  function pixCount(c){ return Math.max(0,Math.min(W*H, c-T_PIX0+1)); }
+  function outBase(c){ var b=c-T_OUT; return (b>=0 && b<W*H)?b:-1; }        // window slot emerging at clock c
+  function baseOk(b){ var r=(b/W)|0, col=b%W; return col<=W-K && r>=K-1 && r<H; }
+  function outIdx(b){ return (((b/W)|0)-(K-1))*OW + (b%W); }                // index into 28x28
+  function outDone(c){
+    var lastB=Math.min(W*H-1, c-T_OUT), n=0;
+    for(var b=0;b<=lastB;b++) if(baseOk(b)) n++;
+    return Math.max(0,n);
+  }
+  function loadingTap(c){ var t=c-T_WLD_FIRST; return (t>=0 && t<K*K)?t:-1; } // kernel tap latched at clock c
+
+  function phaseOf(c){
+    if(c<1) return "idle";
+    if(c<=27) return "weight load";
+    if(c<=T_PIXLAST) return "streaming";
+    if(c<MAXCLK) return "flush";
+    return "done";
+  }
+
+  // ---- build static DOM ----
+  var arr=$("arr"), peEls=[];
+  for(var ky=0;ky<K;ky++) for(var j=0;j<K;j++){
+    var d=document.createElement("div");
+    d.className="pe";
+    d.innerHTML='<span class="w">w<sub>'+ky+','+(K-1-j)+'</sub></span><span class="d">—</span>';
+    arr.appendChild(d); peEls.push(d);
+  }
+  var tapcol=$("tapcol");
+  for(var r=0;r<K;r++){
+    var t=document.createElement("div");
+    t.className="taplab"; t.textContent="tap "+r+" →";
+    tapcol.appendChild(t);
+  }
+  var lb=$("lb"), lbEls=[];
+  for(var r2=0;r2<K;r2++){
+    var e=document.createElement("div");
+    e.className="lbrow";
+    e.innerHTML='<span class="tag">tap '+r2+'</span><span class="pix">—</span><span class="src"></span>';
+    lb.appendChild(e); lbEls.push(e);
+  }
+  var chips=$("chips");
+  for(var c6=0;c6<6;c6++){
+    var ch=document.createElement("div");
+    ch.className="chip"+(c6===0?" on":"");
+    chips.appendChild(ch);
+  }
+
+  // ---- render ----
+  function render(){
+    var n=pixIn(clk), b=outBase(clk), ph=phaseOf(clk), tap=loadingTap(clk);
+    var streaming=(n>=0);
+
+    $("clk").textContent=clk;
+    $("phase").textContent=ph;
+    $("cPix").textContent=pixCount(clk)+" / 1024";
+    $("cOut").textContent=outDone(clk)+" / 784";
+    $("cMac").textContent=(ph==="streaming"||ph==="flush")?"150":"0";
+    $("playhead").style.left=(100*Math.min(clk,MAXCLK)/MAXCLK)+"%";
+    ["rowA","rowB","rowC","rowD"].forEach(function(id,i){
+      var on=(i===0&&clk<=27)||(i===1&&clk>27&&clk<=T_PIXLAST)||(i===2&&clk>T_PIXLAST&&clk<MAXCLK-1)||(i===3&&clk>=MAXCLK-1);
+      $(id).className=on?"now":"";
+    });
+
+    // ---- input canvas ----
+    var lastPix=n>=0?n:(clk>T_PIXLAST?W*H-1:-1);
+    var curRow=lastPix>=0?((lastPix/W)|0):-1;
+    ctxIn.clearRect(0,0,cvIn.width,cvIn.height);
+    for(var p=0;p<W*H;p++){
+      var pr=(p/W)|0, pc=p%W, fill=P["cell-empty"];
+      if(p<lastPix){
+        fill=(curRow>=0 && pr>curRow-K && pr<=curRow)?P["cell-buffer"]:P["cell-streamed"];
+      }
+      if(p===lastPix && streaming) fill=P["cell-live"];
+      ctxIn.fillStyle=fill;
+      ctxIn.fillRect(pc*CIN,pr*CIN,CIN-1,CIN-1);
+    }
+    // window currently producing a result
+    if(b>=0 && baseOk(b)){
+      var wr=((b/W)|0)-(K-1), wc=b%W;
+      ctxIn.strokeStyle=P["cell-live"]; ctxIn.lineWidth=2;
+      ctxIn.strokeRect(wc*CIN-1,wr*CIN-1,K*CIN,K*CIN);
+    }
+
+    // ---- output canvas ----
+    ctxOut.clearRect(0,0,cvOut.width,cvOut.height);
+    var lastB=Math.min(W*H-1,clk-T_OUT);
+    var done=new Uint8Array(OW*OW);
+    for(var bb=0;bb<=lastB;bb++) if(baseOk(bb)) done[outIdx(bb)]=1;
+    for(var o=0;o<OW*OW;o++){
+      ctxOut.fillStyle=done[o]?P["cell-valid"]:P["cell-empty"];
+      ctxOut.fillRect((o%OW)*COUT,((o/OW)|0)*COUT,COUT-1,COUT-1);
+    }
+    if(b>=0 && baseOk(b)){
+      var oi=outIdx(b);
+      ctxOut.fillStyle=P["cell-live"];
+      ctxOut.fillRect((oi%OW)*COUT,((oi/OW)|0)*COUT,COUT-1,COUT-1);
+    }
+
+    // ---- line buffer ----
+    for(var r=0;r<K;r++){
+      var src=streaming?(n-(K-1-r)*W):-1;
+      var el=lbEls[r], ok=(src>=0);
+      el.className="lbrow"+(r===K-1&&ok?" cur":"");
+      el.children[1].textContent=ok?("px "+src):"—";
+      el.children[2].textContent=ok?("row "+((src/W)|0)+", col "+(src%W)):"";
+    }
+
+    // ---- PE array ----
+    for(var ky2=0;ky2<K;ky2++) for(var jj=0;jj<K;jj++){
+      var el2=peEls[ky2*K+jj], di=streaming?(n-2*jj-(K-1-ky2)*W):-1;
+      var isLoad=(tap>=0 && ((tap/K)|0)===ky2 && (K-1-(tap%K))===jj);
+      el2.className="pe"+(isLoad?" load":(di>=0?" act":" idle"));
+      el2.children[1].textContent=isLoad?"← load":(di>=0?("px "+di):"—");
+    }
+  }
+
+  // ---- transport ----
+  function setClk(v){ clk=Math.max(0,Math.min(MAXCLK,Math.round(v))); render(); }
+  function setPlay(p){
+    playing=p;
+    $("play").textContent=playing?"❚❚ Pause":"▶ Play";
+    if(playing){ last=performance.now(); requestAnimationFrame(tick); }
+  }
+  function tick(now){
+    if(!playing) return;
+    var dt=Math.min(100,now-last); last=now;
+    acc+=dt/1000*60*speed;
+    if(acc>=1){ setClk(clk+Math.floor(acc)); acc%=1; }
+    if(clk>=MAXCLK){ setPlay(false); return; }
+    requestAnimationFrame(tick);
+  }
+
+  $("play").addEventListener("click",function(){
+    if(clk>=MAXCLK) setClk(0);
+    setPlay(!playing);
+  });
+  $("step+").addEventListener("click",function(){setPlay(false);setClk(clk+1);});
+  $("step-").addEventListener("click",function(){setPlay(false);setClk(clk-1);});
+  Array.prototype.forEach.call(document.querySelectorAll("[data-sp]"),function(btn){
+    btn.addEventListener("click",function(){
+      speed=+btn.dataset.sp;
+      Array.prototype.forEach.call(document.querySelectorAll("[data-sp]"),function(b2){b2.classList.remove("on");});
+      btn.classList.add("on");
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-go]"),function(btn){
+    btn.addEventListener("click",function(){setPlay(false);setClk(+btn.dataset.go);});
+  });
+  $("track").addEventListener("click",function(ev){
+    var r=this.getBoundingClientRect();
+    setPlay(false); setClk((ev.clientX-r.left)/r.width*MAXCLK);
+  });
+  // ← / → drive THIS (conv1) timeline; ↑ / ↓ drive the small example below.
+  document.addEventListener("keydown",function(ev){
+    if(ev.target&&/^(INPUT|TEXTAREA|SELECT)$/.test(ev.target.tagName)) return;
+    if(ev.key==="ArrowRight"){setPlay(false);setClk(clk+1);ev.preventDefault();}
+    else if(ev.key==="ArrowLeft"){setPlay(false);setClk(clk-1);ev.preventDefault();}
+    else if(ev.key===" "){$("play").click();ev.preventDefault();}
+  });
+
+  render();
+})();
+
+/* ================= small worked example — full run, clock 1..55 ================= */
+(function(){
+  "use strict";
+  var IMG=[3,1,4,1,5,9, 2,6,5,3,5,8, 9,7,9,3,2,3, 8,4,6,2,6,4, 3,3,8,3,2,7, 9,5,0,2,8,8];
+  var KER=[1,2,3, 4,5,6, 7,8,9];
+  var W=6,K=3,OW=4,NPIX=36,NOUT=16;
+  var T_WLD=11, T_PIX0=14, T_PIXLAST=49, MAXCLK=57;
+  // base b: PEs fire b+16..b+18, chains finish b+19, rows summed b+20, out b+21.
+  // T_OUT = T_CHAIN + 2 -- the rsum register and then the bias/shift register.
+  // Verified against the RTL: pixel 0 in at clk 14, first output clk 33, ready clk 57.
+  var T_CHAIN=19, T_OUT=21, T_PE=16;
+  var clk=1, playing=false, timer=null, spd=900;
+
+  var $=function(id){return document.getElementById(id);};
+  var gImg=$("mImg"), gKer=$("mKer"), gPE=$("mPE"), gOut=$("mOut"),
+      gLB=$("mLB"), gCheck=$("mCheck"), gSched=$("mSched").querySelector("tbody"),
+      gNarr=$("mNarr");
+
+  function nAt(c){ return c-T_PIX0; }
+  function pixEntering(c){ var n=nAt(c); return (n>=0&&n<NPIX)?n:-1; }
+  function pixCount(c){ return Math.max(0,Math.min(NPIX,nAt(c)+1)); }
+  function tapPix(c,ky){ var i=nAt(c)-(K-1-ky)*W; return (i>=0&&i<NPIX)?i:-1; }
+  function pePix(c,ky,j){ var i=nAt(c)-2*j-(K-1-ky)*W; return (i>=0&&i<NPIX)?i:-1; }
+  function baseOk(b){ var r=Math.floor(b/W); return (b%W)<=W-K && r>=K-1 && r<W; }
+  function outOf(b){ return {r:Math.floor(b/W)-(K-1), c:b%W}; }
+  function outAt(c){ var b=c-T_OUT; return (b>=0&&b<NPIX&&baseOk(b))?b:-1; }
+  function slotAt(c){ var b=c-T_OUT; return (b>=0&&b<NPIX)?b:-1; }
+  function peDest(c,j){ var b=c-T_PE-j; return (b>=0&&b<NPIX&&baseOk(b))?b:-1; }
+  function tapLoad(c){ var t=c-3; return (t>=0&&t<K*K)?t:-1; }
+  function doneCount(c){ var n=0,last=Math.min(NPIX-1,c-T_OUT); for(var b=0;b<=last;b++) if(baseOk(b)) n++; return Math.max(0,n); }
+  function winVal(b){ var o=outOf(b),t=0; for(var ky=0;ky<K;ky++) for(var kx=0;kx<K;kx++) t+=KER[ky*K+kx]*IMG[(o.r+ky)*W+(o.c+kx)]; return t; }
+  function phaseOf(c){ if(c<=T_WLD) return "weight load"; if(c<=T_PIXLAST) return "streaming"; if(c<MAXCLK) return "flush"; return "done"; }
+
+  // ---------- static DOM ----------
+  var imgCells=[],kerCells=[],outCells=[],peCells=[],rowSumEls=[],dCells=[[],[]],tapEls=[];
+  for(var i=0;i<NPIX;i++){var d=document.createElement("div");d.className="cell";d.textContent=IMG[i];gImg.appendChild(d);imgCells.push(d);}
+  for(var i2=0;i2<K*K;i2++){var d2=document.createElement("div");d2.className="cell kw";d2.textContent=KER[i2];gKer.appendChild(d2);kerCells.push(d2);}
+  for(var i3=0;i3<NOUT;i3++){var d3=document.createElement("div");d3.className="cell owide";d3.textContent="·";gOut.appendChild(d3);outCells.push(d3);}
+
+  // line buffer: tap2 (direct) then two 6-deep delay lines
+  var lbTop=document.createElement("div"); lbTop.className="dline";
+  lbTop.innerHTML='<span class="dtag">pixel in</span><span class="dcells"><span class="dcell out" id="mT2">—</span></span>'+
+                  '<span class="tapout">= tap 2 &nbsp;<b id="mT2v">—</b> <span style="color:var(--faint)">bottom row</span></span>';
+  gLB.appendChild(lbTop);
+  for(var L=1;L>=0;L--){
+    var row=document.createElement("div"); row.className="dline";
+    var tag=document.createElement("span"); tag.className="dtag"; tag.textContent=(L===1?"delay line 1":"delay line 0"); row.appendChild(tag);
+    var cells=document.createElement("span"); cells.className="dcells";
+    for(var q=0;q<W;q++){var dc=document.createElement("span");dc.className="dcell";dc.textContent="·";cells.appendChild(dc);dCells[L].push(dc);}
+    row.appendChild(cells);
+    var to=document.createElement("span"); to.className="tapout"; row.appendChild(to); tapEls[L]=to;
+    gLB.appendChild(row);
+  }
+
+  for(var ky=0;ky<K;ky++){
+    var prow=document.createElement("div"); prow.className="perow";
+    var lab=document.createElement("span"); lab.className="rl"; lab.textContent="tap "+ky+" → row "+ky; prow.appendChild(lab);
+    var grid=document.createElement("div"); grid.className="pegrid"; grid.style.flex="1";
+    for(var j=0;j<K;j++){
+      var c=document.createElement("div"); c.className="pcell";
+      c.innerHTML='<span class="tag">PE'+j+' · kx '+(K-1-j)+'</span><span class="src">'+
+                  (j===0?'◄ from tap':'◄ from PE'+(j-1))+'</span>'+
+                  '<span class="mul"></span><span class="prod"></span><span class="dest"></span>';
+      grid.appendChild(c); peCells.push(c);
+    }
+    prow.appendChild(grid);
+    var rs=document.createElement("span"); rs.className="rs"; prow.appendChild(rs); rowSumEls.push(rs);
+    gPE.appendChild(prow);
+  }
+
+  // ---------- narration ----------
+  function narrate(c){
+    var ti=tapLoad(c), n=pixEntering(c), b=outAt(c), slot=slotAt(c);
+    if(c<=2) return {h:"Asking the ROM for the first weight",
+      t:"Memory takes two clocks to answer, so nothing has landed in a PE yet. This 2-clock wait happens once for the whole image."};
+    if(ti>=0){
+      var ky=Math.floor(ti/K), kx=ti%K, j=K-1-kx;
+      return {h:"Weight "+KER[ti]+" latches into PE"+j+" of row "+ky,
+        t:"This is kernel position (row "+ky+", column "+kx+"), value "+KER[ti]+" — and it goes into <b>PE"+j+"</b>, not PE"+kx+". The taps load in reverse on purpose: the PE nearest the entrance meets the newest (rightmost) pixel, so it must hold the rightmost weight. Once latched, this weight never moves again."};
+    }
+    if(c===T_PIX0) return {h:"All 9 weights held — the first pixel enters",
+      t:"Pixel 0 (value "+IMG[0]+") walks in. The line buffer is empty, so there is nothing above it yet. No answer is possible for a while."};
+    if(n>=0&&c<20) return {h:"Filling the first delay line",
+      t:"Pixels are shuffling into delay line 1 one box per clock. It is six boxes long — one image row — so after six pixels the first one will fall out the far end as \"the pixel one row up\"."};
+    if(n>=0&&c<26) return {h:"tap 1 is alive — one row of history",
+      t:"Delay line 1 is full, so tap 1 now hands back the pixel directly above the current one. Delay line 0 is still filling; we need six more pixels before tap 0 (two rows up) wakes and a full 3×3 window exists."};
+    if(n>=0&&c<28) return {h:"All three taps live — the array can finally see a full column",
+      t:"tap 2 = current pixel, tap 1 = one row up, tap 0 = two rows up, all on the same clock. The first complete window now exists; its products still have to walk along the PE chain."};
+    if(b>=0){
+      var o=outOf(b);
+      return {h:"Output ("+o.r+","+o.c+") = "+winVal(b)+" leaves the array",
+        t:"The three row-totals just got added. Those nine products were computed on clocks "+(b+T_PE)+", "+(b+T_PE+1)+" and "+(b+T_PE+2)+" — spread out, because each partial sum picks up one product per PE as it slides along."+
+          (b===12?" This is the very first answer. From here on, one comes out <b>every clock</b>.":"")};
+    }
+    if(slot>=0&&!baseOk(slot)&&c>=33) return {h:"This slot is thrown away",
+      t:"The window here would run off the right-hand edge and wrap onto the next row, mixing pixels that aren't really neighbours. The hardware computes it anyway — a pipeline can't pause — and a valid flag discards it. Two slots per row are lost this way."};
+    if(n>=0&&c<33) return {h:"Products marching down the chains",
+      t:"Each partial sum moves one PE per clock, picking up one product at each step. The first finished total is due at clock 33."};
+    if(c===T_PIXLAST) return {h:"Last pixel enters",
+      t:"Pixel 35 — the bottom-right corner. All 36 pixels have now been read, each <b>exactly once</b>. But the array is <i>not</i> finished: the last four answers are still inside the chains."};
+    if(c>T_PIXLAST&&c<MAXCLK) return {h:"Flushing — pushing the last answers out",
+      t:"There are no pixels left, so the design feeds in <b>zeros</b> (<span class=\"m\">pix = (n &lt; NPIX) ? qa_data : 0</span>). The zeros are not data — they are a shove, moving the real pixels still sitting in the PEs along to the end of the chain. Outputs (3,0) through (3,3) come out on clocks <b>51–54</b>, after the last pixel went in. The zeros can never corrupt a result, because any window that would contain them sits outside the image and is masked."};
+    if(c>=MAXCLK) return {h:"Done — 57 clocks",
+      t:"11 to load the weights, 36 to stream every pixel once, 8 to flush, 2 for the DONE state and its registered <span class=\"m\">ready</span> flag. All 16 outputs produced. The image length is what set the runtime — not the kernel."};
+    return {h:"Streaming",t:"One pixel in, one result out, every clock."};
+  }
+
+  // ---------- render ----------
+  function render(){
+    var n=pixEntering(clk), ti=tapLoad(clk), b=outAt(clk), ph=phaseOf(clk);
+    $("mClk").textContent=clk;
+    $("mPhase").textContent=ph;
+    $("mPix").textContent=pixCount(clk)+" / 36";
+    $("mDone").textContent=doneCount(clk)+" / 16";
+    $("mHead").style.left=(100*Math.min(clk,MAXCLK)/MAXCLK)+"%";
+
+    var nar=narrate(clk);
+    gNarr.children[0].innerHTML="Clock "+clk+" — "+nar.h;
+    gNarr.children[1].innerHTML=nar.t;
+
+    // image: streamed / in-buffer / entering, plus window outline
+    var newest=(n>=0)?n:(clk>T_PIXLAST?NPIX-1:-1);
+    var win=(b>=0)?outOf(b):null;
+    for(var p=0;p<NPIX;p++){
+      var cls="cell", pr=Math.floor(p/W), pc=p%W;
+      if(newest>=0&&p<newest) cls+=(p>newest-K*W)?" buf":" done";   // still held by the line buffer?
+      if(win&&pr>=win.r&&pr<win.r+K&&pc>=win.c&&pc<win.c+K) cls="cell win";
+      if(p===newest&&n>=0) cls="cell hot";
+      imgCells[p].className=cls;
+    }
+    // kernel highlight during load
+    for(var q2=0;q2<K*K;q2++) kerCells[q2].className="cell kw"+(q2===ti?" hot":"");
+
+    // line buffer contents
+    var t2=tapPix(clk,K-1);
+    $("mT2").textContent=(t2>=0)?IMG[t2]:"·";
+    $("mT2").className="dcell"+(t2>=0?" out":"");
+    $("mT2v").textContent=(t2>=0)?IMG[t2]:"—";
+    for(var L2=1;L2>=0;L2--){
+      for(var s=0;s<W;s++){
+        var idx=nAt(clk)-1-s-(1-L2)*W;       // line 1 holds n-1..n-6, line 0 holds n-7..n-12
+        var ok=(idx>=0&&idx<NPIX), cell=dCells[L2][s];
+        cell.textContent=ok?IMG[idx]:"·";
+        cell.className="dcell"+(ok?(s===W-1?" out":" full"):"");
+      }
+      var tp=tapPix(clk,L2===1?1:0);
+      tapEls[L2].innerHTML=(tp>=0)
+        ? ("= tap "+(L2===1?1:0)+" &nbsp;<b>"+IMG[tp]+"</b> <span style=\"color:var(--faint)\">"+(L2===1?"1 row up":"2 rows up")+"</span>")
+        : ("<span style=\"color:var(--faint)\">tap "+(L2===1?1:0)+" not ready — needs "+(L2===1?6:12)+" pixels</span>");
+    }
+
+    // PEs
+    for(var ky2=0;ky2<K;ky2++){
+      var rs=0,any=false;
+      for(var j2=0;j2<K;j2++){
+        var cell2=peCells[ky2*K+j2], kx2=K-1-j2, pi=pePix(clk,ky2,j2);
+        var w=KER[ky2*K+kx2], live=(pi>=0&&n>=0), db=peDest(clk,j2);
+        cell2.className="pcell"+(live?(db>=0?" fire":""):" dim");
+        cell2.children[2].innerHTML=live?('<span class="w">'+w+'</span> × '+IMG[pi]):('<span class="w">'+w+'</span> × —');
+        cell2.children[3].textContent=live?("= "+(w*IMG[pi])):"";
+        if(live&&db>=0){var od=outOf(db);cell2.children[4].textContent="→ out ("+od.r+","+od.c+")";any=true;rs+=w*IMG[pi];}
+        else cell2.children[4].textContent=live?"→ discarded":"";
+      }
+      rowSumEls[ky2].innerHTML=(b>=0)?("row total <b>"+rowTotal(b,ky2)+"</b>"):(any?"<span style='color:var(--faint)'>in flight</span>":"");
+    }
+
+    // outputs
+    for(var o2=0;o2<NOUT;o2++){
+      var orow=Math.floor(o2/OW), ocol=o2%OW, ob=(orow+K-1)*W+ocol;
+      var emitted=(clk-T_OUT)>=ob, cur=(b>=0&&ob===b);
+      outCells[o2].className="cell owide"+(cur?" ocur":(emitted?" odone":""));
+      outCells[o2].textContent=emitted?winVal(ob):"·";
+    }
+
+    // verification
+    if(b>=0){
+      var ob2=b,o3=outOf(b),terms=[];
+      for(var a=0;a<K;a++) for(var c3=0;c3<K;c3++) terms.push(KER[a*K+c3]+"×"+IMG[(o3.r+a)*W+(o3.c+c3)]);
+      gCheck.innerHTML="textbook check for ("+o3.r+","+o3.c+")<br>"+terms.slice(0,3).join(" + ")+"<br>+ "+
+        terms.slice(3,6).join(" + ")+"<br>+ "+terms.slice(6).join(" + ")+"<br>= <b>"+winVal(ob2)+"</b> ✓ same";
+    } else gCheck.innerHTML="<span style='color:var(--faint)'>no output this clock</span>";
+
+    // schedule for the window in flight
+    var focus=(b>=0)?b:12, of=outOf(focus), rows="";
+    for(var s2=0;s2<K;s2++){
+      var col=K-1-s2, ms=[], run=0;
+      for(var kk=0;kk<K;kk++) ms.push(KER[kk*K+col]+"×"+IMG[(of.r+kk)*W+(of.c+col)]);
+      for(var a2=0;a2<=s2;a2++){var ca=K-1-a2;for(var kb=0;kb<K;kb++) run+=KER[kb*K+ca]*IMG[(of.r+kb)*W+(of.c+ca)];}
+      rows+='<tr class="'+(clk===focus+T_PE+s2?"on":"")+'"><td>'+(focus+T_PE+s2)+'</td><td>PE'+s2+
+            ' in all 3 rows × window column '+col+'</td><td>'+ms.join(", ")+'</td><td>'+run+'</td></tr>';
+    }
+    rows+='<tr class="'+(clk===focus+T_CHAIN?"on":"")+'"><td>'+(focus+T_CHAIN)+'</td><td>each row chain finishes its own total</td><td>—</td><td>'+winVal(focus)+'</td></tr>';
+    rows+='<tr class="'+(clk===focus+T_CHAIN+1?"on":"")+'"><td>'+(focus+T_CHAIN+1)+'</td><td>the 3 row totals are added (<span class="m">rsum</span> register)</td><td>—</td><td>'+winVal(focus)+'</td></tr>';
+    rows+='<tr class="'+(clk===focus+T_OUT?"on":"")+'"><td>'+(focus+T_OUT)+'</td><td>bias added, shifted → output ('+of.r+','+of.c+') leaves</td><td>—</td><td>'+winVal(focus)+'</td></tr>';
+    gSched.innerHTML=rows;
+
+    // ---- pipeline overlap: 8 clocks centred on the action ----
+    var c0=Math.max(T_PIX0+K-1,Math.min(clk-3,MAXCLK-8)), orows="";
+    for(var u=0;u<9;u++){
+      var tc=c0+u, cells="";
+      for(var jj2=0;jj2<K;jj2++){
+        var bd=peDest(tc,jj2), od2=(bd>=0)?outOf(bd):null;
+        cells+=od2?('<td class="pe'+jj2+'">out ('+od2.r+','+od2.c+')</td>')
+                  :'<td class="blank">—</td>';
+      }
+      var fb=peDest(tc,K-1), ff=(fb>=0)?outOf(fb):null;
+      orows+='<tr class="'+(tc===clk?"here":"")+'"><td>'+tc+'</td>'+cells+
+             (ff?('<td class="fin">out ('+ff.r+','+ff.c+') @ clk '+(fb+T_OUT)+'</td>'):'<td class="blank">—</td>')+'</tr>';
+    }
+    document.getElementById("mOverlap").querySelector("tbody").innerHTML=orows;
+  }
+  function rowTotal(b,ky){ var o=outOf(b),t=0; for(var kx=0;kx<K;kx++) t+=KER[ky*K+kx]*IMG[(o.r+ky)*W+(o.c+kx)]; return t; }
+
+  function setClk(v){ clk=Math.max(0,Math.min(MAXCLK,v)); render(); }
+  function setPlay(p){
+    playing=p; $("mPlay").textContent=playing?"❚❚ Pause":"▶ Play";
+    if(timer){clearInterval(timer);timer=null;}
+    if(playing) timer=setInterval(function(){ if(clk>=MAXCLK){setPlay(false);return;} setClk(clk+1); },spd);
+  }
+  $("mPlay").addEventListener("click",function(){ if(clk>=MAXCLK) setClk(1); setPlay(!playing); });
+  $("mNext").addEventListener("click",function(){setPlay(false);setClk(clk+1);});
+  $("mPrev").addEventListener("click",function(){setPlay(false);setClk(clk-1);});
+  Array.prototype.forEach.call(document.querySelectorAll("[data-msp]"),function(btn){
+    btn.addEventListener("click",function(){
+      spd=+btn.dataset.msp;
+      Array.prototype.forEach.call(document.querySelectorAll("[data-msp]"),function(b2){b2.classList.remove("on");});
+      btn.classList.add("on"); if(playing) setPlay(true);
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-mgo]"),function(btn){
+    btn.addEventListener("click",function(){setPlay(false);setClk(+btn.dataset.mgo);});
+  });
+  $("mTrack").addEventListener("click",function(ev){
+    var r=this.getBoundingClientRect(); setPlay(false); setClk(Math.round((ev.clientX-r.left)/r.width*MAXCLK));
+  });
+  // ↓ / ↑ drive THIS timeline; ← / → drive the conv1 one above.
+  document.addEventListener("keydown",function(ev){
+    if(ev.target&&/^(INPUT|TEXTAREA|SELECT)$/.test(ev.target.tagName)) return;
+    if(ev.key==="ArrowDown"){setPlay(false);setClk(clk+1);ev.preventDefault();}
+    else if(ev.key==="ArrowUp"){setPlay(false);setClk(clk-1);ev.preventDefault();}
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
