@@ -1,0 +1,147 @@
+# do probeall.do
+# 0
+# vsim -voptargs="+acc" -c "+NFRAMES=3" work.tb 
+# Start time: 16:21:36 on Sep 08,2026
+# Loading sv_std.std
+# Loading work.tb
+# Loading work.itf_frame_feed
+# Loading work.src_rom
+# Loading work.lenet
+# Loading work.wieght_conv1_rom
+# Loading work.bias_conv1_rom
+# Loading work.systolic_conv
+# Loading work.linebuf
+# Loading work.rfdp1024x96
+# Loading work.bhv_1w1r_sram
+# Loading work.iterator
+# Loading work.max_pool
+# Loading work.relu
+# Loading work.rfdp256x96
+# Loading work.wieght_conv2_rom
+# Loading work.bias_conv2_rom
+# Loading work.systolic_conv2
+# Loading work.rfdp128x256
+# Loading work.rfdp32x256
+# Loading work.wieght_fc1_rom
+# Loading work.bias_fc1_rom
+# Loading work.conv
+# Loading work.rfdp128x16
+# Loading work.wieght_fc2_rom
+# Loading work.bias_fc2_rom
+# Loading work.wieght_fc3_rom
+# Loading work.bias_fc3_rom
+# Loading work.systolic_row
+# Loading work.acc
+# Loading work.mac
+# Loading work.pe
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: systolic_conv.v(25).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv1 File: lenet.v Line: 48
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_data'. The port definition is at: systolic_conv.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv1 File: lenet.v Line: 48
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_pooling1'.  Expected 11, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling1 File: lenet.v Line: 158
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_data'. The port definition is at: cnn.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling1 File: lenet.v Line: 158
+# ** Warning: (vsim-3722) lenet.v(158): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-3722) lenet.v(158): [TFMPC] - Missing connection for port 'aa_bias'.
+# ** Warning: (vsim-3722) lenet.v(158): [TFMPC] - Missing connection for port 'aa_weight'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'max_pooling1'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/max_pooling1 File: lenet.v Line: 190
+# ** Warning: (vsim-3722) lenet.v(190): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu1'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu1 File: lenet.v Line: 203
+# ** Warning: (vsim-3722) lenet.v(203): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(203): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(203): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: systolic_conv2.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv2 File: lenet.v Line: 280
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'aa_data'. The port definition is at: systolic_conv2.v(34).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv2 File: lenet.v Line: 280
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_pooling2'.  Expected 11, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling2 File: lenet.v Line: 392
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_pooling2 File: lenet.v Line: 392
+# ** Warning: (vsim-3722) lenet.v(392): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-3722) lenet.v(392): [TFMPC] - Missing connection for port 'aa_bias'.
+# ** Warning: (vsim-3722) lenet.v(392): [TFMPC] - Missing connection for port 'aa_weight'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'max_pooling2'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/max_pooling2 File: lenet.v Line: 424
+# ** Warning: (vsim-3722) lenet.v(424): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu2'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu2 File: lenet.v Line: 438
+# ** Warning: (vsim-3722) lenet.v(438): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(438): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(438): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_FC1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 513
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (5) for port 'aa_data'. The port definition is at: cnn.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 513
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (12) for port 'aa_weight'. The port definition is at: cnn.v(21).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_FC1 File: lenet.v Line: 513
+# ** Warning: (vsim-3722) lenet.v(513): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc1'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc1 File: lenet.v Line: 548
+# ** Warning: (vsim-3722) lenet.v(548): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu_fc1'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu_fc1 File: lenet.v Line: 564
+# ** Warning: (vsim-3722) lenet.v(564): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(564): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(564): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_fc2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 634
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 634
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (14) for port 'aa_weight'. The port definition is at: cnn.v(21).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc2 File: lenet.v Line: 634
+# ** Warning: (vsim-3722) lenet.v(634): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc2'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc2 File: lenet.v Line: 669
+# ** Warning: (vsim-3722) lenet.v(669): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'relu_fc2'.  Expected 9, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/relu_fc2 File: lenet.v Line: 685
+# ** Warning: (vsim-3722) lenet.v(685): [TFMPC] - Missing connection for port 'go'.
+# ** Warning: (vsim-3722) lenet.v(685): [TFMPC] - Missing connection for port 'first_data'.
+# ** Warning: (vsim-3722) lenet.v(685): [TFMPC] - Missing connection for port 'last_data'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iterator_fc3'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 755
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (7) for port 'aa_data'. The port definition is at: cnn.v(20).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 755
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'aa_weight'. The port definition is at: cnn.v(21).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/iterator_fc3 File: lenet.v Line: 755
+# ** Warning: (vsim-3722) lenet.v(755): [TFMPC] - Missing connection for port 'batch_go'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'conv_fc3'.  Expected 11, found 10.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/lenet/conv_fc3 File: lenet.v Line: 790
+# ** Warning: (vsim-3722) lenet.v(790): [TFMPC] - Missing connection for port 'go'.
+# T                1000 rstn done#############################
+# === classifying 3 frames ===
+# M frame_go 2027500
+# M conv1_ready 7352500
+# M pooling1_ready 11277500
+# M conv2_ready 18337500
+# M pooling2_ready 18842500
+# M fc1_ready 33847500
+# M fc2_ready 84252500
+# M fc3_ready 88457500
+# T               88493==process a frame          0, digit  7 =============
+# M frame_go 88522500
+# M conv1_ready 93847500
+# M pooling1_ready 97772500
+# M conv2_ready 104832500
+# M pooling2_ready 105337500
+# M fc1_ready 120342500
+# M fc2_ready 170747500
+# M fc3_ready 174952500
+# T              174988==process a frame          1, digit  2 =============
+# M frame_go 175017500
+# M conv1_ready 180342500
+# M pooling1_ready 184267500
+# M conv2_ready 191327500
+# M pooling2_ready 191832500
+# M fc1_ready 206837500
+# M fc2_ready 257242500
+# M fc3_ready 261447500
+# T              261483==process a frame          2, digit  1 =============
+# ** Note: $finish    : lenet_tb.v(61)
+#    Time: 361492500 ps  Iteration: 0  Instance: /tb
+# End time: 16:21:49 on Sep 08,2026, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 52

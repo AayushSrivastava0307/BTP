@@ -17,3 +17,24 @@ simulation_report.md
 # Python
 __pycache__/
 *.pyc
+
+# ---- added by reorganize_btp.ps1 ----
+# ModelSim / Quartus build output (regenerated on every run)
+work/
+work_*/
+db/
+output_files/
+transcript
+*.wlf
+*.vstf
+# Jupyter
+.ipynb_checkpoints/
+# Google Drive sync temp folder
+.tmp.driveupload/
+# one-off reorganisation helpers
+reorganize_btp.ps1
+run_reorganize.bat
+reorganize_log.txt
+reorganize_finish.ps1
+run_finish.bat
+finish_log.txt
