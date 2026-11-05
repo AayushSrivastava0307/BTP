@@ -600,6 +600,29 @@ module lenet(
 		else if (!cenb_relu_fc1_buf)	ab_relu_fc1_buf <= ab_relu_fc1_buf + 1;
 		
 	//=================FC2============================================================
+
+	wire	fc2_go = fc1_ready;
+`ifdef PARALLEL_FC2
+	// fc2 with `FC2_PAR neurons per group (fc2_par.v): ~860 clocks instead of 10,082.
+	// Same q / q_en stream as conv_fc2 below, so relu_fc2 and relu_fc2_buf are unchanged.
+	wire	[`WDP*`OUTPUT_NUM_FC2 -1:0] q_fc2;
+	fc2_par #(
+		.P				(`FC2_PAR),
+		.NIN			(`KERNEL_SIZEX_FC2*`KERNEL_SIZEY_FC2),
+		.NOUT			(`OUTPUT_BATCH_FC2),
+		.WIGHT_SHIFT	(`WIGHT_SHIFT)
+		)fc2_par(
+		.clk			(clk),
+		.rstn			(rstn),
+		.go				(fc2_go),
+		.aa_data		(aa_relu_fc1_buf),
+		.cena_data		(cena_relu_fc1_buf),
+		.qa_data		(qa_relu_fc1_buf),
+		.q_en			(q_fc2_en),
+		.q				(q_fc2),
+		.ready			(fc2_ready)
+		);
+`else
 	
 	wire		[`WDP*`OUTPUT_NUM_FC1*`OUTPUT_NUM_FC2 -1:0]		qa_weight_fc2_rom;
 //	wire		[11:0]											aa_weight_fc2;
@@ -623,7 +646,6 @@ module lenet(
 		);
 	
 		
-	wire	fc2_go = fc1_ready;
 	iterator  #(
 		.OUTPUT_BATCH	(`OUTPUT_BATCH_FC2),
 		.KERNEL_SIZEX	(`KERNEL_SIZEX_FC2),
@@ -679,6 +701,8 @@ module lenet(
 		.q_en           (q_fc2_en)
 		);
 		
+`endif
+	
 	wire	[`WDP*`OUTPUT_NUM_FC2 -1:0] qa_relu_fc2;		
 	relu #(
 		.INPUT_NUM (`OUTPUT_NUM_FC2)   // input plane_num

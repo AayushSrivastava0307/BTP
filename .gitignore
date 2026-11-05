@@ -38,3 +38,15 @@ reorganize_log.txt
 reorganize_finish.ps1
 run_finish.bat
 finish_log.txt
+
+# Verilator build (systolic/verilator/run_verilator.sh)
+obj/
+lenet_roms_sim.v
+build.log
+
+# Vivado (systolic/run_vivado.tcl)
+vivado_out/
+.Xil/
+vivado*.log
+vivado*.jou
+*.str

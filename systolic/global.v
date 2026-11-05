@@ -32,7 +32,14 @@
 // conv/acc/mac chain.  Comment either out to fall back for that layer; both
 // paths must agree bit for bit, which is the regression test.
 `define SYSTOLIC_CONV1
-`define SYSTOLIC_CONV2
+// conv2 systolic array: 1.77x on conv2 (~1,090 clocks/frame) for ~300 extra DSPs, more than
+// the XC7A100T's 240 allow. Off by default; conv2 uses the original iterator + conv engine.
+//`define SYSTOLIC_CONV2
+
+// fc2 with FC2_PAR neurons computed at once (fc2_par.v). 12 divides both 84 and 120.
+// Comment out PARALLEL_FC2 to fall back to the original one-multiply-per-clock fc2.
+`define PARALLEL_FC2
+`define FC2_PAR 12
 
 `define OUTPUT_BATCH_CONV1  1
 `define OUTPUT_NUM_CONV1   	6

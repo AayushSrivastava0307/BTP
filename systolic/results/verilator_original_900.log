@@ -1,0 +1,1804 @@
+T              186600==process a frame           0, digit  7 =============
+L frame 0 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 0
+T              371215==process a frame           1, digit  2 =============
+L frame 1 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T              555830==process a frame           2, digit  1 =============
+L frame 2 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T              740445==process a frame           3, digit  0 =============
+L frame 3 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T              925060==process a frame           4, digit  4 =============
+L frame 4 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             1109675==process a frame           5, digit  1 =============
+L frame 5 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             1294290==process a frame           6, digit  4 =============
+L frame 6 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             1478905==process a frame           7, digit  9 =============
+L frame 7 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             1663520==process a frame           8, digit  5 =============
+L frame 8 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             1848135==process a frame           9, digit  9 =============
+L frame 9 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             2032750==process a frame          10, digit  0 =============
+L frame 10 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             2217365==process a frame          11, digit  6 =============
+L frame 11 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             2401980==process a frame          12, digit  9 =============
+L frame 12 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             2586595==process a frame          13, digit  0 =============
+L frame 13 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             2771210==process a frame          14, digit  1 =============
+L frame 14 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             2955825==process a frame          15, digit  5 =============
+L frame 15 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             3140440==process a frame          16, digit  9 =============
+L frame 16 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             3325055==process a frame          17, digit  7 =============
+L frame 17 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             3509670==process a frame          18, digit  3 =============
+L frame 18 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             3694285==process a frame          19, digit  4 =============
+L frame 19 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             3878900==process a frame          20, digit  9 =============
+L frame 20 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             4063515==process a frame          21, digit  6 =============
+L frame 21 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             4248130==process a frame          22, digit  6 =============
+L frame 22 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             4432745==process a frame          23, digit  5 =============
+L frame 23 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             4617360==process a frame          24, digit  4 =============
+L frame 24 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             4801975==process a frame          25, digit  0 =============
+L frame 25 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             4986590==process a frame          26, digit  7 =============
+L frame 26 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             5171205==process a frame          27, digit  4 =============
+L frame 27 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             5355820==process a frame          28, digit  0 =============
+L frame 28 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             5540435==process a frame          29, digit  1 =============
+L frame 29 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             5725050==process a frame          30, digit  3 =============
+L frame 30 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             5909665==process a frame          31, digit  1 =============
+L frame 31 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             6094280==process a frame          32, digit  3 =============
+L frame 32 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             6278895==process a frame          33, digit  4 =============
+L frame 33 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             6463510==process a frame          34, digit  7 =============
+L frame 34 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             6648125==process a frame          35, digit  2 =============
+L frame 35 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             6832740==process a frame          36, digit  7 =============
+L frame 36 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             7017355==process a frame          37, digit  1 =============
+L frame 37 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             7201970==process a frame          38, digit  2 =============
+L frame 38 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             7386585==process a frame          39, digit  1 =============
+L frame 39 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             7571200==process a frame          40, digit  1 =============
+L frame 40 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             7755815==process a frame          41, digit  7 =============
+L frame 41 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             7940430==process a frame          42, digit  4 =============
+L frame 42 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             8125045==process a frame          43, digit  2 =============
+L frame 43 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             8309660==process a frame          44, digit  3 =============
+L frame 44 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             8494275==process a frame          45, digit  5 =============
+L frame 45 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             8678890==process a frame          46, digit  1 =============
+L frame 46 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             8863505==process a frame          47, digit  2 =============
+L frame 47 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             9048120==process a frame          48, digit  4 =============
+L frame 48 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             9232735==process a frame          49, digit  4 =============
+L frame 49 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             9417350==process a frame          50, digit  6 =============
+L frame 50 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             9601965==process a frame          51, digit  3 =============
+L frame 51 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             9786580==process a frame          52, digit  5 =============
+L frame 52 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T             9971195==process a frame          53, digit  5 =============
+L frame 53 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            10155810==process a frame          54, digit  6 =============
+L frame 54 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            10340425==process a frame          55, digit  0 =============
+L frame 55 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            10525040==process a frame          56, digit  4 =============
+L frame 56 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            10709655==process a frame          57, digit  1 =============
+L frame 57 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            10894270==process a frame          58, digit  9 =============
+L frame 58 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            11078885==process a frame          59, digit  5 =============
+L frame 59 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            11263500==process a frame          60, digit  7 =============
+L frame 60 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            11448115==process a frame          61, digit  8 =============
+L frame 61 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            11632730==process a frame          62, digit  9 =============
+L frame 62 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            11817345==process a frame          63, digit  3 =============
+L frame 63 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            12001960==process a frame          64, digit  7 =============
+L frame 64 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            12186575==process a frame          65, digit  4 =============
+L frame 65 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            12371190==process a frame          66, digit  6 =============
+L frame 66 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            12555805==process a frame          67, digit  4 =============
+L frame 67 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            12740420==process a frame          68, digit  3 =============
+L frame 68 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            12925035==process a frame          69, digit  0 =============
+L frame 69 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            13109650==process a frame          70, digit  7 =============
+L frame 70 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            13294265==process a frame          71, digit  0 =============
+L frame 71 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            13478880==process a frame          72, digit  2 =============
+L frame 72 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            13663495==process a frame          73, digit  9 =============
+L frame 73 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            13848110==process a frame          74, digit  1 =============
+L frame 74 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            14032725==process a frame          75, digit  7 =============
+L frame 75 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            14217340==process a frame          76, digit  3 =============
+L frame 76 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            14401955==process a frame          77, digit  2 =============
+L frame 77 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            14586570==process a frame          78, digit  9 =============
+L frame 78 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            14771185==process a frame          79, digit  7 =============
+L frame 79 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            14955800==process a frame          80, digit  7 =============
+L frame 80 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            15140415==process a frame          81, digit  6 =============
+L frame 81 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            15325030==process a frame          82, digit  2 =============
+L frame 82 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            15509645==process a frame          83, digit  7 =============
+L frame 83 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            15694260==process a frame          84, digit  8 =============
+L frame 84 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            15878875==process a frame          85, digit  4 =============
+L frame 85 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            16063490==process a frame          86, digit  7 =============
+L frame 86 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            16248105==process a frame          87, digit  3 =============
+L frame 87 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            16432720==process a frame          88, digit  6 =============
+L frame 88 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            16617335==process a frame          89, digit  1 =============
+L frame 89 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            16801950==process a frame          90, digit  3 =============
+L frame 90 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            16986565==process a frame          91, digit  6 =============
+L frame 91 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            17171180==process a frame          92, digit  9 =============
+L frame 92 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            17355795==process a frame          93, digit  3 =============
+L frame 93 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            17540410==process a frame          94, digit  1 =============
+L frame 94 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            17725025==process a frame          95, digit  4 =============
+L frame 95 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            17909640==process a frame          96, digit  1 =============
+L frame 96 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            18094255==process a frame          97, digit  7 =============
+L frame 97 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            18278870==process a frame          98, digit  6 =============
+L frame 98 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            18463485==process a frame          99, digit  9 =============
+L frame 99 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            18648100==process a frame         100, digit  6 =============
+L frame 100 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            18832715==process a frame         101, digit  0 =============
+L frame 101 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            19017330==process a frame         102, digit  5 =============
+L frame 102 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            19201945==process a frame         103, digit  4 =============
+L frame 103 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            19386560==process a frame         104, digit  9 =============
+L frame 104 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            19571175==process a frame         105, digit  9 =============
+L frame 105 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            19755790==process a frame         106, digit  2 =============
+L frame 106 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            19940405==process a frame         107, digit  1 =============
+L frame 107 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            20125020==process a frame         108, digit  9 =============
+L frame 108 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            20309635==process a frame         109, digit  4 =============
+L frame 109 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            20494250==process a frame         110, digit  8 =============
+L frame 110 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            20678865==process a frame         111, digit  7 =============
+L frame 111 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            20863480==process a frame         112, digit  3 =============
+L frame 112 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            21048095==process a frame         113, digit  9 =============
+L frame 113 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            21232710==process a frame         114, digit  7 =============
+L frame 114 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            21417325==process a frame         115, digit  9 =============
+L frame 115 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            21601940==process a frame         116, digit  4 =============
+L frame 116 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            21786555==process a frame         117, digit  4 =============
+L frame 117 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            21971170==process a frame         118, digit  9 =============
+L frame 118 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            22155785==process a frame         119, digit  2 =============
+L frame 119 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            22340400==process a frame         120, digit  5 =============
+L frame 120 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            22525015==process a frame         121, digit  4 =============
+L frame 121 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            22709630==process a frame         122, digit  7 =============
+L frame 122 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            22894245==process a frame         123, digit  6 =============
+L frame 123 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            23078860==process a frame         124, digit  7 =============
+L frame 124 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            23263475==process a frame         125, digit  9 =============
+L frame 125 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            23448090==process a frame         126, digit  0 =============
+L frame 126 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            23632705==process a frame         127, digit  5 =============
+L frame 127 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            23817320==process a frame         128, digit  8 =============
+L frame 128 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            24001935==process a frame         129, digit  5 =============
+L frame 129 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            24186550==process a frame         130, digit  6 =============
+L frame 130 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            24371165==process a frame         131, digit  6 =============
+L frame 131 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            24555780==process a frame         132, digit  5 =============
+L frame 132 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            24740395==process a frame         133, digit  7 =============
+L frame 133 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            24925010==process a frame         134, digit  8 =============
+L frame 134 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            25109625==process a frame         135, digit  1 =============
+L frame 135 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            25294240==process a frame         136, digit  0 =============
+L frame 136 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            25478855==process a frame         137, digit  1 =============
+L frame 137 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            25663470==process a frame         138, digit  6 =============
+L frame 138 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            25848085==process a frame         139, digit  4 =============
+L frame 139 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            26032700==process a frame         140, digit  6 =============
+L frame 140 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            26217315==process a frame         141, digit  7 =============
+L frame 141 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            26401930==process a frame         142, digit  3 =============
+L frame 142 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            26586545==process a frame         143, digit  1 =============
+L frame 143 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            26771160==process a frame         144, digit  7 =============
+L frame 144 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            26955775==process a frame         145, digit  1 =============
+L frame 145 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            27140390==process a frame         146, digit  8 =============
+L frame 146 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            27325005==process a frame         147, digit  2 =============
+L frame 147 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            27509620==process a frame         148, digit  0 =============
+L frame 148 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            27694235==process a frame         149, digit  2 =============
+L frame 149 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            27878850==process a frame         150, digit  9 =============
+L frame 150 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            28063465==process a frame         151, digit  9 =============
+L frame 151 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            28248080==process a frame         152, digit  5 =============
+L frame 152 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            28432695==process a frame         153, digit  5 =============
+L frame 153 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            28617310==process a frame         154, digit  1 =============
+L frame 154 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            28801925==process a frame         155, digit  5 =============
+L frame 155 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            28986540==process a frame         156, digit  6 =============
+L frame 156 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            29171155==process a frame         157, digit  0 =============
+L frame 157 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            29355770==process a frame         158, digit  3 =============
+L frame 158 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            29540385==process a frame         159, digit  4 =============
+L frame 159 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            29725000==process a frame         160, digit  4 =============
+L frame 160 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            29909615==process a frame         161, digit  6 =============
+L frame 161 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            30094230==process a frame         162, digit  5 =============
+L frame 162 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            30278845==process a frame         163, digit  4 =============
+L frame 163 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            30463460==process a frame         164, digit  6 =============
+L frame 164 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            30648075==process a frame         165, digit  5 =============
+L frame 165 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            30832690==process a frame         166, digit  4 =============
+L frame 166 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            31017305==process a frame         167, digit  5 =============
+L frame 167 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            31201920==process a frame         168, digit  1 =============
+L frame 168 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            31386535==process a frame         169, digit  4 =============
+L frame 169 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            31571150==process a frame         170, digit  4 =============
+L frame 170 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            31755765==process a frame         171, digit  7 =============
+L frame 171 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            31940380==process a frame         172, digit  2 =============
+L frame 172 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            32124995==process a frame         173, digit  3 =============
+L frame 173 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            32309610==process a frame         174, digit  2 =============
+L frame 174 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            32494225==process a frame         175, digit  7 =============
+L frame 175 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            32678840==process a frame         176, digit  1 =============
+L frame 176 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            32863455==process a frame         177, digit  8 =============
+L frame 177 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            33048070==process a frame         178, digit  1 =============
+L frame 178 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            33232685==process a frame         179, digit  8 =============
+L frame 179 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            33417300==process a frame         180, digit  1 =============
+L frame 180 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            33601915==process a frame         181, digit  8 =============
+L frame 181 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            33786530==process a frame         182, digit  5 =============
+L frame 182 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            33971145==process a frame         183, digit  0 =============
+L frame 183 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            34155760==process a frame         184, digit  8 =============
+L frame 184 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            34340375==process a frame         185, digit  9 =============
+L frame 185 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            34524990==process a frame         186, digit  2 =============
+L frame 186 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            34709605==process a frame         187, digit  5 =============
+L frame 187 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            34894220==process a frame         188, digit  0 =============
+L frame 188 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            35078835==process a frame         189, digit  1 =============
+L frame 189 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            35263450==process a frame         190, digit  1 =============
+L frame 190 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            35448065==process a frame         191, digit  1 =============
+L frame 191 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            35632680==process a frame         192, digit  0 =============
+L frame 192 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            35817295==process a frame         193, digit  9 =============
+L frame 193 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            36001910==process a frame         194, digit  0 =============
+L frame 194 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            36186525==process a frame         195, digit  3 =============
+L frame 195 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            36371140==process a frame         196, digit  1 =============
+L frame 196 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            36555755==process a frame         197, digit  6 =============
+L frame 197 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            36740370==process a frame         198, digit  4 =============
+L frame 198 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            36924985==process a frame         199, digit  2 =============
+L frame 199 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            37109600==process a frame         200, digit  3 =============
+L frame 200 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            37294215==process a frame         201, digit  6 =============
+L frame 201 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            37478830==process a frame         202, digit  1 =============
+L frame 202 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            37663445==process a frame         203, digit  1 =============
+L frame 203 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            37848060==process a frame         204, digit  1 =============
+L frame 204 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            38032675==process a frame         205, digit  3 =============
+L frame 205 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            38217290==process a frame         206, digit  9 =============
+L frame 206 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            38401905==process a frame         207, digit  5 =============
+L frame 207 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            38586520==process a frame         208, digit  2 =============
+L frame 208 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            38771135==process a frame         209, digit  9 =============
+L frame 209 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            38955750==process a frame         210, digit  4 =============
+L frame 210 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            39140365==process a frame         211, digit  5 =============
+L frame 211 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            39324980==process a frame         212, digit  9 =============
+L frame 212 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            39509595==process a frame         213, digit  3 =============
+L frame 213 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            39694210==process a frame         214, digit  9 =============
+L frame 214 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            39878825==process a frame         215, digit  0 =============
+L frame 215 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            40063440==process a frame         216, digit  3 =============
+L frame 216 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            40248055==process a frame         217, digit  6 =============
+L frame 217 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            40432670==process a frame         218, digit  5 =============
+L frame 218 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            40617285==process a frame         219, digit  5 =============
+L frame 219 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            40801900==process a frame         220, digit  7 =============
+L frame 220 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            40986515==process a frame         221, digit  2 =============
+L frame 221 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            41171130==process a frame         222, digit  2 =============
+L frame 222 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            41355745==process a frame         223, digit  7 =============
+L frame 223 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            41540360==process a frame         224, digit  1 =============
+L frame 224 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            41724975==process a frame         225, digit  2 =============
+L frame 225 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            41909590==process a frame         226, digit  8 =============
+L frame 226 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            42094205==process a frame         227, digit  4 =============
+L frame 227 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            42278820==process a frame         228, digit  1 =============
+L frame 228 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            42463435==process a frame         229, digit  7 =============
+L frame 229 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            42648050==process a frame         230, digit  3 =============
+L frame 230 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            42832665==process a frame         231, digit  3 =============
+L frame 231 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            43017280==process a frame         232, digit  8 =============
+L frame 232 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            43201895==process a frame         233, digit  8 =============
+L frame 233 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            43386510==process a frame         234, digit  7 =============
+L frame 234 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            43571125==process a frame         235, digit  9 =============
+L frame 235 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            43755740==process a frame         236, digit  2 =============
+L frame 236 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            43940355==process a frame         237, digit  2 =============
+L frame 237 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            44124970==process a frame         238, digit  4 =============
+L frame 238 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            44309585==process a frame         239, digit  1 =============
+L frame 239 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            44494200==process a frame         240, digit  5 =============
+L frame 240 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            44678815==process a frame         241, digit  9 =============
+L frame 241 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            44863430==process a frame         242, digit  8 =============
+L frame 242 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            45048045==process a frame         243, digit  7 =============
+L frame 243 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            45232660==process a frame         244, digit  2 =============
+L frame 244 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            45417275==process a frame         245, digit  3 =============
+L frame 245 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            45601890==process a frame         246, digit  0 =============
+L frame 246 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            45786505==process a frame         247, digit  2 =============
+L frame 247 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            45971120==process a frame         248, digit  4 =============
+L frame 248 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            46155735==process a frame         249, digit  2 =============
+L frame 249 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            46340350==process a frame         250, digit  4 =============
+L frame 250 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            46524965==process a frame         251, digit  1 =============
+L frame 251 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            46709580==process a frame         252, digit  9 =============
+L frame 252 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            46894195==process a frame         253, digit  5 =============
+L frame 253 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            47078810==process a frame         254, digit  7 =============
+L frame 254 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            47263425==process a frame         255, digit  7 =============
+L frame 255 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            47448040==process a frame         256, digit  2 =============
+L frame 256 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            47632655==process a frame         257, digit  8 =============
+L frame 257 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            47817270==process a frame         258, digit  2 =============
+L frame 258 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            48001885==process a frame         259, digit  0 =============
+L frame 259 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            48186500==process a frame         260, digit  8 =============
+L frame 260 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            48371115==process a frame         261, digit  5 =============
+L frame 261 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            48555730==process a frame         262, digit  7 =============
+L frame 262 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            48740345==process a frame         263, digit  7 =============
+L frame 263 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            48924960==process a frame         264, digit  9 =============
+L frame 264 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            49109575==process a frame         265, digit  1 =============
+L frame 265 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            49294190==process a frame         266, digit  8 =============
+L frame 266 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            49478805==process a frame         267, digit  1 =============
+L frame 267 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            49663420==process a frame         268, digit  8 =============
+L frame 268 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            49848035==process a frame         269, digit  0 =============
+L frame 269 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            50032650==process a frame         270, digit  3 =============
+L frame 270 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            50217265==process a frame         271, digit  0 =============
+L frame 271 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            50401880==process a frame         272, digit  1 =============
+L frame 272 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            50586495==process a frame         273, digit  9 =============
+L frame 273 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            50771110==process a frame         274, digit  9 =============
+L frame 274 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            50955725==process a frame         275, digit  4 =============
+L frame 275 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            51140340==process a frame         276, digit  1 =============
+L frame 276 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            51324955==process a frame         277, digit  8 =============
+L frame 277 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            51509570==process a frame         278, digit  2 =============
+L frame 278 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            51694185==process a frame         279, digit  1 =============
+L frame 279 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            51878800==process a frame         280, digit  2 =============
+L frame 280 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            52063415==process a frame         281, digit  9 =============
+L frame 281 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            52248030==process a frame         282, digit  7 =============
+L frame 282 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            52432645==process a frame         283, digit  5 =============
+L frame 283 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            52617260==process a frame         284, digit  9 =============
+L frame 284 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            52801875==process a frame         285, digit  2 =============
+L frame 285 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            52986490==process a frame         286, digit  6 =============
+L frame 286 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            53171105==process a frame         287, digit  4 =============
+L frame 287 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            53355720==process a frame         288, digit  1 =============
+L frame 288 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            53540335==process a frame         289, digit  5 =============
+L frame 289 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            53724950==process a frame         290, digit  8 =============
+L frame 290 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            53909565==process a frame         291, digit  2 =============
+L frame 291 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            54094180==process a frame         292, digit  9 =============
+L frame 292 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            54278795==process a frame         293, digit  2 =============
+L frame 293 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            54463410==process a frame         294, digit  0 =============
+L frame 294 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            54648025==process a frame         295, digit  4 =============
+L frame 295 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            54832640==process a frame         296, digit  0 =============
+L frame 296 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            55017255==process a frame         297, digit  0 =============
+L frame 297 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            55201870==process a frame         298, digit  2 =============
+L frame 298 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            55386485==process a frame         299, digit  8 =============
+L frame 299 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            55571100==process a frame         300, digit  4 =============
+L frame 300 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            55755715==process a frame         301, digit  7 =============
+L frame 301 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            55940330==process a frame         302, digit  1 =============
+L frame 302 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            56124945==process a frame         303, digit  2 =============
+L frame 303 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            56309560==process a frame         304, digit  4 =============
+L frame 304 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            56494175==process a frame         305, digit  0 =============
+L frame 305 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            56678790==process a frame         306, digit  2 =============
+L frame 306 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            56863405==process a frame         307, digit  7 =============
+L frame 307 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            57048020==process a frame         308, digit  4 =============
+L frame 308 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            57232635==process a frame         309, digit  3 =============
+L frame 309 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            57417250==process a frame         310, digit  3 =============
+L frame 310 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            57601865==process a frame         311, digit  0 =============
+L frame 311 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            57786480==process a frame         312, digit  0 =============
+L frame 312 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            57971095==process a frame         313, digit  3 =============
+L frame 313 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            58155710==process a frame         314, digit  1 =============
+L frame 314 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            58340325==process a frame         315, digit  9 =============
+L frame 315 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            58524940==process a frame         316, digit  6 =============
+L frame 316 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            58709555==process a frame         317, digit  5 =============
+L frame 317 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            58894170==process a frame         318, digit  2 =============
+L frame 318 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            59078785==process a frame         319, digit  5 =============
+L frame 319 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            59263400==process a frame         320, digit  9 =============
+L frame 320 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            59448015==process a frame         321, digit  2 =============
+L frame 321 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            59632630==process a frame         322, digit  9 =============
+L frame 322 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            59817245==process a frame         323, digit  3 =============
+L frame 323 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            60001860==process a frame         324, digit  0 =============
+L frame 324 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            60186475==process a frame         325, digit  4 =============
+L frame 325 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            60371090==process a frame         326, digit  2 =============
+L frame 326 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            60555705==process a frame         327, digit  0 =============
+L frame 327 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            60740320==process a frame         328, digit  7 =============
+L frame 328 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            60924935==process a frame         329, digit  1 =============
+L frame 329 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            61109550==process a frame         330, digit  1 =============
+L frame 330 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            61294165==process a frame         331, digit  2 =============
+L frame 331 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            61478780==process a frame         332, digit  1 =============
+L frame 332 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            61663395==process a frame         333, digit  5 =============
+L frame 333 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            61848010==process a frame         334, digit  3 =============
+L frame 334 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            62032625==process a frame         335, digit  3 =============
+L frame 335 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            62217240==process a frame         336, digit  9 =============
+L frame 336 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            62401855==process a frame         337, digit  7 =============
+L frame 337 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            62586470==process a frame         338, digit  8 =============
+L frame 338 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            62771085==process a frame         339, digit  6 =============
+L frame 339 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            62955700==process a frame         340, digit  3 =============
+L frame 340 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            63140315==process a frame         341, digit  6 =============
+L frame 341 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            63324930==process a frame         342, digit  1 =============
+L frame 342 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            63509545==process a frame         343, digit  3 =============
+L frame 343 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            63694160==process a frame         344, digit  8 =============
+L frame 344 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            63878775==process a frame         345, digit  1 =============
+L frame 345 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            64063390==process a frame         346, digit  0 =============
+L frame 346 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            64248005==process a frame         347, digit  5 =============
+L frame 347 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            64432620==process a frame         348, digit  1 =============
+L frame 348 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            64617235==process a frame         349, digit  3 =============
+L frame 349 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            64801850==process a frame         350, digit  1 =============
+L frame 350 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            64986465==process a frame         351, digit  5 =============
+L frame 351 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            65171080==process a frame         352, digit  5 =============
+L frame 352 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            65355695==process a frame         353, digit  6 =============
+L frame 353 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            65540310==process a frame         354, digit  1 =============
+L frame 354 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            65724925==process a frame         355, digit  8 =============
+L frame 355 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            65909540==process a frame         356, digit  5 =============
+L frame 356 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            66094155==process a frame         357, digit  1 =============
+L frame 357 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            66278770==process a frame         358, digit  7 =============
+L frame 358 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            66463385==process a frame         359, digit  9 =============
+L frame 359 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            66648000==process a frame         360, digit  4 =============
+L frame 360 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            66832615==process a frame         361, digit  6 =============
+L frame 361 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            67017230==process a frame         362, digit  2 =============
+L frame 362 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            67201845==process a frame         363, digit  2 =============
+L frame 363 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            67386460==process a frame         364, digit  5 =============
+L frame 364 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            67571075==process a frame         365, digit  0 =============
+L frame 365 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            67755690==process a frame         366, digit  6 =============
+L frame 366 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            67940305==process a frame         367, digit  5 =============
+L frame 367 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            68124920==process a frame         368, digit  6 =============
+L frame 368 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            68309535==process a frame         369, digit  3 =============
+L frame 369 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            68494150==process a frame         370, digit  7 =============
+L frame 370 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            68678765==process a frame         371, digit  2 =============
+L frame 371 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            68863380==process a frame         372, digit  0 =============
+L frame 372 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            69047995==process a frame         373, digit  8 =============
+L frame 373 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            69232610==process a frame         374, digit  8 =============
+L frame 374 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            69417225==process a frame         375, digit  5 =============
+L frame 375 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            69601840==process a frame         376, digit  4 =============
+L frame 376 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            69786455==process a frame         377, digit  1 =============
+L frame 377 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            69971070==process a frame         378, digit  1 =============
+L frame 378 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            70155685==process a frame         379, digit  4 =============
+L frame 379 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            70340300==process a frame         380, digit  0 =============
+L frame 380 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            70524915==process a frame         381, digit  3 =============
+L frame 381 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            70709530==process a frame         382, digit  3 =============
+L frame 382 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            70894145==process a frame         383, digit  7 =============
+L frame 383 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            71078760==process a frame         384, digit  6 =============
+L frame 384 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            71263375==process a frame         385, digit  1 =============
+L frame 385 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            71447990==process a frame         386, digit  6 =============
+L frame 386 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            71632605==process a frame         387, digit  2 =============
+L frame 387 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            71817220==process a frame         388, digit  1 =============
+L frame 388 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            72001835==process a frame         389, digit  9 =============
+L frame 389 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            72186450==process a frame         390, digit  2 =============
+L frame 390 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            72371065==process a frame         391, digit  8 =============
+L frame 391 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            72555680==process a frame         392, digit  6 =============
+L frame 392 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            72740295==process a frame         393, digit  1 =============
+L frame 393 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            72924910==process a frame         394, digit  9 =============
+L frame 394 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            73109525==process a frame         395, digit  5 =============
+L frame 395 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            73294140==process a frame         396, digit  2 =============
+L frame 396 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            73478755==process a frame         397, digit  5 =============
+L frame 397 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            73663370==process a frame         398, digit  4 =============
+L frame 398 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            73847985==process a frame         399, digit  4 =============
+L frame 399 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            74032600==process a frame         400, digit  2 =============
+L frame 400 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            74217215==process a frame         401, digit  8 =============
+L frame 401 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            74401830==process a frame         402, digit  3 =============
+L frame 402 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            74586445==process a frame         403, digit  8 =============
+L frame 403 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            74771060==process a frame         404, digit  2 =============
+L frame 404 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            74955675==process a frame         405, digit  4 =============
+L frame 405 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            75140290==process a frame         406, digit  5 =============
+L frame 406 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            75324905==process a frame         407, digit  0 =============
+L frame 407 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            75509520==process a frame         408, digit  3 =============
+L frame 408 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            75694135==process a frame         409, digit  1 =============
+L frame 409 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            75878750==process a frame         410, digit  7 =============
+L frame 410 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            76063365==process a frame         411, digit  7 =============
+L frame 411 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            76247980==process a frame         412, digit  3 =============
+L frame 412 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            76432595==process a frame         413, digit  7 =============
+L frame 413 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            76617210==process a frame         414, digit  9 =============
+L frame 414 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            76801825==process a frame         415, digit  7 =============
+L frame 415 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            76986440==process a frame         416, digit  1 =============
+L frame 416 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            77171055==process a frame         417, digit  9 =============
+L frame 417 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            77355670==process a frame         418, digit  2 =============
+L frame 418 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            77540285==process a frame         419, digit  1 =============
+L frame 419 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            77724900==process a frame         420, digit  4 =============
+L frame 420 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            77909515==process a frame         421, digit  2 =============
+L frame 421 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            78094130==process a frame         422, digit  9 =============
+L frame 422 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            78278745==process a frame         423, digit  2 =============
+L frame 423 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            78463360==process a frame         424, digit  0 =============
+L frame 424 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            78647975==process a frame         425, digit  4 =============
+L frame 425 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            78832590==process a frame         426, digit  9 =============
+L frame 426 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            79017205==process a frame         427, digit  1 =============
+L frame 427 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            79201820==process a frame         428, digit  4 =============
+L frame 428 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            79386435==process a frame         429, digit  8 =============
+L frame 429 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            79571050==process a frame         430, digit  1 =============
+L frame 430 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            79755665==process a frame         431, digit  8 =============
+L frame 431 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            79940280==process a frame         432, digit  4 =============
+L frame 432 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            80124895==process a frame         433, digit  5 =============
+L frame 433 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            80309510==process a frame         434, digit  9 =============
+L frame 434 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            80494125==process a frame         435, digit  8 =============
+L frame 435 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            80678740==process a frame         436, digit  8 =============
+L frame 436 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            80863355==process a frame         437, digit  3 =============
+L frame 437 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            81047970==process a frame         438, digit  7 =============
+L frame 438 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            81232585==process a frame         439, digit  6 =============
+L frame 439 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            81417200==process a frame         440, digit  0 =============
+L frame 440 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            81601815==process a frame         441, digit  0 =============
+L frame 441 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            81786430==process a frame         442, digit  3 =============
+L frame 442 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            81971045==process a frame         443, digit  0 =============
+L frame 443 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            82155660==process a frame         444, digit  2 =============
+L frame 444 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            82340275==process a frame         445, digit  6 =============
+L frame 445 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            82524890==process a frame         446, digit  6 =============
+L frame 446 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            82709505==process a frame         447, digit  4 =============
+L frame 447 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            82894120==process a frame         448, digit  9 =============
+L frame 448 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            83078735==process a frame         449, digit  3 =============
+L frame 449 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            83263350==process a frame         450, digit  3 =============
+L frame 450 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            83447965==process a frame         451, digit  3 =============
+L frame 451 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            83632580==process a frame         452, digit  2 =============
+L frame 452 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            83817195==process a frame         453, digit  3 =============
+L frame 453 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            84001810==process a frame         454, digit  9 =============
+L frame 454 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            84186425==process a frame         455, digit  1 =============
+L frame 455 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            84371040==process a frame         456, digit  2 =============
+L frame 456 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            84555655==process a frame         457, digit  6 =============
+L frame 457 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            84740270==process a frame         458, digit  8 =============
+L frame 458 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            84924885==process a frame         459, digit  0 =============
+L frame 459 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            85109500==process a frame         460, digit  5 =============
+L frame 460 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            85294115==process a frame         461, digit  6 =============
+L frame 461 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            85478730==process a frame         462, digit  6 =============
+L frame 462 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            85663345==process a frame         463, digit  6 =============
+L frame 463 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            85847960==process a frame         464, digit  3 =============
+L frame 464 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            86032575==process a frame         465, digit  8 =============
+L frame 465 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            86217190==process a frame         466, digit  8 =============
+L frame 466 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            86401805==process a frame         467, digit  2 =============
+L frame 467 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            86586420==process a frame         468, digit  7 =============
+L frame 468 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            86771035==process a frame         469, digit  5 =============
+L frame 469 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            86955650==process a frame         470, digit  8 =============
+L frame 470 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            87140265==process a frame         471, digit  9 =============
+L frame 471 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            87324880==process a frame         472, digit  6 =============
+L frame 472 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            87509495==process a frame         473, digit  1 =============
+L frame 473 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            87694110==process a frame         474, digit  8 =============
+L frame 474 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            87878725==process a frame         475, digit  4 =============
+L frame 475 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            88063340==process a frame         476, digit  1 =============
+L frame 476 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            88247955==process a frame         477, digit  2 =============
+L frame 477 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            88432570==process a frame         478, digit  5 =============
+L frame 478 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            88617185==process a frame         479, digit  9 =============
+L frame 479 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            88801800==process a frame         480, digit  1 =============
+L frame 480 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            88986415==process a frame         481, digit  9 =============
+L frame 481 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            89171030==process a frame         482, digit  7 =============
+L frame 482 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            89355645==process a frame         483, digit  5 =============
+L frame 483 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            89540260==process a frame         484, digit  4 =============
+L frame 484 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            89724875==process a frame         485, digit  0 =============
+L frame 485 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            89909490==process a frame         486, digit  8 =============
+L frame 486 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            90094105==process a frame         487, digit  9 =============
+L frame 487 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            90278720==process a frame         488, digit  9 =============
+L frame 488 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            90463335==process a frame         489, digit  1 =============
+L frame 489 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            90647950==process a frame         490, digit  0 =============
+L frame 490 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            90832565==process a frame         491, digit  5 =============
+L frame 491 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            91017180==process a frame         492, digit  2 =============
+L frame 492 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            91201795==process a frame         493, digit  3 =============
+L frame 493 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            91386410==process a frame         494, digit  7 =============
+L frame 494 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            91571025==process a frame         495, digit  2 =============
+L frame 495 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            91755640==process a frame         496, digit  9 =============
+L frame 496 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            91940255==process a frame         497, digit  4 =============
+L frame 497 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            92124870==process a frame         498, digit  0 =============
+L frame 498 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            92309485==process a frame         499, digit  6 =============
+L frame 499 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            92494100==process a frame         500, digit  3 =============
+L frame 500 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            92678715==process a frame         501, digit  9 =============
+L frame 501 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            92863330==process a frame         502, digit  5 =============
+L frame 502 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            93047945==process a frame         503, digit  2 =============
+L frame 503 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            93232560==process a frame         504, digit  1 =============
+L frame 504 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            93417175==process a frame         505, digit  3 =============
+L frame 505 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            93601790==process a frame         506, digit  1 =============
+L frame 506 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            93786405==process a frame         507, digit  3 =============
+L frame 507 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            93971020==process a frame         508, digit  6 =============
+L frame 508 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            94155635==process a frame         509, digit  5 =============
+L frame 509 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            94340250==process a frame         510, digit  7 =============
+L frame 510 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            94524865==process a frame         511, digit  4 =============
+L frame 511 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            94709480==process a frame         512, digit  2 =============
+L frame 512 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            94894095==process a frame         513, digit  2 =============
+L frame 513 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            95078710==process a frame         514, digit  6 =============
+L frame 514 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            95263325==process a frame         515, digit  3 =============
+L frame 515 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            95447940==process a frame         516, digit  2 =============
+L frame 516 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            95632555==process a frame         517, digit  6 =============
+L frame 517 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            95817170==process a frame         518, digit  5 =============
+L frame 518 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            96001785==process a frame         519, digit  4 =============
+L frame 519 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            96186400==process a frame         520, digit  8 =============
+L frame 520 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            96371015==process a frame         521, digit  9 =============
+L frame 521 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            96555630==process a frame         522, digit  7 =============
+L frame 522 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            96740245==process a frame         523, digit  1 =============
+L frame 523 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            96924860==process a frame         524, digit  3 =============
+L frame 524 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            97109475==process a frame         525, digit  0 =============
+L frame 525 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            97294090==process a frame         526, digit  3 =============
+L frame 526 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            97478705==process a frame         527, digit  8 =============
+L frame 527 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            97663320==process a frame         528, digit  3 =============
+L frame 528 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            97847935==process a frame         529, digit  1 =============
+L frame 529 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            98032550==process a frame         530, digit  9 =============
+L frame 530 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            98217165==process a frame         531, digit  3 =============
+L frame 531 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            98401780==process a frame         532, digit  4 =============
+L frame 532 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            98586395==process a frame         533, digit  4 =============
+L frame 533 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            98771010==process a frame         534, digit  6 =============
+L frame 534 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            98955625==process a frame         535, digit  4 =============
+L frame 535 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            99140240==process a frame         536, digit  2 =============
+L frame 536 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            99324855==process a frame         537, digit  1 =============
+L frame 537 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            99509470==process a frame         538, digit  8 =============
+L frame 538 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            99694085==process a frame         539, digit  2 =============
+L frame 539 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T            99878700==process a frame         540, digit  5 =============
+L frame 540 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           100063315==process a frame         541, digit  4 =============
+L frame 541 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           100247930==process a frame         542, digit  8 =============
+L frame 542 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           100432545==process a frame         543, digit  8 =============
+L frame 543 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           100617160==process a frame         544, digit  4 =============
+L frame 544 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           100801775==process a frame         545, digit  0 =============
+L frame 545 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           100986390==process a frame         546, digit  0 =============
+L frame 546 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           101171005==process a frame         547, digit  2 =============
+L frame 547 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           101355620==process a frame         548, digit  3 =============
+L frame 548 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           101540235==process a frame         549, digit  2 =============
+L frame 549 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           101724850==process a frame         550, digit  7 =============
+L frame 550 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           101909465==process a frame         551, digit  7 =============
+L frame 551 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           102094080==process a frame         552, digit  0 =============
+L frame 552 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           102278695==process a frame         553, digit  8 =============
+L frame 553 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           102463310==process a frame         554, digit  7 =============
+L frame 554 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           102647925==process a frame         555, digit  4 =============
+L frame 555 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           102832540==process a frame         556, digit  4 =============
+L frame 556 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           103017155==process a frame         557, digit  7 =============
+L frame 557 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           103201770==process a frame         558, digit  9 =============
+L frame 558 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           103386385==process a frame         559, digit  6 =============
+L frame 559 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           103571000==process a frame         560, digit  9 =============
+L frame 560 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           103755615==process a frame         561, digit  0 =============
+L frame 561 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           103940230==process a frame         562, digit  9 =============
+L frame 562 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           104124845==process a frame         563, digit  8 =============
+L frame 563 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           104309460==process a frame         564, digit  0 =============
+L frame 564 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           104494075==process a frame         565, digit  4 =============
+L frame 565 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           104678690==process a frame         566, digit  6 =============
+L frame 566 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           104863305==process a frame         567, digit  0 =============
+L frame 567 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           105047920==process a frame         568, digit  6 =============
+L frame 568 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           105232535==process a frame         569, digit  3 =============
+L frame 569 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           105417150==process a frame         570, digit  5 =============
+L frame 570 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           105601765==process a frame         571, digit  4 =============
+L frame 571 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           105786380==process a frame         572, digit  8 =============
+L frame 572 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           105970995==process a frame         573, digit  3 =============
+L frame 573 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           106155610==process a frame         574, digit  3 =============
+L frame 574 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           106340225==process a frame         575, digit  9 =============
+L frame 575 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           106524840==process a frame         576, digit  3 =============
+L frame 576 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           106709455==process a frame         577, digit  3 =============
+L frame 577 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           106894070==process a frame         578, digit  3 =============
+L frame 578 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           107078685==process a frame         579, digit  7 =============
+L frame 579 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           107263300==process a frame         580, digit  8 =============
+L frame 580 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           107447915==process a frame         581, digit  0 =============
+L frame 581 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           107632530==process a frame         582, digit  2 =============
+L frame 582 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           107817145==process a frame         583, digit  2 =============
+L frame 583 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           108001760==process a frame         584, digit  1 =============
+L frame 584 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           108186375==process a frame         585, digit  7 =============
+L frame 585 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           108370990==process a frame         586, digit  0 =============
+L frame 586 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           108555605==process a frame         587, digit  6 =============
+L frame 587 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           108740220==process a frame         588, digit  5 =============
+L frame 588 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           108924835==process a frame         589, digit  4 =============
+L frame 589 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           109109450==process a frame         590, digit  3 =============
+L frame 590 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           109294065==process a frame         591, digit  8 =============
+L frame 591 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           109478680==process a frame         592, digit  0 =============
+L frame 592 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           109663295==process a frame         593, digit  9 =============
+L frame 593 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           109847910==process a frame         594, digit  6 =============
+L frame 594 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           110032525==process a frame         595, digit  3 =============
+L frame 595 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           110217140==process a frame         596, digit  8 =============
+L frame 596 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           110401755==process a frame         597, digit  0 =============
+L frame 597 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           110586370==process a frame         598, digit  9 =============
+L frame 598 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           110770985==process a frame         599, digit  9 =============
+L frame 599 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           110955600==process a frame         600, digit  6 =============
+L frame 600 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           111140215==process a frame         601, digit  8 =============
+L frame 601 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           111324830==process a frame         602, digit  6 =============
+L frame 602 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           111509445==process a frame         603, digit  8 =============
+L frame 603 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           111694060==process a frame         604, digit  5 =============
+L frame 604 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           111878675==process a frame         605, digit  7 =============
+L frame 605 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           112063290==process a frame         606, digit  8 =============
+L frame 606 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           112247905==process a frame         607, digit  6 =============
+L frame 607 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           112432520==process a frame         608, digit  0 =============
+L frame 608 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           112617135==process a frame         609, digit  2 =============
+L frame 609 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           112801750==process a frame         610, digit  4 =============
+L frame 610 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           112986365==process a frame         611, digit  0 =============
+L frame 611 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           113170980==process a frame         612, digit  2 =============
+L frame 612 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           113355595==process a frame         613, digit  2 =============
+L frame 613 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           113540210==process a frame         614, digit  3 =============
+L frame 614 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           113724825==process a frame         615, digit  1 =============
+L frame 615 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           113909440==process a frame         616, digit  9 =============
+L frame 616 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           114094055==process a frame         617, digit  7 =============
+L frame 617 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           114278670==process a frame         618, digit  5 =============
+L frame 618 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           114463285==process a frame         619, digit  1 =============
+L frame 619 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           114647900==process a frame         620, digit  0 =============
+L frame 620 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           114832515==process a frame         621, digit  8 =============
+L frame 621 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           115017130==process a frame         622, digit  4 =============
+L frame 622 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           115201745==process a frame         623, digit  6 =============
+L frame 623 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           115386360==process a frame         624, digit  2 =============
+L frame 624 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           115570975==process a frame         625, digit  6 =============
+L frame 625 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           115755590==process a frame         626, digit  7 =============
+L frame 626 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           115940205==process a frame         627, digit  9 =============
+L frame 627 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           116124820==process a frame         628, digit  3 =============
+L frame 628 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           116309435==process a frame         629, digit  2 =============
+L frame 629 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           116494050==process a frame         630, digit  9 =============
+L frame 630 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           116678665==process a frame         631, digit  8 =============
+L frame 631 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           116863280==process a frame         632, digit  2 =============
+L frame 632 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           117047895==process a frame         633, digit  2 =============
+L frame 633 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           117232510==process a frame         634, digit  9 =============
+L frame 634 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           117417125==process a frame         635, digit  2 =============
+L frame 635 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           117601740==process a frame         636, digit  7 =============
+L frame 636 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           117786355==process a frame         637, digit  3 =============
+L frame 637 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           117970970==process a frame         638, digit  5 =============
+L frame 638 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           118155585==process a frame         639, digit  9 =============
+L frame 639 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           118340200==process a frame         640, digit  1 =============
+L frame 640 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           118524815==process a frame         641, digit  8 =============
+L frame 641 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           118709430==process a frame         642, digit  0 =============
+L frame 642 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           118894045==process a frame         643, digit  2 =============
+L frame 643 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           119078660==process a frame         644, digit  0 =============
+L frame 644 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           119263275==process a frame         645, digit  5 =============
+L frame 645 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           119447890==process a frame         646, digit  2 =============
+L frame 646 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           119632505==process a frame         647, digit  1 =============
+L frame 647 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           119817120==process a frame         648, digit  3 =============
+L frame 648 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           120001735==process a frame         649, digit  7 =============
+L frame 649 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           120186350==process a frame         650, digit  6 =============
+L frame 650 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           120370965==process a frame         651, digit  7 =============
+L frame 651 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           120555580==process a frame         652, digit  1 =============
+L frame 652 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           120740195==process a frame         653, digit  2 =============
+L frame 653 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           120924810==process a frame         654, digit  5 =============
+L frame 654 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           121109425==process a frame         655, digit  8 =============
+L frame 655 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           121294040==process a frame         656, digit  0 =============
+L frame 656 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           121478655==process a frame         657, digit  3 =============
+L frame 657 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           121663270==process a frame         658, digit  7 =============
+L frame 658 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           121847885==process a frame         659, digit  7 =============
+L frame 659 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           122032500==process a frame         660, digit  4 =============
+L frame 660 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           122217115==process a frame         661, digit  0 =============
+L frame 661 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           122401730==process a frame         662, digit  9 =============
+L frame 662 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           122586345==process a frame         663, digit  1 =============
+L frame 663 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           122770960==process a frame         664, digit  8 =============
+L frame 664 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           122955575==process a frame         665, digit  6 =============
+L frame 665 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           123140190==process a frame         666, digit  7 =============
+L frame 666 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           123324805==process a frame         667, digit  7 =============
+L frame 667 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           123509420==process a frame         668, digit  4 =============
+L frame 668 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           123694035==process a frame         669, digit  3 =============
+L frame 669 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           123878650==process a frame         670, digit  4 =============
+L frame 670 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           124063265==process a frame         671, digit  9 =============
+L frame 671 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           124247880==process a frame         672, digit  1 =============
+L frame 672 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           124432495==process a frame         673, digit  9 =============
+L frame 673 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           124617110==process a frame         674, digit  3 =============
+L frame 674 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           124801725==process a frame         675, digit  1 =============
+L frame 675 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           124986340==process a frame         676, digit  7 =============
+L frame 676 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           125170955==process a frame         677, digit  3 =============
+L frame 677 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           125355570==process a frame         678, digit  9 =============
+L frame 678 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           125540185==process a frame         679, digit  7 =============
+L frame 679 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           125724800==process a frame         680, digit  6 =============
+L frame 680 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           125909415==process a frame         681, digit  9 =============
+L frame 681 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           126094030==process a frame         682, digit  1 =============
+L frame 682 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           126278645==process a frame         683, digit  3 =============
+L frame 683 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           126463260==process a frame         684, digit  3 =============
+L frame 684 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           126647875==process a frame         685, digit  8 =============
+L frame 685 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           126832490==process a frame         686, digit  3 =============
+L frame 686 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           127017105==process a frame         687, digit  3 =============
+L frame 687 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           127201720==process a frame         688, digit  6 =============
+L frame 688 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           127386335==process a frame         689, digit  7 =============
+L frame 689 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           127570950==process a frame         690, digit  2 =============
+L frame 690 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           127755565==process a frame         691, digit  8 =============
+L frame 691 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           127940180==process a frame         692, digit  5 =============
+L frame 692 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           128124795==process a frame         693, digit  8 =============
+L frame 693 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           128309410==process a frame         694, digit  5 =============
+L frame 694 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           128494025==process a frame         695, digit  1 =============
+L frame 695 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           128678640==process a frame         696, digit  1 =============
+L frame 696 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           128863255==process a frame         697, digit  4 =============
+L frame 697 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           129047870==process a frame         698, digit  4 =============
+L frame 698 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           129232485==process a frame         699, digit  3 =============
+L frame 699 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           129417100==process a frame         700, digit  1 =============
+L frame 700 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           129601715==process a frame         701, digit  0 =============
+L frame 701 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           129786330==process a frame         702, digit  7 =============
+L frame 702 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           129970945==process a frame         703, digit  7 =============
+L frame 703 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           130155560==process a frame         704, digit  0 =============
+L frame 704 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           130340175==process a frame         705, digit  7 =============
+L frame 705 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           130524790==process a frame         706, digit  9 =============
+L frame 706 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           130709405==process a frame         707, digit  4 =============
+L frame 707 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           130894020==process a frame         708, digit  4 =============
+L frame 708 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           131078635==process a frame         709, digit  8 =============
+L frame 709 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           131263250==process a frame         710, digit  5 =============
+L frame 710 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           131447865==process a frame         711, digit  5 =============
+L frame 711 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           131632480==process a frame         712, digit  4 =============
+L frame 712 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           131817095==process a frame         713, digit  0 =============
+L frame 713 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           132001710==process a frame         714, digit  8 =============
+L frame 714 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           132186325==process a frame         715, digit  2 =============
+L frame 715 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           132370940==process a frame         716, digit  1 =============
+L frame 716 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           132555555==process a frame         717, digit  0 =============
+L frame 717 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           132740170==process a frame         718, digit  8 =============
+L frame 718 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           132924785==process a frame         719, digit  4 =============
+L frame 719 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           133109400==process a frame         720, digit  8 =============
+L frame 720 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           133294015==process a frame         721, digit  0 =============
+L frame 721 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           133478630==process a frame         722, digit  4 =============
+L frame 722 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           133663245==process a frame         723, digit  0 =============
+L frame 723 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           133847860==process a frame         724, digit  6 =============
+L frame 724 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           134032475==process a frame         725, digit  1 =============
+L frame 725 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           134217090==process a frame         726, digit  7 =============
+L frame 726 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           134401705==process a frame         727, digit  3 =============
+L frame 727 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           134586320==process a frame         728, digit  2 =============
+L frame 728 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           134770935==process a frame         729, digit  6 =============
+L frame 729 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           134955550==process a frame         730, digit  7 =============
+L frame 730 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           135140165==process a frame         731, digit  2 =============
+L frame 731 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           135324780==process a frame         732, digit  6 =============
+L frame 732 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           135509395==process a frame         733, digit  9 =============
+L frame 733 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           135694010==process a frame         734, digit  3 =============
+L frame 734 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           135878625==process a frame         735, digit  1 =============
+L frame 735 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           136063240==process a frame         736, digit  4 =============
+L frame 736 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           136247855==process a frame         737, digit  6 =============
+L frame 737 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           136432470==process a frame         738, digit  2 =============
+L frame 738 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           136617085==process a frame         739, digit  5 =============
+L frame 739 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           136801700==process a frame         740, digit  4 =============
+L frame 740 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           136986315==process a frame         741, digit  2 =============
+L frame 741 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           137170930==process a frame         742, digit  0 =============
+L frame 742 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           137355545==process a frame         743, digit  6 =============
+L frame 743 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           137540160==process a frame         744, digit  2 =============
+L frame 744 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           137724775==process a frame         745, digit  1 =============
+L frame 745 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           137909390==process a frame         746, digit  7 =============
+L frame 746 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           138094005==process a frame         747, digit  3 =============
+L frame 747 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           138278620==process a frame         748, digit  4 =============
+L frame 748 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           138463235==process a frame         749, digit  1 =============
+L frame 749 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           138647850==process a frame         750, digit  0 =============
+L frame 750 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           138832465==process a frame         751, digit  5 =============
+L frame 751 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           139017080==process a frame         752, digit  4 =============
+L frame 752 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           139201695==process a frame         753, digit  3 =============
+L frame 753 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           139386310==process a frame         754, digit  1 =============
+L frame 754 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           139570925==process a frame         755, digit  1 =============
+L frame 755 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           139755540==process a frame         756, digit  7 =============
+L frame 756 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           139940155==process a frame         757, digit  4 =============
+L frame 757 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           140124770==process a frame         758, digit  9 =============
+L frame 758 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           140309385==process a frame         759, digit  9 =============
+L frame 759 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           140494000==process a frame         760, digit  4 =============
+L frame 760 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           140678615==process a frame         761, digit  8 =============
+L frame 761 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           140863230==process a frame         762, digit  4 =============
+L frame 762 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           141047845==process a frame         763, digit  0 =============
+L frame 763 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           141232460==process a frame         764, digit  2 =============
+L frame 764 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           141417075==process a frame         765, digit  4 =============
+L frame 765 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           141601690==process a frame         766, digit  5 =============
+L frame 766 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           141786305==process a frame         767, digit  1 =============
+L frame 767 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           141970920==process a frame         768, digit  1 =============
+L frame 768 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           142155535==process a frame         769, digit  6 =============
+L frame 769 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           142340150==process a frame         770, digit  4 =============
+L frame 770 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           142524765==process a frame         771, digit  7 =============
+L frame 771 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           142709380==process a frame         772, digit  1 =============
+L frame 772 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           142893995==process a frame         773, digit  9 =============
+L frame 773 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           143078610==process a frame         774, digit  4 =============
+L frame 774 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           143263225==process a frame         775, digit  2 =============
+L frame 775 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           143447840==process a frame         776, digit  4 =============
+L frame 776 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           143632455==process a frame         777, digit  1 =============
+L frame 777 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           143817070==process a frame         778, digit  5 =============
+L frame 778 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           144001685==process a frame         779, digit  5 =============
+L frame 779 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           144186300==process a frame         780, digit  3 =============
+L frame 780 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           144370915==process a frame         781, digit  8 =============
+L frame 781 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           144555530==process a frame         782, digit  3 =============
+L frame 782 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           144740145==process a frame         783, digit  1 =============
+L frame 783 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           144924760==process a frame         784, digit  4 =============
+L frame 784 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           145109375==process a frame         785, digit  5 =============
+L frame 785 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           145293990==process a frame         786, digit  6 =============
+L frame 786 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           145478605==process a frame         787, digit  8 =============
+L frame 787 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           145663220==process a frame         788, digit  9 =============
+L frame 788 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           145847835==process a frame         789, digit  4 =============
+L frame 789 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           146032450==process a frame         790, digit  1 =============
+L frame 790 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           146217065==process a frame         791, digit  5 =============
+L frame 791 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           146401680==process a frame         792, digit  3 =============
+L frame 792 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           146586295==process a frame         793, digit  8 =============
+L frame 793 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           146770910==process a frame         794, digit  0 =============
+L frame 794 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           146955525==process a frame         795, digit  3 =============
+L frame 795 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           147140140==process a frame         796, digit  2 =============
+L frame 796 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           147324755==process a frame         797, digit  5 =============
+L frame 797 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           147509370==process a frame         798, digit  1 =============
+L frame 798 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           147693985==process a frame         799, digit  2 =============
+L frame 799 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           147878600==process a frame         800, digit  8 =============
+L frame 800 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           148063215==process a frame         801, digit  3 =============
+L frame 801 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           148247830==process a frame         802, digit  4 =============
+L frame 802 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           148432445==process a frame         803, digit  4 =============
+L frame 803 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           148617060==process a frame         804, digit  0 =============
+L frame 804 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           148801675==process a frame         805, digit  8 =============
+L frame 805 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           148986290==process a frame         806, digit  8 =============
+L frame 806 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           149170905==process a frame         807, digit  3 =============
+L frame 807 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           149355520==process a frame         808, digit  3 =============
+L frame 808 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           149540135==process a frame         809, digit  1 =============
+L frame 809 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           149724750==process a frame         810, digit  7 =============
+L frame 810 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           149909365==process a frame         811, digit  3 =============
+L frame 811 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           150093980==process a frame         812, digit  5 =============
+L frame 812 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           150278595==process a frame         813, digit  8 =============
+L frame 813 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           150463210==process a frame         814, digit  6 =============
+L frame 814 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           150647825==process a frame         815, digit  3 =============
+L frame 815 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           150832440==process a frame         816, digit  2 =============
+L frame 816 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           151017055==process a frame         817, digit  6 =============
+L frame 817 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           151201670==process a frame         818, digit  1 =============
+L frame 818 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           151386285==process a frame         819, digit  3 =============
+L frame 819 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           151570900==process a frame         820, digit  6 =============
+L frame 820 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           151755515==process a frame         821, digit  0 =============
+L frame 821 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           151940130==process a frame         822, digit  7 =============
+L frame 822 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           152124745==process a frame         823, digit  2 =============
+L frame 823 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           152309360==process a frame         824, digit  1 =============
+L frame 824 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           152493975==process a frame         825, digit  7 =============
+L frame 825 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           152678590==process a frame         826, digit  1 =============
+L frame 826 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           152863205==process a frame         827, digit  4 =============
+L frame 827 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           153047820==process a frame         828, digit  2 =============
+L frame 828 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           153232435==process a frame         829, digit  4 =============
+L frame 829 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           153417050==process a frame         830, digit  2 =============
+L frame 830 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           153601665==process a frame         831, digit  1 =============
+L frame 831 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           153786280==process a frame         832, digit  7 =============
+L frame 832 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           153970895==process a frame         833, digit  9 =============
+L frame 833 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           154155510==process a frame         834, digit  6 =============
+L frame 834 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           154340125==process a frame         835, digit  1 =============
+L frame 835 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           154524740==process a frame         836, digit  1 =============
+L frame 836 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           154709355==process a frame         837, digit  2 =============
+L frame 837 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           154893970==process a frame         838, digit  4 =============
+L frame 838 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           155078585==process a frame         839, digit  8 =============
+L frame 839 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           155263200==process a frame         840, digit  1 =============
+L frame 840 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           155447815==process a frame         841, digit  7 =============
+L frame 841 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           155632430==process a frame         842, digit  7 =============
+L frame 842 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           155817045==process a frame         843, digit  4 =============
+L frame 843 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           156001660==process a frame         844, digit  8 =============
+L frame 844 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           156186275==process a frame         845, digit  0 =============
+L frame 845 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           156370890==process a frame         846, digit  7 =============
+L frame 846 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           156555505==process a frame         847, digit  3 =============
+L frame 847 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           156740120==process a frame         848, digit  1 =============
+L frame 848 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           156924735==process a frame         849, digit  3 =============
+L frame 849 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           157109350==process a frame         850, digit  1 =============
+L frame 850 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           157293965==process a frame         851, digit  0 =============
+L frame 851 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           157478580==process a frame         852, digit  7 =============
+L frame 852 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           157663195==process a frame         853, digit  7 =============
+L frame 853 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           157847810==process a frame         854, digit  0 =============
+L frame 854 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           158032425==process a frame         855, digit  3 =============
+L frame 855 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           158217040==process a frame         856, digit  5 =============
+L frame 856 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           158401655==process a frame         857, digit  5 =============
+L frame 857 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           158586270==process a frame         858, digit  2 =============
+L frame 858 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           158770885==process a frame         859, digit  7 =============
+L frame 859 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           158955500==process a frame         860, digit  6 =============
+L frame 860 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           159140115==process a frame         861, digit  6 =============
+L frame 861 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           159324730==process a frame         862, digit  9 =============
+L frame 862 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           159509345==process a frame         863, digit  2 =============
+L frame 863 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           159693960==process a frame         864, digit  8 =============
+L frame 864 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           159878575==process a frame         865, digit  3 =============
+L frame 865 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           160063190==process a frame         866, digit  5 =============
+L frame 866 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           160247805==process a frame         867, digit  2 =============
+L frame 867 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           160432420==process a frame         868, digit  2 =============
+L frame 868 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           160617035==process a frame         869, digit  5 =============
+L frame 869 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           160801650==process a frame         870, digit  6 =============
+L frame 870 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           160986265==process a frame         871, digit  0 =============
+L frame 871 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           161170880==process a frame         872, digit  8 =============
+L frame 872 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           161355495==process a frame         873, digit  2 =============
+L frame 873 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           161540110==process a frame         874, digit  9 =============
+L frame 874 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           161724725==process a frame         875, digit  2 =============
+L frame 875 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           161909340==process a frame         876, digit  8 =============
+L frame 876 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           162093955==process a frame         877, digit  8 =============
+L frame 877 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           162278570==process a frame         878, digit  8 =============
+L frame 878 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           162463185==process a frame         879, digit  8 =============
+L frame 879 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           162647800==process a frame         880, digit  7 =============
+L frame 880 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           162832415==process a frame         881, digit  4 =============
+L frame 881 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           163017030==process a frame         882, digit  9 =============
+L frame 882 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           163201645==process a frame         883, digit  3 =============
+L frame 883 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           163386260==process a frame         884, digit  0 =============
+L frame 884 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           163570875==process a frame         885, digit  6 =============
+L frame 885 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           163755490==process a frame         886, digit  6 =============
+L frame 886 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           163940105==process a frame         887, digit  3 =============
+L frame 887 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           164124720==process a frame         888, digit  2 =============
+L frame 888 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           164309335==process a frame         889, digit  1 =============
+L frame 889 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           164493950==process a frame         890, digit  3 =============
+L frame 890 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           164678565==process a frame         891, digit  2 =============
+L frame 891 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           164863180==process a frame         892, digit  2 =============
+L frame 892 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           165047795==process a frame         893, digit  9 =============
+L frame 893 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           165232410==process a frame         894, digit  3 =============
+L frame 894 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           165417025==process a frame         895, digit  0 =============
+L frame 895 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           165601640==process a frame         896, digit  0 =============
+L frame 896 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           165786255==process a frame         897, digit  5 =============
+L frame 897 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           165970870==process a frame         898, digit  7 =============
+L frame 898 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+T           166155485==process a frame         899, digit  8 =============
+L frame 899 conv1 19601 pool1 785 conv2 2501 pool2 101 fc1 3001 fc2 10081 fc3 841 total 36917 interval 36923
+- tb_iv.v:56: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.49
+- Verilator: $finish at 166ms; walltime 69.448 s; speed 2.413 ms/s
+- Verilator: cpu 68.864 s on 1 threads; allocated 7 MB

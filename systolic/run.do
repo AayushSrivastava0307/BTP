@@ -39,7 +39,8 @@ vmap $LIB $LIB
 # Order matches the original flow; global.v is `include-d by the others but is
 # listed anyway so that editing it always forces a recompile.
 # pe.v / linebuf.v / systolic_conv.v are the systolic path, selected by the
-# SYSTOLIC_CONV1 switch in global.v.
+# SYSTOLIC_CONV1 switch in global.v.  fc2_par.v / fc2_par_rom.v are the parallel fc2,
+# selected by PARALLEL_FC2.
 vlog -sv -work $LIB -timescale=1ns/1ps \
     bhv_1p_sram.v      \
     bhv_1w1r_sram.v    \
@@ -51,6 +52,8 @@ vlog -sv -work $LIB -timescale=1ns/1ps \
     linebuf.v          \
     systolic_conv.v    \
     systolic_conv2.v   \
+    fc2_par_rom.v      \
+    fc2_par.v          \
     lenet.v            \
     lenet_roms.v       \
     lenet_tb.v

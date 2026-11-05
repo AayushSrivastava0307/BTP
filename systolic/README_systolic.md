@@ -4,6 +4,53 @@ conv1 and conv2 rebuilt as weight-stationary systolic arrays fed by line
 buffers. Everything else (pooling, relu, fc1–fc3, all ROMs, all SRAMs) is
 untouched.
 
+## Current build (Nov 2026): conv1 systolic, conv2 original, fc2 parallel
+
+Synthesis estimates showed the conv2 array costs about 300 extra DSP blocks for a 1.77x
+gain on conv2 (about 1,090 clocks per frame), and the XC7A100T has only 240 DSPs. With conv1
+fast, fc2 had become 58% of every frame, because it does one multiply per clock. So the
+default build in `global.v` is now:
+
+| Switch | Setting | Engine |
+|---|---|---|
+| `SYSTOLIC_CONV1` | on | `systolic_conv.v` (150 PEs) |
+| `SYSTOLIC_CONV2` | **off** | original iterator + conv/acc/mac |
+| `PARALLEL_FC2`, `FC2_PAR 12` | **on** | `fc2_par.v`: 12 neurons per group |
+
+| | original | conv1+conv2 systolic | **current** |
+|---|---|---|---|
+| conv1 | 19,601 | 1,065 | 1,065 |
+| conv2 | 2,501 | 1,412 | 2,501 |
+| fc2 | 10,081 | 10,081 | **862** |
+| frame interval | 36,923 | 17,298 | **9,168** |
+| vs original | 1x | 2.13x | **4.03x** |
+| DSP blocks (Yosys est., board has 240) | 129 | 573 | **280** |
+| MNIST, 900 digits | 888 | 888 | 888 |
+
+Clock counts are from `verilator/run_verilator.sh` (logs in `results/verilator_*_900.log`).
+That testbench counts one clock fewer per frame than `lenet_tb.v` in ModelSim (17,298 vs
+17,299 for the same build), so expect about 9,169 from `sim.bat`. Predictions are identical
+across all three builds for all 900 digits.
+
+**How fc2_par works.** fc2 has 120 inputs and 84 outputs. The original walks the 84 neurons
+one at a time, one multiply per clock (10,080 clocks). `fc2_par` reads each input once and
+feeds it to 12 multiply-accumulate lanes, each building a different neuron, so the layer is
+7 groups of 120 clocks. 12 is the largest number that divides both 84 and 120. The 12 sums of
+a group leave one per clock, neuron 0 first, through the same `q`/`q_en` interface as the old
+`conv_fc2`, while the next group is already accumulating, so `relu_fc2`, `relu_fc2_buf` and
+fc3 are untouched.
+
+The weights are the same 10,080 values, repacked 12 per ROM word by `gen_fc2_par_rom.py`
+into `fc2_par_rom.v` (840 words x 192 bits). Each lane forms `bias + SUM x*w` in the same
+order as the original `acc`, in a 32-bit register, and keeps the same slice `[30:15]`, so
+every output is bit-identical. `run_fc2_unit.do` checks this directly: it runs the original
+fc2 and `fc2_par` side by side on 9 input sets and compares all 84 outputs.
+
+**Resources.** 280 DSPs is still 40 over the board. Vivado builds the extra multipliers from
+LUTs (roughly 250-300 LUTs each, about 10-12k in total, against 63,400 available). Those
+LUT multipliers are the timing risk at 5 ns on a -1 part; a Vivado run with a 5 ns
+clock constraint will show whether they need a pipeline register.
+
 ## Why
 
 The baseline walks `(batch, row, col, ky, kx)` and does **one** multiply per
@@ -15,7 +62,7 @@ A systolic array unrolls the kernel taps into *hardware* instead of into
 pixel exactly **once** and holds the K−1 rows still needed. Compute scales
 with the number of PEs; memory traffic does not. That is the whole point.
 
-## Results
+## Results of the first systolic build (conv1 + conv2)
 
 | | baseline | systolic | |
 |---|---|---|---|
@@ -43,6 +90,11 @@ Predictions are **bit-identical** to the baseline — see *Verification*.
 | `systolic_conv.v` | conv1 layer — single input channel, one pass |
 | `systolic_conv2.v` | conv2 layer — six input channels, one pass each, partial sums held between passes |
 | `tb_systolic.v` | Unit tests for the blocks above |
+| `fc2_par.v` | fc2 with `FC2_PAR` neurons per group |
+| `fc2_par_rom.v` | fc2 weights and biases repacked for `fc2_par` (generated) |
+| `gen_fc2_par_rom.py` | Regenerates `fc2_par_rom.v` from `lenet_roms.v` |
+| `tb_fc2_par.v`, `run_fc2_unit.do` | Original fc2 vs `fc2_par`, bit for bit |
+| `verilator/` | Fast full-network simulation (900 digits in seconds) |
 
 Selected by `SYSTOLIC_CONV1` / `SYSTOLIC_CONV2` in `global.v`. Comment either
 out to fall back to the baseline `iterator` + `conv/acc/mac` path for that
@@ -101,6 +153,8 @@ sim.bat            all 900 frames  -> result.log, then scored
 sim.bat 20         first 20 frames (fast check)
 sim.bat gui        open the ModelSim GUI
 vsim -c -do run_unit.do    block-level unit tests
+vsim -c -do run_fc2_unit.do    fc2_par vs original fc2
+verilator/run_verilator.sh 900  same 900-frame run in Verilator (Linux/WSL)
 ```
 
 Needs `test_900f.yuv`; `sim.bat` generates it from `test_900.png` via
@@ -117,5 +171,7 @@ test labels — frame *k* is MNIST test image *k*.
 
 ## Not done yet
 
-DFX, loop tiling, FINN, pruning. Synthesis has not been re-run — all timing
-figures above are simulation clock counts, not post-route results.
+DFX, loop tiling, FINN, pruning. No Vivado run yet: resource figures are Yosys estimates and
+clock counts are simulation, not post-route results. Next candidates: fc1 (now the largest
+layer at 3,001 clocks; 32 lanes would save about 1,500) and a smaller conv2 array that reuses
+fewer PEs over several passes.
