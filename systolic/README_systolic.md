@@ -51,6 +51,38 @@ LUTs (roughly 250-300 LUTs each, about 10-12k in total, against 63,400 available
 LUT multipliers are the timing risk at 5 ns on a -1 part; a Vivado run with a 5 ns
 clock constraint will show whether they need a pipeline register.
 
+## Second Vivado round: every multiplier in a DSP block (7 Nov 2026)
+
+The run with block-RAM ROMs and `MUL_PIPE` (`results/vivado_mulpipe_bram_*` in
+`btp_reports_for_aayush_2026-11-07`) cut LUTs to 19,301 but timing got worse: WNS -5.590 ns
+at 5 ns and -3.918 ns at 6.67 ns, the same 10.57 ns path both times (about 94 MHz). All ten
+worst paths ran from the fc2 weight ROM (block RAM, 2.45 ns clock-to-out) straight into
+LUT-built multipliers in `fc2_par`; retiming left the extra register at the end of the
+multiply. DSPs were at 240/240, so the overflow multipliers had nowhere else to go.
+
+The baseline datapath (all three switches off, same block-RAM ROMs) reaches 6.17 ns, about
+162 MHz, limited by conv2's iterator address logic and not by any multiplier: its 144
+multipliers all fit in DSPs. So the accelerator's timing problem is entirely the multipliers
+that overflow the 240 DSP blocks.
+
+Fixes:
+
+1. **conv1 in two passes** (`CONV1_PASSES 2`). `systolic_conv` builds 3 arrays of 5x5 PEs
+   (75 PEs instead of 150) and streams the image twice, maps 0-2 then 3-5. Pass 1 results
+   are kept in `hold_mem` (784 x 48 bits, one block RAM) and sent with pass 2's, so
+   `lenet.v` and the conv1 buffer see the same writes as before. conv1: 1,065 -> 2,128 clocks.
+2. **fc2 inputs registered.** `fc2_par` registers the ROM words and the input value before
+   the multipliers (the DSPs' A/B registers), so the block-RAM read is no longer in the
+   multiply's clock cycle. fc2: 864 -> 865 clocks.
+
+Result in Verilator: 10,234 clocks per frame (3.61x fewer than the baseline's 36,923); all
+900 predictions identical to the original in both reset styles; with `CONV1_PASSES 1` the
+design is exactly as before. Yosys counts 205 DSP blocks (was 280), under the chip's 240.
+
+Real-time speedup must use each design's own post-route clock: today it is
+227.8 us (baseline at 6.17 ns) / 97.1 us (10.59 ns) = 2.35x. If this build closes near the
+baseline's 6.2 ns, it would be about 10,234 x 6.2 ns = 63 us, about 3.6x. Awaiting Vivado.
+
 ## Vivado results and timing fixes (6 Nov 2026)
 
 First routed run of the current build (Vivado 2025.2, xc7a100tcsg324-1, 5 ns clock, out of context):

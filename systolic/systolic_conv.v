@@ -10,9 +10,16 @@
 // within rounding.
 //
 // INPUT_NUM == 1 only; conv2 has six input channels, see systolic_conv2.v.
+//
+// PASSES = 2 builds arrays for half the output maps and streams the image twice
+// (maps 0..2, then 3..5): half the PEs (and DSP blocks) for twice the clocks.
+// Pass 1 results are kept in hold_mem and sent together with pass 2's, so the
+// q / q_en stream lenet.v sees is unchanged: one full OUTPUT_NUM-wide word per
+// output pixel, in the same order.
 module systolic_conv #(
 	parameter INPUT_NUM   = 1,
 	parameter OUTPUT_NUM  = 6,
+	parameter PASSES      = 1,		// 1 or 2; must divide OUTPUT_NUM
 	parameter K           = 5,
 	parameter IN_W        = 32,
 	parameter IN_H        = 32,
@@ -44,6 +51,8 @@ module systolic_conv #(
 	// address+SRAM latency
 	localparam	STREAM_N = NPIX + 2*K + 2;
 	localparam	LAT      = 2*(K-1);
+	localparam	OPP      = OUTPUT_NUM / PASSES;	// output maps computed per pass
+	localparam	NOUT_PIX = OUT_W * OUT_H;
 
 	localparam	S_IDLE = 2'd0,
 				S_WLD  = 2'd1,
@@ -52,17 +61,23 @@ module systolic_conv #(
 
 	reg	[1:0]	state;
 	reg	[15:0]	cnt;
+	reg			pass;			// PASSES = 2: 0 = maps 0..OPP-1, 1 = maps OPP..
+	wire		last_pass = (pass == PASSES - 1);
 
 	always @(`CLK_RST_EDGE)
 		if (`RST) begin
 			state <= S_IDLE;
 			cnt   <= 0;
+			pass  <= 0;
 		end else case (state)
-			S_IDLE:	if (go) begin state <= S_WLD; cnt <= 0; end
+			S_IDLE:	if (go) begin state <= S_WLD; cnt <= 0; pass <= 0; end
 			S_WLD:	if (cnt == NTAP + 1) begin state <= S_RUN; cnt <= 0; end
 					else cnt <= cnt + 1'b1;
-			S_RUN:	if (cnt == STREAM_N - 1) begin state <= S_DONE; cnt <= 0; end
-					else cnt <= cnt + 1'b1;
+			S_RUN:	if (cnt == STREAM_N - 1) begin
+						cnt <= 0;
+						if (last_pass)	state <= S_DONE;
+						else begin		state <= S_WLD; pass <= pass + 1'b1; end
+					end else cnt <= cnt + 1'b1;
 			S_DONE:	state <= S_IDLE;
 		endcase
 
@@ -94,8 +109,23 @@ module systolic_conv #(
 			wld_v <= (state == S_WLD);
 		end
 
-	wire	[0:OUTPUT_NUM-1][0:INPUT_NUM-1][`WD:0]	w_rom  = qa_weight;
-	wire	[0:OUTPUT_NUM-1][`WD_BIAS:0]			bias_in = qa_bias;
+	wire	[0:OUTPUT_NUM-1][0:INPUT_NUM-1][`WD:0]	w_rom_all = qa_weight;
+	wire	[0:OUTPUT_NUM-1][`WD_BIAS:0]			bias_all  = qa_bias;
+	// the OPP maps of the current pass
+	wire	[0:OPP-1][0:INPUT_NUM-1][`WD:0]			w_rom;
+	wire	[0:OPP-1][`WD_BIAS:0]					bias_in;
+	genvar ps;
+	generate
+		for (ps = 0; ps < OPP; ps = ps + 1) begin : gen_pass_sel
+			if (PASSES == 1) begin : one
+				assign w_rom[ps]   = w_rom_all[ps];
+				assign bias_in[ps] = bias_all[ps];
+			end else begin : two
+				assign w_rom[ps]   = pass ? w_rom_all[OPP + ps] : w_rom_all[ps];
+				assign bias_in[ps] = pass ? bias_all[OPP + ps]  : bias_all[ps];
+			end
+		end
+	endgenerate
 
 	wire	run = (state == S_RUN);
 
@@ -140,7 +170,7 @@ module systolic_conv #(
 		.clk	(clk),
 		.rstn	(rstn),
 		.en		(feed_v),
-		.clr	(state == S_IDLE),
+		.clr	(state == S_IDLE || state == S_WLD),	// empty before each pass
 		.d_in	(pix),
 		.d_out	(lb_q)
 		);
@@ -148,11 +178,11 @@ module systolic_conv #(
 	// OUTPUT_NUM arrays of K rows of K PEs.  PE j holds kernel column K-1-j
 	// (pe.v pairs w[0] with the newest sample); systolic row r holds kernel
 	// row r, since it is fed line-buffer tap r = input row out_row + r.
-	wire	[0:OUTPUT_NUM-1][0:K-1][`WDP*2-1:0]	row_q;
+	wire	[0:OPP-1][0:K-1][`WDP*2-1:0]	row_q;
 
 	genvar o, ky, j;
 	generate
-		for (o = 0; o < OUTPUT_NUM; o = o + 1) begin : gen_out
+		for (o = 0; o < OPP; o = o + 1) begin : gen_out
 			for (ky = 0; ky < K; ky = ky + 1) begin : gen_ky
 
 				// every lane carries the tap the ROM presents now; w_ld_row
@@ -177,28 +207,27 @@ module systolic_conv #(
 		end
 	endgenerate
 
-	reg	[0:OUTPUT_NUM-1][`WDP*2-1:0]	rsum;
+	reg	[0:OPP-1][`WDP*2-1:0]	rsum;
 	integer	oi;
 	always @(`CLK_RST_EDGE)
 		if (`RST)
-			for (oi = 0; oi < OUTPUT_NUM; oi = oi + 1) rsum[oi] <= 0;
+			for (oi = 0; oi < OPP; oi = oi + 1) rsum[oi] <= 0;
 		else
-			for (oi = 0; oi < OUTPUT_NUM; oi = oi + 1)
+			for (oi = 0; oi < OPP; oi = oi + 1)
 				rsum[oi] <= $signed(row_q[oi][0]) + $signed(row_q[oi][1])
 				          + $signed(row_q[oi][2]) + $signed(row_q[oi][3])
 				          + $signed(row_q[oi][4]);
 
 	// baseline keeps q_mac_acc[`WD+WIGHT_SHIFT : WIGHT_SHIFT]; same slice here
-	reg	[0:OUTPUT_NUM-1][`WD:0]	qv;
+	reg	[0:OPP-1][`WD:0]	qv;
 	always @(`CLK_RST_EDGE)
 		if (`RST)
-			for (oi = 0; oi < OUTPUT_NUM; oi = oi + 1) qv[oi] <= 0;
+			for (oi = 0; oi < OPP; oi = oi + 1) qv[oi] <= 0;
 		else
-			for (oi = 0; oi < OUTPUT_NUM; oi = oi + 1)
+			for (oi = 0; oi < OPP; oi = oi + 1)
 				qv[oi] <= ($signed(rsum[oi]) + $signed(bias_in[oi]))
 				          >>> WIGHT_SHIFT;
 
-	always @(*) q = qv;
 
 	// A row chain's result after clock n covers pixels n-(K-1)-m, so the
 	// window's leftmost pixel is base = n - 2*(K-1).  Real only when that
@@ -215,8 +244,39 @@ module systolic_conv #(
 		if (`RST)	win_v_d <= 0;
 		else		win_v_d <= {win_v_d[0], win_v};
 
+	reg		q_en_i;					// an output pixel finished, in either pass
 	always @(`CLK_RST_EDGE)
-		if (`RST)	q_en <= 0;
-		else		q_en <= win_v_d[1];
+		if (`RST)	q_en_i <= 0;
+		else		q_en_i <= win_v_d[1];
+
+	generate
+		if (PASSES == 1) begin : out_one
+			always @(*) q    = qv;
+			always @(*) q_en = q_en_i;
+		end else begin : out_two
+			// Pass 1: store each finished pixel's OPP maps, in output order.
+			// Pass 2: the k-th finished pixel goes out as {stored maps, new maps}.
+			// hold_q is read on the edge that raises q_en_i, so it holds pixel k
+			// for exactly the cycle q_en is high, the cycle lenet.v samples q.
+			(* ram_style = "block" *) reg [`WDP*OPP-1:0] hold_mem [0:NOUT_PIX-1];
+			reg		[`WDP*OPP-1:0]			hold_q;
+			reg		[$clog2(NOUT_PIX)-1:0]	wk, rk;
+			always @(posedge clk)
+				if (q_en_i && !last_pass)	hold_mem[wk] <= qv;
+			always @(posedge clk)
+				if (win_v_d[1] && last_pass)	hold_q <= hold_mem[rk];
+			always @(`CLK_RST_EDGE)
+				if (`RST) begin
+					wk <= 0; rk <= 0;
+				end else if (state == S_WLD) begin
+					wk <= 0; rk <= 0;
+				end else begin
+					if (q_en_i && !last_pass)		wk <= wk + 1'b1;
+					if (win_v_d[1] && last_pass)	rk <= rk + 1'b1;
+				end
+			always @(*) q    = {hold_q, qv};
+			always @(*) q_en = q_en_i & last_pass;
+		end
+	endgenerate
 
 endmodule

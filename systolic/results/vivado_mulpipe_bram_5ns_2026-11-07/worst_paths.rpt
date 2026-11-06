@@ -1,0 +1,749 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Nov  6 23:09:29 2026
+| Host         : LAPTOP-GFEF8MJU running 64-bit major release  (build 9200)
+| Command      : report_timing -sort_by group -max_paths 10 -file C:/Users/Uday/BTP_github/systolic/vivado_out_5.000ns/worst_paths.rpt
+| Design       : lenet
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -5.590ns  (required time - arrival time)
+  Source:                 fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            fc2_par/lane[7].two_stage.mul_p_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        10.568ns  (logic 5.785ns (54.740%)  route 4.783ns (45.260%))
+  Logic Levels:           11  (CARRY4=7 LUT3=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 5.924 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13926, unset)        0.973     0.973    fc2_par/u_wrom/clk
+    RAMB36_X0Y26         RAMB36E1                                     r  fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y26         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[1])
+                                                      2.454     3.427 r  fc2_par/u_wrom/qa_reg_3/DOADO[1]
+                         net (fo=33, routed)          1.654     5.081    fc2_par/out[109]
+    SLICE_X10Y123        LUT6 (Prop_lut6_I2_O)        0.124     5.205 r  fc2_par/lane[7].two_stage.mul_p[19]_i_57/O
+                         net (fo=2, routed)           0.420     5.625    fc2_par/u_wrom/lane[7].two_stage.mul_p_reg[19]_i_32[1]
+    SLICE_X11Y124        LUT6 (Prop_lut6_I0_O)        0.124     5.749 r  fc2_par/u_wrom/lane[7].two_stage.mul_p[19]_i_61/O
+                         net (fo=1, routed)           0.000     5.749    fc2_par/u_wrom_n_490
+    SLICE_X11Y124        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.299 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32/CO[3]
+                         net (fo=1, routed)           0.009     6.308    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32_n_0
+    SLICE_X11Y125        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.547 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39/O[2]
+                         net (fo=3, routed)           0.760     7.307    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39_n_5
+    SLICE_X11Y121        LUT3 (Prop_lut3_I2_O)        0.302     7.609 r  fc2_par/lane[7].two_stage.mul_p[19]_i_13/O
+                         net (fo=1, routed)           0.744     8.353    fc2_par/lane[7].two_stage.mul_p[19]_i_13_n_0
+    SLICE_X8Y121         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     8.749 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.749    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_10_n_0
+    SLICE_X8Y122         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.064 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10/O[3]
+                         net (fo=3, routed)           0.716     9.780    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10_n_4
+    SLICE_X6Y122         LUT3 (Prop_lut3_I0_O)        0.307    10.087 r  fc2_par/lane[7].two_stage.mul_p[23]_i_5/O
+                         net (fo=1, routed)           0.471    10.558    fc2_par/lane[7].two_stage.mul_p[23]_i_5_n_0
+    SLICE_X7Y123         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526    11.084 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.084    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_1_n_0
+    SLICE_X7Y124         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.198 r  fc2_par/lane[7].two_stage.mul_p_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.009    11.207    fc2_par/lane[7].two_stage.mul_p_reg[27]_i_1_n_0
+    SLICE_X7Y125         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.541 r  fc2_par/lane[7].two_stage.mul_p_reg[30]_i_1/O[1]
+                         net (fo=1, routed)           0.000    11.541    fc2_par/lane[7].two_stage.mul_p_reg[30]_i_1_n_6
+    SLICE_X7Y125         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=13926, unset)        0.924     5.924    fc2_par/clk
+    SLICE_X7Y125         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[29]/C
+                         clock pessimism              0.000     5.924    
+                         clock uncertainty           -0.035     5.889    
+    SLICE_X7Y125         FDRE (Setup_fdre_C_D)        0.062     5.951    fc2_par/lane[7].two_stage.mul_p_reg[29]
+  -------------------------------------------------------------------
+                         required time                          5.951    
+                         arrival time                         -11.541    
+  -------------------------------------------------------------------
+                         slack                                 -5.590    
+
+Slack (VIOLATED) :        -5.581ns  (required time - arrival time)
+  Source:                 fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            fc2_par/lane[7].two_stage.mul_p_reg[30]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        10.559ns  (logic 5.598ns (53.016%)  route 4.961ns (46.984%))
+  Logic Levels:           11  (CARRY4=7 LUT3=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 5.924 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13926, unset)        0.973     0.973    fc2_par/u_wrom/clk
+    RAMB36_X0Y26         RAMB36E1                                     r  fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y26         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[1])
+                                                      2.454     3.427 r  fc2_par/u_wrom/qa_reg_3/DOADO[1]
+                         net (fo=33, routed)          1.654     5.081    fc2_par/out[109]
+    SLICE_X10Y123        LUT6 (Prop_lut6_I2_O)        0.124     5.205 r  fc2_par/lane[7].two_stage.mul_p[19]_i_57/O
+                         net (fo=2, routed)           0.420     5.625    fc2_par/u_wrom/lane[7].two_stage.mul_p_reg[19]_i_32[1]
+    SLICE_X11Y124        LUT6 (Prop_lut6_I0_O)        0.124     5.749 r  fc2_par/u_wrom/lane[7].two_stage.mul_p[19]_i_61/O
+                         net (fo=1, routed)           0.000     5.749    fc2_par/u_wrom_n_490
+    SLICE_X11Y124        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.299 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32/CO[3]
+                         net (fo=1, routed)           0.009     6.308    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32_n_0
+    SLICE_X11Y125        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     6.422 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39/CO[3]
+                         net (fo=1, routed)           0.000     6.422    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39_n_0
+    SLICE_X11Y126        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.661 r  fc2_par/lane[7].two_stage.mul_p_reg[27]_i_39/O[2]
+                         net (fo=3, routed)           0.774     7.435    fc2_par/lane[7].two_stage.mul_p_reg[27]_i_39_n_5
+    SLICE_X10Y122        LUT3 (Prop_lut3_I2_O)        0.302     7.737 r  fc2_par/lane[7].two_stage.mul_p[23]_i_13/O
+                         net (fo=1, routed)           0.760     8.497    fc2_par/lane[7].two_stage.mul_p[23]_i_13_n_0
+    SLICE_X8Y122         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     8.893 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.893    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10_n_0
+    SLICE_X8Y123         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.010 r  fc2_par/lane[7].two_stage.mul_p_reg[27]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     9.010    fc2_par/lane[7].two_stage.mul_p_reg[27]_i_10_n_0
+    SLICE_X8Y124         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.325 r  fc2_par/lane[7].two_stage.mul_p_reg[30]_i_12/O[3]
+                         net (fo=3, routed)           0.796    10.121    fc2_par/lane[7].two_stage.mul_p_reg[30]_i_12_n_4
+    SLICE_X6Y124         LUT3 (Prop_lut3_I0_O)        0.307    10.428 r  fc2_par/lane[7].two_stage.mul_p[30]_i_4/O
+                         net (fo=1, routed)           0.548    10.976    fc2_par/lane[7].two_stage.mul_p[30]_i_4_n_0
+    SLICE_X7Y125         CARRY4 (Prop_carry4_DI[0]_O[2])
+                                                      0.556    11.532 r  fc2_par/lane[7].two_stage.mul_p_reg[30]_i_1/O[2]
+                         net (fo=1, routed)           0.000    11.532    fc2_par/lane[7].two_stage.mul_p_reg[30]_i_1_n_5
+    SLICE_X7Y125         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=13926, unset)        0.924     5.924    fc2_par/clk
+    SLICE_X7Y125         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[30]/C
+                         clock pessimism              0.000     5.924    
+                         clock uncertainty           -0.035     5.889    
+    SLICE_X7Y125         FDRE (Setup_fdre_C_D)        0.062     5.951    fc2_par/lane[7].two_stage.mul_p_reg[30]
+  -------------------------------------------------------------------
+                         required time                          5.951    
+                         arrival time                         -11.532    
+  -------------------------------------------------------------------
+                         slack                                 -5.581    
+
+Slack (VIOLATED) :        -5.493ns  (required time - arrival time)
+  Source:                 fc2_par/u_wrom/qa_reg_2/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            fc2_par/lane[6].two_stage.mul_p_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        10.471ns  (logic 5.657ns (54.026%)  route 4.814ns (45.974%))
+  Logic Levels:           10  (CARRY4=6 LUT3=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 5.924 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13926, unset)        0.973     0.973    fc2_par/u_wrom/clk
+    RAMB36_X0Y20         RAMB36E1                                     r  fc2_par/u_wrom/qa_reg_2/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y20         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[29])
+                                                      2.454     3.427 r  fc2_par/u_wrom/qa_reg_2/DOADO[29]
+                         net (fo=32, routed)          1.227     4.654    fc2_par/out[101]
+    SLICE_X6Y104         LUT6 (Prop_lut6_I0_O)        0.124     4.778 r  fc2_par/lane[6].two_stage.mul_p[23]_i_50/O
+                         net (fo=2, routed)           0.758     5.536    fc2_par/u_wrom/lane[6].two_stage.mul_p_reg[23]_i_37[0]
+    SLICE_X3Y99          LUT6 (Prop_lut6_I0_O)        0.124     5.660 r  fc2_par/u_wrom/lane[6].two_stage.mul_p[23]_i_54/O
+                         net (fo=1, routed)           0.000     5.660    fc2_par/u_wrom_n_590
+    SLICE_X3Y99          CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     6.300 r  fc2_par/lane[6].two_stage.mul_p_reg[23]_i_37/O[3]
+                         net (fo=3, routed)           0.846     7.146    fc2_par/lane[6].two_stage.mul_p_reg[23]_i_37_n_4
+    SLICE_X5Y100         LUT3 (Prop_lut3_I0_O)        0.306     7.452 r  fc2_par/lane[6].two_stage.mul_p[23]_i_16/O
+                         net (fo=1, routed)           0.789     8.241    fc2_par/lane[6].two_stage.mul_p[23]_i_16_n_0
+    SLICE_X1Y100         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     8.767 r  fc2_par/lane[6].two_stage.mul_p_reg[23]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.767    fc2_par/lane[6].two_stage.mul_p_reg[23]_i_10_n_0
+    SLICE_X1Y101         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.881 r  fc2_par/lane[6].two_stage.mul_p_reg[27]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.881    fc2_par/lane[6].two_stage.mul_p_reg[27]_i_10_n_0
+    SLICE_X1Y102         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     9.215 r  fc2_par/lane[6].two_stage.mul_p_reg[30]_i_12/O[1]
+                         net (fo=3, routed)           0.607     9.822    fc2_par/lane[6].two_stage.mul_p_reg[30]_i_12_n_6
+    SLICE_X5Y101         LUT3 (Prop_lut3_I0_O)        0.303    10.125 r  fc2_par/lane[6].two_stage.mul_p[27]_i_3/O
+                         net (fo=1, routed)           0.587    10.712    fc2_par/lane[6].two_stage.mul_p[27]_i_3_n_0
+    SLICE_X4Y100         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    11.110 r  fc2_par/lane[6].two_stage.mul_p_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.110    fc2_par/lane[6].two_stage.mul_p_reg[27]_i_1_n_0
+    SLICE_X4Y101         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.444 r  fc2_par/lane[6].two_stage.mul_p_reg[30]_i_1/O[1]
+                         net (fo=1, routed)           0.000    11.444    fc2_par/lane[6].two_stage.mul_p_reg[30]_i_1_n_6
+    SLICE_X4Y101         FDRE                                         r  fc2_par/lane[6].two_stage.mul_p_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=13926, unset)        0.924     5.924    fc2_par/clk
+    SLICE_X4Y101         FDRE                                         r  fc2_par/lane[6].two_stage.mul_p_reg[29]/C
+                         clock pessimism              0.000     5.924    
+                         clock uncertainty           -0.035     5.889    
+    SLICE_X4Y101         FDRE (Setup_fdre_C_D)        0.062     5.951    fc2_par/lane[6].two_stage.mul_p_reg[29]
+  -------------------------------------------------------------------
+                         required time                          5.951    
+                         arrival time                         -11.444    
+  -------------------------------------------------------------------
+                         slack                                 -5.493    
+
+Slack (VIOLATED) :        -5.479ns  (required time - arrival time)
+  Source:                 fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            fc2_par/lane[7].two_stage.mul_p_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        10.457ns  (logic 5.674ns (54.259%)  route 4.783ns (45.741%))
+  Logic Levels:           11  (CARRY4=7 LUT3=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 5.924 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13926, unset)        0.973     0.973    fc2_par/u_wrom/clk
+    RAMB36_X0Y26         RAMB36E1                                     r  fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y26         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[1])
+                                                      2.454     3.427 r  fc2_par/u_wrom/qa_reg_3/DOADO[1]
+                         net (fo=33, routed)          1.654     5.081    fc2_par/out[109]
+    SLICE_X10Y123        LUT6 (Prop_lut6_I2_O)        0.124     5.205 r  fc2_par/lane[7].two_stage.mul_p[19]_i_57/O
+                         net (fo=2, routed)           0.420     5.625    fc2_par/u_wrom/lane[7].two_stage.mul_p_reg[19]_i_32[1]
+    SLICE_X11Y124        LUT6 (Prop_lut6_I0_O)        0.124     5.749 r  fc2_par/u_wrom/lane[7].two_stage.mul_p[19]_i_61/O
+                         net (fo=1, routed)           0.000     5.749    fc2_par/u_wrom_n_490
+    SLICE_X11Y124        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.299 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32/CO[3]
+                         net (fo=1, routed)           0.009     6.308    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32_n_0
+    SLICE_X11Y125        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.547 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39/O[2]
+                         net (fo=3, routed)           0.760     7.307    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39_n_5
+    SLICE_X11Y121        LUT3 (Prop_lut3_I2_O)        0.302     7.609 r  fc2_par/lane[7].two_stage.mul_p[19]_i_13/O
+                         net (fo=1, routed)           0.744     8.353    fc2_par/lane[7].two_stage.mul_p[19]_i_13_n_0
+    SLICE_X8Y121         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     8.749 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.749    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_10_n_0
+    SLICE_X8Y122         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.064 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10/O[3]
+                         net (fo=3, routed)           0.716     9.780    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10_n_4
+    SLICE_X6Y122         LUT3 (Prop_lut3_I0_O)        0.307    10.087 r  fc2_par/lane[7].two_stage.mul_p[23]_i_5/O
+                         net (fo=1, routed)           0.471    10.558    fc2_par/lane[7].two_stage.mul_p[23]_i_5_n_0
+    SLICE_X7Y123         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526    11.084 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.084    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_1_n_0
+    SLICE_X7Y124         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.198 r  fc2_par/lane[7].two_stage.mul_p_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.009    11.207    fc2_par/lane[7].two_stage.mul_p_reg[27]_i_1_n_0
+    SLICE_X7Y125         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    11.430 r  fc2_par/lane[7].two_stage.mul_p_reg[30]_i_1/O[0]
+                         net (fo=1, routed)           0.000    11.430    fc2_par/lane[7].two_stage.mul_p_reg[30]_i_1_n_7
+    SLICE_X7Y125         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=13926, unset)        0.924     5.924    fc2_par/clk
+    SLICE_X7Y125         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[28]/C
+                         clock pessimism              0.000     5.924    
+                         clock uncertainty           -0.035     5.889    
+    SLICE_X7Y125         FDRE (Setup_fdre_C_D)        0.062     5.951    fc2_par/lane[7].two_stage.mul_p_reg[28]
+  -------------------------------------------------------------------
+                         required time                          5.951    
+                         arrival time                         -11.430    
+  -------------------------------------------------------------------
+                         slack                                 -5.479    
+
+Slack (VIOLATED) :        -5.467ns  (required time - arrival time)
+  Source:                 fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            fc2_par/lane[7].two_stage.mul_p_reg[25]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        10.445ns  (logic 5.671ns (54.293%)  route 4.774ns (45.707%))
+  Logic Levels:           10  (CARRY4=6 LUT3=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 5.924 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13926, unset)        0.973     0.973    fc2_par/u_wrom/clk
+    RAMB36_X0Y26         RAMB36E1                                     r  fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y26         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[1])
+                                                      2.454     3.427 r  fc2_par/u_wrom/qa_reg_3/DOADO[1]
+                         net (fo=33, routed)          1.654     5.081    fc2_par/out[109]
+    SLICE_X10Y123        LUT6 (Prop_lut6_I2_O)        0.124     5.205 r  fc2_par/lane[7].two_stage.mul_p[19]_i_57/O
+                         net (fo=2, routed)           0.420     5.625    fc2_par/u_wrom/lane[7].two_stage.mul_p_reg[19]_i_32[1]
+    SLICE_X11Y124        LUT6 (Prop_lut6_I0_O)        0.124     5.749 r  fc2_par/u_wrom/lane[7].two_stage.mul_p[19]_i_61/O
+                         net (fo=1, routed)           0.000     5.749    fc2_par/u_wrom_n_490
+    SLICE_X11Y124        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.299 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32/CO[3]
+                         net (fo=1, routed)           0.009     6.308    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32_n_0
+    SLICE_X11Y125        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.547 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39/O[2]
+                         net (fo=3, routed)           0.760     7.307    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39_n_5
+    SLICE_X11Y121        LUT3 (Prop_lut3_I2_O)        0.302     7.609 r  fc2_par/lane[7].two_stage.mul_p[19]_i_13/O
+                         net (fo=1, routed)           0.744     8.353    fc2_par/lane[7].two_stage.mul_p[19]_i_13_n_0
+    SLICE_X8Y121         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     8.749 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.749    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_10_n_0
+    SLICE_X8Y122         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.064 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10/O[3]
+                         net (fo=3, routed)           0.716     9.780    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10_n_4
+    SLICE_X6Y122         LUT3 (Prop_lut3_I0_O)        0.307    10.087 r  fc2_par/lane[7].two_stage.mul_p[23]_i_5/O
+                         net (fo=1, routed)           0.471    10.558    fc2_par/lane[7].two_stage.mul_p[23]_i_5_n_0
+    SLICE_X7Y123         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526    11.084 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.084    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_1_n_0
+    SLICE_X7Y124         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.418 r  fc2_par/lane[7].two_stage.mul_p_reg[27]_i_1/O[1]
+                         net (fo=1, routed)           0.000    11.418    fc2_par/lane[7].two_stage.mul_p_reg[27]_i_1_n_6
+    SLICE_X7Y124         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=13926, unset)        0.924     5.924    fc2_par/clk
+    SLICE_X7Y124         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[25]/C
+                         clock pessimism              0.000     5.924    
+                         clock uncertainty           -0.035     5.889    
+    SLICE_X7Y124         FDRE (Setup_fdre_C_D)        0.062     5.951    fc2_par/lane[7].two_stage.mul_p_reg[25]
+  -------------------------------------------------------------------
+                         required time                          5.951    
+                         arrival time                         -11.418    
+  -------------------------------------------------------------------
+                         slack                                 -5.467    
+
+Slack (VIOLATED) :        -5.446ns  (required time - arrival time)
+  Source:                 fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            fc2_par/lane[7].two_stage.mul_p_reg[27]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        10.424ns  (logic 5.650ns (54.201%)  route 4.774ns (45.799%))
+  Logic Levels:           10  (CARRY4=6 LUT3=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 5.924 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13926, unset)        0.973     0.973    fc2_par/u_wrom/clk
+    RAMB36_X0Y26         RAMB36E1                                     r  fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y26         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[1])
+                                                      2.454     3.427 r  fc2_par/u_wrom/qa_reg_3/DOADO[1]
+                         net (fo=33, routed)          1.654     5.081    fc2_par/out[109]
+    SLICE_X10Y123        LUT6 (Prop_lut6_I2_O)        0.124     5.205 r  fc2_par/lane[7].two_stage.mul_p[19]_i_57/O
+                         net (fo=2, routed)           0.420     5.625    fc2_par/u_wrom/lane[7].two_stage.mul_p_reg[19]_i_32[1]
+    SLICE_X11Y124        LUT6 (Prop_lut6_I0_O)        0.124     5.749 r  fc2_par/u_wrom/lane[7].two_stage.mul_p[19]_i_61/O
+                         net (fo=1, routed)           0.000     5.749    fc2_par/u_wrom_n_490
+    SLICE_X11Y124        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.299 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32/CO[3]
+                         net (fo=1, routed)           0.009     6.308    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32_n_0
+    SLICE_X11Y125        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.547 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39/O[2]
+                         net (fo=3, routed)           0.760     7.307    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39_n_5
+    SLICE_X11Y121        LUT3 (Prop_lut3_I2_O)        0.302     7.609 r  fc2_par/lane[7].two_stage.mul_p[19]_i_13/O
+                         net (fo=1, routed)           0.744     8.353    fc2_par/lane[7].two_stage.mul_p[19]_i_13_n_0
+    SLICE_X8Y121         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     8.749 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.749    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_10_n_0
+    SLICE_X8Y122         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.064 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10/O[3]
+                         net (fo=3, routed)           0.716     9.780    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10_n_4
+    SLICE_X6Y122         LUT3 (Prop_lut3_I0_O)        0.307    10.087 r  fc2_par/lane[7].two_stage.mul_p[23]_i_5/O
+                         net (fo=1, routed)           0.471    10.558    fc2_par/lane[7].two_stage.mul_p[23]_i_5_n_0
+    SLICE_X7Y123         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526    11.084 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.084    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_1_n_0
+    SLICE_X7Y124         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    11.397 r  fc2_par/lane[7].two_stage.mul_p_reg[27]_i_1/O[3]
+                         net (fo=1, routed)           0.000    11.397    fc2_par/lane[7].two_stage.mul_p_reg[27]_i_1_n_4
+    SLICE_X7Y124         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=13926, unset)        0.924     5.924    fc2_par/clk
+    SLICE_X7Y124         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[27]/C
+                         clock pessimism              0.000     5.924    
+                         clock uncertainty           -0.035     5.889    
+    SLICE_X7Y124         FDRE (Setup_fdre_C_D)        0.062     5.951    fc2_par/lane[7].two_stage.mul_p_reg[27]
+  -------------------------------------------------------------------
+                         required time                          5.951    
+                         arrival time                         -11.397    
+  -------------------------------------------------------------------
+                         slack                                 -5.446    
+
+Slack (VIOLATED) :        -5.398ns  (required time - arrival time)
+  Source:                 fc2_par/u_wrom/qa_reg_2/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            fc2_par/lane[6].two_stage.mul_p_reg[30]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        10.376ns  (logic 5.562ns (53.606%)  route 4.814ns (46.394%))
+  Logic Levels:           10  (CARRY4=6 LUT3=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 5.924 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13926, unset)        0.973     0.973    fc2_par/u_wrom/clk
+    RAMB36_X0Y20         RAMB36E1                                     r  fc2_par/u_wrom/qa_reg_2/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y20         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[29])
+                                                      2.454     3.427 r  fc2_par/u_wrom/qa_reg_2/DOADO[29]
+                         net (fo=32, routed)          1.227     4.654    fc2_par/out[101]
+    SLICE_X6Y104         LUT6 (Prop_lut6_I0_O)        0.124     4.778 r  fc2_par/lane[6].two_stage.mul_p[23]_i_50/O
+                         net (fo=2, routed)           0.758     5.536    fc2_par/u_wrom/lane[6].two_stage.mul_p_reg[23]_i_37[0]
+    SLICE_X3Y99          LUT6 (Prop_lut6_I0_O)        0.124     5.660 r  fc2_par/u_wrom/lane[6].two_stage.mul_p[23]_i_54/O
+                         net (fo=1, routed)           0.000     5.660    fc2_par/u_wrom_n_590
+    SLICE_X3Y99          CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     6.300 r  fc2_par/lane[6].two_stage.mul_p_reg[23]_i_37/O[3]
+                         net (fo=3, routed)           0.846     7.146    fc2_par/lane[6].two_stage.mul_p_reg[23]_i_37_n_4
+    SLICE_X5Y100         LUT3 (Prop_lut3_I0_O)        0.306     7.452 r  fc2_par/lane[6].two_stage.mul_p[23]_i_16/O
+                         net (fo=1, routed)           0.789     8.241    fc2_par/lane[6].two_stage.mul_p[23]_i_16_n_0
+    SLICE_X1Y100         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     8.767 r  fc2_par/lane[6].two_stage.mul_p_reg[23]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.767    fc2_par/lane[6].two_stage.mul_p_reg[23]_i_10_n_0
+    SLICE_X1Y101         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.881 r  fc2_par/lane[6].two_stage.mul_p_reg[27]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.881    fc2_par/lane[6].two_stage.mul_p_reg[27]_i_10_n_0
+    SLICE_X1Y102         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     9.215 r  fc2_par/lane[6].two_stage.mul_p_reg[30]_i_12/O[1]
+                         net (fo=3, routed)           0.607     9.822    fc2_par/lane[6].two_stage.mul_p_reg[30]_i_12_n_6
+    SLICE_X5Y101         LUT3 (Prop_lut3_I0_O)        0.303    10.125 r  fc2_par/lane[6].two_stage.mul_p[27]_i_3/O
+                         net (fo=1, routed)           0.587    10.712    fc2_par/lane[6].two_stage.mul_p[27]_i_3_n_0
+    SLICE_X4Y100         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    11.110 r  fc2_par/lane[6].two_stage.mul_p_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.110    fc2_par/lane[6].two_stage.mul_p_reg[27]_i_1_n_0
+    SLICE_X4Y101         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.349 r  fc2_par/lane[6].two_stage.mul_p_reg[30]_i_1/O[2]
+                         net (fo=1, routed)           0.000    11.349    fc2_par/lane[6].two_stage.mul_p_reg[30]_i_1_n_5
+    SLICE_X4Y101         FDRE                                         r  fc2_par/lane[6].two_stage.mul_p_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=13926, unset)        0.924     5.924    fc2_par/clk
+    SLICE_X4Y101         FDRE                                         r  fc2_par/lane[6].two_stage.mul_p_reg[30]/C
+                         clock pessimism              0.000     5.924    
+                         clock uncertainty           -0.035     5.889    
+    SLICE_X4Y101         FDRE (Setup_fdre_C_D)        0.062     5.951    fc2_par/lane[6].two_stage.mul_p_reg[30]
+  -------------------------------------------------------------------
+                         required time                          5.951    
+                         arrival time                         -11.349    
+  -------------------------------------------------------------------
+                         slack                                 -5.398    
+
+Slack (VIOLATED) :        -5.382ns  (required time - arrival time)
+  Source:                 fc2_par/u_wrom/qa_reg_2/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            fc2_par/lane[6].two_stage.mul_p_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        10.360ns  (logic 5.546ns (53.534%)  route 4.814ns (46.466%))
+  Logic Levels:           10  (CARRY4=6 LUT3=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 5.924 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13926, unset)        0.973     0.973    fc2_par/u_wrom/clk
+    RAMB36_X0Y20         RAMB36E1                                     r  fc2_par/u_wrom/qa_reg_2/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y20         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[29])
+                                                      2.454     3.427 r  fc2_par/u_wrom/qa_reg_2/DOADO[29]
+                         net (fo=32, routed)          1.227     4.654    fc2_par/out[101]
+    SLICE_X6Y104         LUT6 (Prop_lut6_I0_O)        0.124     4.778 r  fc2_par/lane[6].two_stage.mul_p[23]_i_50/O
+                         net (fo=2, routed)           0.758     5.536    fc2_par/u_wrom/lane[6].two_stage.mul_p_reg[23]_i_37[0]
+    SLICE_X3Y99          LUT6 (Prop_lut6_I0_O)        0.124     5.660 r  fc2_par/u_wrom/lane[6].two_stage.mul_p[23]_i_54/O
+                         net (fo=1, routed)           0.000     5.660    fc2_par/u_wrom_n_590
+    SLICE_X3Y99          CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     6.300 r  fc2_par/lane[6].two_stage.mul_p_reg[23]_i_37/O[3]
+                         net (fo=3, routed)           0.846     7.146    fc2_par/lane[6].two_stage.mul_p_reg[23]_i_37_n_4
+    SLICE_X5Y100         LUT3 (Prop_lut3_I0_O)        0.306     7.452 r  fc2_par/lane[6].two_stage.mul_p[23]_i_16/O
+                         net (fo=1, routed)           0.789     8.241    fc2_par/lane[6].two_stage.mul_p[23]_i_16_n_0
+    SLICE_X1Y100         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526     8.767 r  fc2_par/lane[6].two_stage.mul_p_reg[23]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.767    fc2_par/lane[6].two_stage.mul_p_reg[23]_i_10_n_0
+    SLICE_X1Y101         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.881 r  fc2_par/lane[6].two_stage.mul_p_reg[27]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.881    fc2_par/lane[6].two_stage.mul_p_reg[27]_i_10_n_0
+    SLICE_X1Y102         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     9.215 r  fc2_par/lane[6].two_stage.mul_p_reg[30]_i_12/O[1]
+                         net (fo=3, routed)           0.607     9.822    fc2_par/lane[6].two_stage.mul_p_reg[30]_i_12_n_6
+    SLICE_X5Y101         LUT3 (Prop_lut3_I0_O)        0.303    10.125 r  fc2_par/lane[6].two_stage.mul_p[27]_i_3/O
+                         net (fo=1, routed)           0.587    10.712    fc2_par/lane[6].two_stage.mul_p[27]_i_3_n_0
+    SLICE_X4Y100         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    11.110 r  fc2_par/lane[6].two_stage.mul_p_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.110    fc2_par/lane[6].two_stage.mul_p_reg[27]_i_1_n_0
+    SLICE_X4Y101         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    11.333 r  fc2_par/lane[6].two_stage.mul_p_reg[30]_i_1/O[0]
+                         net (fo=1, routed)           0.000    11.333    fc2_par/lane[6].two_stage.mul_p_reg[30]_i_1_n_7
+    SLICE_X4Y101         FDRE                                         r  fc2_par/lane[6].two_stage.mul_p_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=13926, unset)        0.924     5.924    fc2_par/clk
+    SLICE_X4Y101         FDRE                                         r  fc2_par/lane[6].two_stage.mul_p_reg[28]/C
+                         clock pessimism              0.000     5.924    
+                         clock uncertainty           -0.035     5.889    
+    SLICE_X4Y101         FDRE (Setup_fdre_C_D)        0.062     5.951    fc2_par/lane[6].two_stage.mul_p_reg[28]
+  -------------------------------------------------------------------
+                         required time                          5.951    
+                         arrival time                         -11.333    
+  -------------------------------------------------------------------
+                         slack                                 -5.382    
+
+Slack (VIOLATED) :        -5.372ns  (required time - arrival time)
+  Source:                 fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            fc2_par/lane[7].two_stage.mul_p_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        10.350ns  (logic 5.576ns (53.873%)  route 4.774ns (46.127%))
+  Logic Levels:           10  (CARRY4=6 LUT3=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 5.924 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13926, unset)        0.973     0.973    fc2_par/u_wrom/clk
+    RAMB36_X0Y26         RAMB36E1                                     r  fc2_par/u_wrom/qa_reg_3/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y26         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[1])
+                                                      2.454     3.427 r  fc2_par/u_wrom/qa_reg_3/DOADO[1]
+                         net (fo=33, routed)          1.654     5.081    fc2_par/out[109]
+    SLICE_X10Y123        LUT6 (Prop_lut6_I2_O)        0.124     5.205 r  fc2_par/lane[7].two_stage.mul_p[19]_i_57/O
+                         net (fo=2, routed)           0.420     5.625    fc2_par/u_wrom/lane[7].two_stage.mul_p_reg[19]_i_32[1]
+    SLICE_X11Y124        LUT6 (Prop_lut6_I0_O)        0.124     5.749 r  fc2_par/u_wrom/lane[7].two_stage.mul_p[19]_i_61/O
+                         net (fo=1, routed)           0.000     5.749    fc2_par/u_wrom_n_490
+    SLICE_X11Y124        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.299 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32/CO[3]
+                         net (fo=1, routed)           0.009     6.308    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_32_n_0
+    SLICE_X11Y125        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.547 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39/O[2]
+                         net (fo=3, routed)           0.760     7.307    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_39_n_5
+    SLICE_X11Y121        LUT3 (Prop_lut3_I2_O)        0.302     7.609 r  fc2_par/lane[7].two_stage.mul_p[19]_i_13/O
+                         net (fo=1, routed)           0.744     8.353    fc2_par/lane[7].two_stage.mul_p[19]_i_13_n_0
+    SLICE_X8Y121         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     8.749 r  fc2_par/lane[7].two_stage.mul_p_reg[19]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.749    fc2_par/lane[7].two_stage.mul_p_reg[19]_i_10_n_0
+    SLICE_X8Y122         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.064 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10/O[3]
+                         net (fo=3, routed)           0.716     9.780    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_10_n_4
+    SLICE_X6Y122         LUT3 (Prop_lut3_I0_O)        0.307    10.087 r  fc2_par/lane[7].two_stage.mul_p[23]_i_5/O
+                         net (fo=1, routed)           0.471    10.558    fc2_par/lane[7].two_stage.mul_p[23]_i_5_n_0
+    SLICE_X7Y123         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.526    11.084 r  fc2_par/lane[7].two_stage.mul_p_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.084    fc2_par/lane[7].two_stage.mul_p_reg[23]_i_1_n_0
+    SLICE_X7Y124         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.323 r  fc2_par/lane[7].two_stage.mul_p_reg[27]_i_1/O[2]
+                         net (fo=1, routed)           0.000    11.323    fc2_par/lane[7].two_stage.mul_p_reg[27]_i_1_n_5
+    SLICE_X7Y124         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=13926, unset)        0.924     5.924    fc2_par/clk
+    SLICE_X7Y124         FDRE                                         r  fc2_par/lane[7].two_stage.mul_p_reg[26]/C
+                         clock pessimism              0.000     5.924    
+                         clock uncertainty           -0.035     5.889    
+    SLICE_X7Y124         FDRE (Setup_fdre_C_D)        0.062     5.951    fc2_par/lane[7].two_stage.mul_p_reg[26]
+  -------------------------------------------------------------------
+                         required time                          5.951    
+                         arrival time                         -11.323    
+  -------------------------------------------------------------------
+                         slack                                 -5.372    
+
+Slack (VIOLATED) :        -5.372ns  (required time - arrival time)
+  Source:                 fc2_par/u_wrom/qa_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            fc2_par/lane[2].two_stage.mul_p_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        10.397ns  (logic 5.756ns (55.361%)  route 4.641ns (44.639%))
+  Logic Levels:           11  (CARRY4=7 LUT3=2 LUT6=2)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 5.924 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=13926, unset)        0.973     0.973    fc2_par/u_wrom/clk
+    RAMB36_X0Y16         RAMB36E1                                     r  fc2_par/u_wrom/qa_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y16         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[2])
+                                                      2.454     3.427 r  fc2_par/u_wrom/qa_reg_1/DOADO[2]
+                         net (fo=32, routed)          1.311     4.738    fc2_par/out[38]
+    SLICE_X9Y76          LUT6 (Prop_lut6_I0_O)        0.124     4.862 r  fc2_par/lane[2].two_stage.mul_p[19]_i_47/O
+                         net (fo=2, routed)           0.790     5.652    fc2_par/u_wrom/lane[2].two_stage.mul_p_reg[19]_i_31[1]
+    SLICE_X7Y72          LUT6 (Prop_lut6_I0_O)        0.124     5.776 r  fc2_par/u_wrom/lane[2].two_stage.mul_p[19]_i_51/O
+                         net (fo=1, routed)           0.000     5.776    fc2_par/u_wrom_n_866
+    SLICE_X7Y72          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     6.177 r  fc2_par/lane[2].two_stage.mul_p_reg[19]_i_31/CO[3]
+                         net (fo=1, routed)           0.000     6.177    fc2_par/lane[2].two_stage.mul_p_reg[19]_i_31_n_0
+    SLICE_X7Y73          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     6.399 r  fc2_par/lane[2].two_stage.mul_p_reg[23]_i_38/O[0]
+                         net (fo=3, routed)           0.740     7.140    fc2_par/lane[2].two_stage.mul_p_reg[23]_i_38_n_7
+    SLICE_X6Y70          LUT3 (Prop_lut3_I1_O)        0.299     7.439 r  fc2_par/lane[2].two_stage.mul_p[19]_i_15/O
+                         net (fo=1, routed)           0.717     8.156    fc2_par/lane[2].two_stage.mul_p[19]_i_15_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     8.676 r  fc2_par/lane[2].two_stage.mul_p_reg[19]_i_10/CO[3]
+                         net (fo=1, routed)           0.000     8.676    fc2_par/lane[2].two_stage.mul_p_reg[19]_i_10_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     8.991 r  fc2_par/lane[2].two_stage.mul_p_reg[23]_i_10/O[3]
+                         net (fo=3, routed)           0.750     9.741    fc2_par/lane[2].two_stage.mul_p_reg[23]_i_10_n_4
+    SLICE_X11Y71         LUT3 (Prop_lut3_I0_O)        0.307    10.048 r  fc2_par/lane[2].two_stage.mul_p[23]_i_5/O
+                         net (fo=1, routed)           0.332    10.380    fc2_par/lane[2].two_stage.mul_p[23]_i_5_n_0
+    SLICE_X10Y71         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.550    10.930 r  fc2_par/lane[2].two_stage.mul_p_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.930    fc2_par/lane[2].two_stage.mul_p_reg[23]_i_1_n_0
+    SLICE_X10Y72         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    11.047 r  fc2_par/lane[2].two_stage.mul_p_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.047    fc2_par/lane[2].two_stage.mul_p_reg[27]_i_1_n_0
+    SLICE_X10Y73         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    11.370 r  fc2_par/lane[2].two_stage.mul_p_reg[30]_i_1/O[1]
+                         net (fo=1, routed)           0.000    11.370    fc2_par/lane[2].two_stage.mul_p_reg[30]_i_1_n_6
+    SLICE_X10Y73         FDRE                                         r  fc2_par/lane[2].two_stage.mul_p_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=13926, unset)        0.924     5.924    fc2_par/clk
+    SLICE_X10Y73         FDRE                                         r  fc2_par/lane[2].two_stage.mul_p_reg[29]/C
+                         clock pessimism              0.000     5.924    
+                         clock uncertainty           -0.035     5.889    
+    SLICE_X10Y73         FDRE (Setup_fdre_C_D)        0.109     5.998    fc2_par/lane[2].two_stage.mul_p_reg[29]
+  -------------------------------------------------------------------
+                         required time                          5.998    
+                         arrival time                         -11.370    
+  -------------------------------------------------------------------
+                         slack                                 -5.372    
+
+
+
+

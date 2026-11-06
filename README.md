@@ -16,19 +16,19 @@ convolution layers as weight-stationary systolic arrays. Target board: Digilent 
 | `docs/` | Interactive walkthrough of the conv1 systolic array, served by GitHub Pages. |
 | `reference/` | CNN notes and the Nexys 4 DDR reference manual. |
 
-## Results (5 ns clock, 900 MNIST test digits)
+## Results (clock cycles in simulation, 900 MNIST test digits)
 
 | | `original/` | first systolic build | **current `systolic/`** |
 |---|---|---|---|
-| What changed | baseline | conv1 + conv2 systolic | conv1 systolic, conv2 original, fc2 x12 parallel |
-| Clocks per frame | 36,924 | 17,299 | **~9,171** |
-| Speedup | 1x | 2.13x | **4.03x** |
-| DSP blocks (Yosys estimate; board has 240) | 129 | 573 | **280** |
+| What changed | baseline | conv1 + conv2 systolic | conv1 systolic (2 passes), conv2 original, fc2 x12 parallel |
+| Clocks per frame | 36,924 | 17,299 | **~10,235** |
+| Speedup in clocks | 1x | 2.13x | **3.61x** |
+| DSP blocks (Yosys estimate; board has 240) | 129 | 573 | **205** |
 | Correct digits | 888 / 900 | 888 / 900 | 888 / 900 |
 
 Predictions are bit-identical in all three builds. The first two columns are ModelSim
 runs; the current build was run in Verilator (`systolic/verilator/`), whose testbench counts
-one clock fewer per frame than ModelSim's, hence ~9,171. Details in `systolic/README_systolic.md`.
+one clock fewer per frame than ModelSim's, hence ~10,235. Details in `systolic/README_systolic.md`.
 
 ## Running
 
@@ -41,8 +41,12 @@ From `systolic/`, with ModelSim Intel Starter Edition 20.1 (to run the baseline,
 
 ## Status
 
-- First Vivado run (6 Nov): fits (226/240 DSPs, 64% of LUTs) but reaches only about 109 MHz
-  (WNS -4.128 ns at 5 ns). The slow paths are multipliers built from LUTs.
-- Fixes in place, verified bit-exact: weight ROMs moved to block RAM (`lenet_roms_bram.v`) and
-  an extra register per multiplier with Vivado retiming (`MUL_PIPE`). Awaiting the next run.
-- Next: confirm timing, then layer pipelining and fc1 (now the largest layer, 3,001 clocks).
+- Vivado (xc7a100t-1, post-route): the baseline datapath reaches ~162 MHz (6.17 ns). The
+  conv1-systolic + fc2-parallel build reached only ~94 MHz (10.59 ns), because ~280
+  multipliers do not fit in 240 DSP blocks and the LUT-built ones are slow. Real-time
+  speedup so far: 2.35x (227.8 us vs 97.1 us per digit); 4.03x is the clock-cycle figure.
+- Fix in place, verified bit-exact: conv1's array runs in two passes (`CONV1_PASSES 2`,
+  205 DSPs), fc2's inputs are registered. 10,234 clocks per frame (3.61x in clocks).
+  Awaiting the next Vivado run.
+- Next: layer pipelining and fc1 (largest layer, 3,001 clocks); shorten conv2's iterator
+  address path, which limits both designs.

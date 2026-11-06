@@ -41,6 +41,7 @@ module lenet(
 	systolic_conv #(
 		.INPUT_NUM		(`INPUT_NUM),
 		.OUTPUT_NUM		(`OUTPUT_NUM),
+		.PASSES			(`CONV1_PASSES),
 		.K				(`KERNEL_SIZE_CONV1),
 		.IN_W			(`INPUT_WIDTH),
 		.IN_H			(`INPUT_HEIGHT),

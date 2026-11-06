@@ -53,3 +53,4 @@ vivado*.jou
 
 # Vivado reports dropped in the root (copies kept in systolic/results/)
 btp_vivado_reports*
+btp_reports_for_aayush*

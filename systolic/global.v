@@ -32,6 +32,10 @@
 // conv/acc/mac chain.  Comment either out to fall back for that layer; both
 // paths must agree bit for bit, which is the regression test.
 `define SYSTOLIC_CONV1
+// conv1's array computes OUTPUT_NUM/CONV1_PASSES maps per pass. 2 passes = 75 PEs instead
+// of 150, so every multiplier in the design fits in the XC7A100T's 240 DSP blocks
+// (multipliers built from LUTs were the timing limit). Costs ~1,065 clocks per frame.
+`define CONV1_PASSES 2
 // conv2 systolic array: 1.77x on conv2 (~1,090 clocks/frame) for ~300 extra DSPs, more than
 // the XC7A100T's 240 allow. Off by default; conv2 uses the original iterator + conv engine.
 //`define SYSTOLIC_CONV2
