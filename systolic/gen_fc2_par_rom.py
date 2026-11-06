@@ -58,7 +58,7 @@ lines.append("\tinput\t\t\t\tcena,\t\t// active low, as in the other ROMs")
 lines.append("\tinput\t\t[%d:0]\taa,\t\t\t// g*%d + k" % (AW - 1, NIN))
 lines.append("\toutput reg\t[%d:0]\tqa\t\t\t// [16*j +: 16] = weight of neuron g*%d+j, input k" % (WW - 1, P))
 lines.append("\t);")
-lines.append("\treg [%d:0] rom [0:%d];" % (WW - 1, G * NIN - 1))
+lines.append("\t(* rom_style = \"block\" *) reg [%d:0] rom [0:%d];" % (WW - 1, G * NIN - 1))
 lines.append("\tinitial begin")
 for g in range(G):
     for k in range(NIN):
@@ -74,7 +74,7 @@ lines.append("\tinput\t\t\t\tcena,")
 lines.append("\tinput\t\t[%d:0]\taa,\t\t\t// group g" % (GW - 1))
 lines.append("\toutput reg\t[%d:0]\tqa\t\t\t// [24*j +: 24] = bias of neuron g*%d+j" % (BW - 1, P))
 lines.append("\t);")
-lines.append("\treg [%d:0] rom [0:%d];" % (BW - 1, G - 1))
+lines.append("\t(* rom_style = \"distributed\" *) reg [%d:0] rom [0:%d];" % (BW - 1, G - 1))
 lines.append("\tinitial begin")
 for g in range(G):
     lines.append("\t\trom[%d] = %d'h%0*x;" % (g, BW, BW // 4, word(b[g * P:(g + 1) * P], 24)))

@@ -849,6 +849,11 @@ module lenet(
 		if (`RST)	fc3_ready_d[15:1] <= 0;
 		else 		fc3_ready_d[15:1] <= fc3_ready_d;
 	
+	// ready follows fc3's last result into digit; MUL_PIPE adds one clock to that path.
+`ifdef MUL_PIPE
+	assign ready = 	fc3_ready_d[7];
+`else
 	assign ready = 	fc3_ready_d[6];
+`endif
 
 endmodule

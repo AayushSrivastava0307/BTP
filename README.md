@@ -21,14 +21,14 @@ convolution layers as weight-stationary systolic arrays. Target board: Digilent 
 | | `original/` | first systolic build | **current `systolic/`** |
 |---|---|---|---|
 | What changed | baseline | conv1 + conv2 systolic | conv1 systolic, conv2 original, fc2 x12 parallel |
-| Clocks per frame | 36,924 | 17,299 | **~9,169** |
+| Clocks per frame | 36,924 | 17,299 | **~9,171** |
 | Speedup | 1x | 2.13x | **4.03x** |
 | DSP blocks (Yosys estimate; board has 240) | 129 | 573 | **280** |
 | Correct digits | 888 / 900 | 888 / 900 | 888 / 900 |
 
 Predictions are bit-identical in all three builds. The first two columns are ModelSim
 runs; the current build was run in Verilator (`systolic/verilator/`), whose testbench counts
-one clock fewer per frame than ModelSim's, hence ~9,169. Details in `systolic/README_systolic.md`.
+one clock fewer per frame than ModelSim's, hence ~9,171. Details in `systolic/README_systolic.md`.
 
 ## Running
 
@@ -41,6 +41,8 @@ From `systolic/`, with ModelSim Intel Starter Edition 20.1 (to run the baseline,
 
 ## Status
 
-- Synthesis has not been run in Vivado yet. The current build needs about 280 DSP blocks
-  (Yosys estimate) against the board's 240; Vivado will build the rest from LUTs.
-- Next: Vivado synthesis and timing at 5 ns, then fc1 (now the largest layer, 3,001 clocks).
+- First Vivado run (6 Nov): fits (226/240 DSPs, 64% of LUTs) but reaches only about 109 MHz
+  (WNS -4.128 ns at 5 ns). The slow paths are multipliers built from LUTs.
+- Fixes in place, verified bit-exact: weight ROMs moved to block RAM (`lenet_roms_bram.v`) and
+  an extra register per multiplier with Vivado retiming (`MUL_PIPE`). Awaiting the next run.
+- Next: confirm timing, then layer pipelining and fc1 (now the largest layer, 3,001 clocks).

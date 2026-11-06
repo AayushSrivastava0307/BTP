@@ -266,6 +266,11 @@ module acc #(
 
 	wire	[`WDP*2-1:0]		q_mac;
 	wire				q_mac_en;
+`ifdef MUL_PIPE
+	localparam MP = 1;		// extra register after the multiplier (see MUL_PIPE in global.v)
+`else
+	localparam MP = 0;
+`endif
 	reg		[15:0]	first_data_d;
 	always @(*)	first_data_d[0] = first_data;
 	always @(`CLK_RST_EDGE)
@@ -321,7 +326,7 @@ module acc #(
 	always @(`CLK_RST_EDGE)
 		if (`ZST)											q_mac_acc <= 0;
 		else if (q_mac_en) begin
-			if(first_data_d[1+$clog2(INPUT_NUM) + 1])		q_mac_acc <= $signed(q_mac) + $signed(bias_d[1+$clog2(INPUT_NUM)+1]);
+			if(first_data_d[1+$clog2(INPUT_NUM)+1+MP])		q_mac_acc <= $signed(q_mac) + $signed(bias_d[1+$clog2(INPUT_NUM)+1+MP]);
 			else 											q_mac_acc <= $signed(q_mac) + $signed(q_mac_acc);
 		end
 	
@@ -329,7 +334,7 @@ module acc #(
 	
 	always @(`CLK_RST_EDGE)
 		if (`RST)	q_en <= 0;
-		else 		q_en <= last_data_d[1+$clog2(INPUT_NUM)+1]&q_mac_en;
+		else 		q_en <= last_data_d[1+$clog2(INPUT_NUM)+1+MP]&q_mac_en;
 	
 endmodule
 
@@ -350,6 +355,11 @@ module mac#(
 	output	[`WDP*2-1:0]				q
 	);	
 	parameter INPUT_NUM_PADING = 2**$clog2(INPUT_NUM);
+`ifdef MUL_PIPE
+	localparam MP = 1;		// extra register after the multiplier (see MUL_PIPE in global.v)
+`else
+	localparam MP = 0;
+`endif
 	
 	wire	[0:INPUT_NUM-1][`WD:0] 	d_in = d;
 	wire	[0:INPUT_NUM-1][`WD:0] 	w_in = w;
@@ -367,9 +377,19 @@ module mac#(
 	genvar j;
 	generate 
 		for (i=0; i<INPUT_NUM; i=i+1) begin : multiply
+`ifdef MUL_PIPE
+			// Two registers per multiply. mul_p has no reset so synthesis retiming can move
+			// it into the middle of a LUT-built multiplier (or into the DSP's MREG).
+			reg		[`WDP*2-1:0]	mul_p;
+			always @(posedge clk)	mul_p <= $signed(d_in[i]) * $signed(w_in[i]);
+			always @(`CLK_RST_EDGE)
+				if (`RST)	mul[i] <= 0;
+				else 		mul[i] <= mul_p;
+`else
 			always @(`CLK_RST_EDGE)
 				if (`RST)	mul[i] <= 0;
 				else 		mul[i] <= $signed(d_in[i]) * $signed(w_in[i]);
+`endif
 		end
 	endgenerate
 	
@@ -390,13 +410,13 @@ generate
 			end                                          // <-- closes gen_j (NEW)
 		end                                              // closes gen_level
 		assign q = sum[$clog2(INPUT_NUM_PADING)-1][0];
-		assign q_en = d_en_d[$clog2(INPUT_NUM_PADING)+1];
-		assign q_en_b1 = d_en_d[$clog2(INPUT_NUM_PADING)];
+		assign q_en = d_en_d[$clog2(INPUT_NUM_PADING)+1+MP];
+		assign q_en_b1 = d_en_d[$clog2(INPUT_NUM_PADING)+MP];
 	end else begin
 		//assign q = sum[$clog2(INPUT_NUM)-1][0][`WDP*2-1-:`WDP];
 		assign q = mul[0];
-		assign q_en = d_en_d[$clog2(INPUT_NUM_PADING)+1];
-		assign q_en_b1 = d_en_d[$clog2(INPUT_NUM_PADING)];
+		assign q_en = d_en_d[$clog2(INPUT_NUM_PADING)+1+MP];
+		assign q_en_b1 = d_en_d[$clog2(INPUT_NUM_PADING)+MP];
 	end
 endgenerate
 	

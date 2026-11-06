@@ -45,8 +45,11 @@ lenet_roms_sim.v
 build.log
 
 # Vivado (systolic/run_vivado.tcl)
-vivado_out/
+vivado_out*/
 .Xil/
 vivado*.log
 vivado*.jou
 *.str
+
+# Vivado reports dropped in the root (copies kept in systolic/results/)
+btp_vivado_reports*

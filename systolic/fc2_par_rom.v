@@ -7,7 +7,7 @@ module fc2_par_weight_rom (
 	input		[9:0]	aa,			// g*120 + k
 	output reg	[191:0]	qa			// [16*j +: 16] = weight of neuron g*12+j, input k
 	);
-	reg [191:0] rom [0:839];
+	(* rom_style = "block" *) reg [191:0] rom [0:839];
 	initial begin
 		rom[0] = 192'h0439f39df02d041a0d7c0795e96ef3c808f0eb85f4b402a0;
 		rom[1] = 192'h08f8199102550a9ffc03f509fef1fda6fdaaf5e8f19df577;
@@ -859,7 +859,7 @@ module fc2_par_bias_rom (
 	input		[2:0]	aa,			// group g
 	output reg	[287:0]	qa			// [24*j +: 24] = bias of neuron g*12+j
 	);
-	reg [287:0] rom [0:6];
+	(* rom_style = "distributed" *) reg [287:0] rom [0:6];
 	initial begin
 		rom[0] = 288'h04f49803ae8702a1880249b6fba67a03467dff7647031c7cffad4400752f06987a05c01a;
 		rom[1] = 288'hfc1e5dffab0e0478db00d7f306271207c795054d250070800006fd05e75601ab4904ab86;

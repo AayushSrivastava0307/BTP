@@ -51,6 +51,42 @@ LUTs (roughly 250-300 LUTs each, about 10-12k in total, against 63,400 available
 LUT multipliers are the timing risk at 5 ns on a -1 part; a Vivado run with a 5 ns
 clock constraint will show whether they need a pipeline register.
 
+## Vivado results and timing fixes (6 Nov 2026)
+
+First routed run of the current build (Vivado 2025.2, xc7a100tcsg324-1, 5 ns clock, out of context):
+
+| Resource | Used | Available | |
+|---|---|---|---|
+| DSP blocks | 226 | 240 | 94% |
+| LUTs | 40,872 | 63,400 | 64% |
+| Flip-flops | 13,081 | 126,800 | 10% |
+| Block RAM tiles | 19 | 135 | 14% |
+
+Timing failed: WNS = -4.128 ns, so the slowest path needs 9.13 ns (about 109 MHz); 13,282 of
+39,519 endpoints missed 5 ns. All ten worst paths end in multipliers that did not get a DSP
+block and were built from LUTs (6-9 CARRY4 stages), in `fc2_par` lanes and in conv2's `mac`;
+about 60% of each path is routing. Only 19 block RAMs were used because Vivado built the
+packed-array weight ROMs of `lenet_roms.v` as LUT multiplexers.
+
+Two fixes, both bit-exact (all 900 digits identical to the original in Verilator, both reset
+styles; with `MUL_PIPE` off the design is exactly as before):
+
+1. **Weight ROMs in block RAM.** `gen_bram_roms.py` rewrites `lenet_roms.v` as
+   `lenet_roms_bram.v`: the same 10 modules in the standard inferable ROM form, with
+   `rom_style = "block"` for ROMs of 256 words or more (fc1, fc2, fc3 weights) and
+   `"distributed"` for the small ones. All 14,186 words were compared between the two files.
+   `fc2_par_rom.v` gets the same attributes. `run_vivado.tcl` and `verilator/` use
+   `lenet_roms_bram.v`; ModelSim's `run.do` still uses `lenet_roms.v`.
+2. **Two registers per multiplier** (`MUL_PIPE` in `global.v`). In `cnn.v`'s `mac` and in
+   `fc2_par`, the product passes through an extra register with no reset, and the control
+   delays move by one clock to match. With `synth_design -retiming` (now in `run_vivado.tcl`),
+   Vivado can move that register into the middle of a LUT-built multiplier, or into the DSP's
+   MREG. `ready` now waits 7 clocks after fc3 instead of 6. Cost: 2 clocks per frame
+   (9,170 instead of 9,168).
+
+Next run: `vivado -mode batch -source run_vivado.tcl` (5 ns) and, if it still fails,
+`-tclargs 6.67` (150 MHz) or `-tclargs 10` (100 MHz).
+
 ## Why
 
 The baseline walks `(batch, row, col, ky, kx)` and does **one** multiply per
@@ -93,6 +129,9 @@ Predictions are **bit-identical** to the baseline — see *Verification*.
 | `fc2_par.v` | fc2 with `FC2_PAR` neurons per group |
 | `fc2_par_rom.v` | fc2 weights and biases repacked for `fc2_par` (generated) |
 | `gen_fc2_par_rom.py` | Regenerates `fc2_par_rom.v` from `lenet_roms.v` |
+| `lenet_roms_bram.v` | `lenet_roms.v` in block-RAM ROM form, used for synthesis (generated) |
+| `gen_bram_roms.py` | Regenerates `lenet_roms_bram.v` from `lenet_roms.v` |
+| `run_vivado.tcl` | Synthesis + place + route + timing; `-tclargs <period ns>` |
 | `tb_fc2_par.v`, `run_fc2_unit.do` | Original fc2 vs `fc2_par`, bit for bit |
 | `verilator/` | Fast full-network simulation (900 digits in seconds) |
 

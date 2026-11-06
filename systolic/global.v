@@ -41,6 +41,12 @@
 `define PARALLEL_FC2
 `define FC2_PAR 12
 
+// One extra pipeline register after every multiplier (cnn.v mac and fc2_par), for timing:
+// multipliers that do not fit in the 240 DSP blocks are built from LUTs and need ~9 ns.
+// With synth_design -retiming, Vivado splits each one across the two registers.
+// Adds one clock of latency per layer pass; results are unchanged.
+`define MUL_PIPE
+
 `define OUTPUT_BATCH_CONV1  1
 `define OUTPUT_NUM_CONV1   	6
 `define KERNEL_SIZEX_CONV1  5

@@ -22,7 +22,7 @@
 //   c     counters k, g                     (issue)
 //   c+1   aa_data / rom address registered
 //   c+2   SRAM data and ROM words valid      -> product registered at c+3
-//   c+3   accumulate
+//   c+3   accumulate               (c+4 with MUL_PIPE: product takes two registers)
 // After the last input of a group the P sums are copied to an output shift register and
 // sent one per clock while the next group is already accumulating.
 
@@ -50,6 +50,11 @@ module fc2_par #(
 	localparam GW  = (G > 1) ? $clog2(G) : 1;
 	localparam KW  = $clog2(NIN);
 	localparam ACC = `WDP * 2;			// 32-bit accumulator, as in acc
+`ifdef MUL_PIPE
+	localparam MP = 1;		// extra register after each multiplier (see MUL_PIPE in global.v)
+`else
+	localparam MP = 0;
+`endif
 
 	// ---- issue: walk g = 0..G-1, k = 0..NIN-1 ---------------------------------
 	reg				run;
@@ -92,7 +97,7 @@ module fc2_par #(
 	fc2_par_bias_rom   u_brom (.clk(clk), .cena(cena_data), .aa(aa_b), .qa(b_word));
 
 	// control flags, delayed to line up with the data
-	//   [0] = issue cycle, [2] = data valid, [3] = product valid (accumulate)
+	//   [0] = issue cycle, [2+MP] = product valid in this cycle (accumulate)
 	reg	[3:0]	v_d, first_d, last_d;
 	always @(`CLK_RST_EDGE)
 		if (`RST) begin
@@ -113,24 +118,42 @@ module fc2_par #(
 		for (j = 0; j < P; j = j + 1) begin : lane
 			wire signed [`WD:0]	x  = qa_data;
 			wire signed [`WD:0]	wj = w_word[16*j +: 16];
-			always @(`CLK_RST_EDGE)
-				if (`RST) begin
-					prod[j] <= 0; bias_d[j] <= 0;
-				end else begin
-					prod[j]   <= x * wj;				// 16 x 16 -> 32, one DSP
-					bias_d[j] <= b_word[24*j +: 24];
+			if (MP) begin : two_stage
+				// mul_p has no reset so synthesis retiming can move it into the middle of a
+				// LUT-built multiplier (or into the DSP's MREG)
+				reg signed [ACC-1:0]	mul_p;
+				reg signed [23:0]		bias_p;
+				always @(posedge clk) begin
+					mul_p  <= x * wj;
+					bias_p <= b_word[24*j +: 24];
 				end
+				always @(`CLK_RST_EDGE)
+					if (`RST) begin
+						prod[j] <= 0; bias_d[j] <= 0;
+					end else begin
+						prod[j]   <= mul_p;
+						bias_d[j] <= bias_p;
+					end
+			end else begin : one_stage
+				always @(`CLK_RST_EDGE)
+					if (`RST) begin
+						prod[j] <= 0; bias_d[j] <= 0;
+					end else begin
+						prod[j]   <= x * wj;			// 16 x 16 -> 32, one DSP
+						bias_d[j] <= b_word[24*j +: 24];
+					end
+			end
 			always @(`CLK_RST_EDGE)
-				if (`RST)				acc[j] <= 0;
-				else if (v_d[2]) begin
-					if (first_d[2])		acc[j] <= prod[j] + bias_d[j];
-					else				acc[j] <= prod[j] + acc[j];
+				if (`RST)					acc[j] <= 0;
+				else if (v_d[2+MP]) begin
+					if (first_d[2+MP])		acc[j] <= prod[j] + bias_d[j];
+					else					acc[j] <= prod[j] + acc[j];
 				end
 		end
 	endgenerate
 
 	// ---- send the P results of a group, one per clock ---------------------------
-	// last_d[2] marks the cycle that adds the final product; the sums are complete
+	// last_d[2+MP] marks the cycle that adds the final product; the sums are complete
 	// one clock later, when done_grp is high.
 	reg						done_grp;
 	reg	[ACC-1:0]			outq [0:P-1];
@@ -140,7 +163,7 @@ module fc2_par #(
 
 	always @(`CLK_RST_EDGE)
 		if (`RST)	done_grp <= 0;
-		else		done_grp <= v_d[2] & last_d[2];
+		else		done_grp <= v_d[2+MP] & last_d[2+MP];
 
 	always @(`CLK_RST_EDGE)
 		if (`RST) begin
