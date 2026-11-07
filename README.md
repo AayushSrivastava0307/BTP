@@ -12,6 +12,8 @@ convolution layers as weight-stationary systolic arrays. Target board: Digilent 
 | `systolic/` | Our design: conv1 as a systolic array, fc2 computing 12 neurons at once; conv2 can also be switched to a systolic array. See `systolic/README_systolic.md`. |
 | `systolic/results/` | ModelSim logs behind every number below (900-frame run, per-layer timing probe, Xilinx-build runs). |
 | `noc/` | Network-on-chip work in progress: a 5-port router, a 3x3 mesh and an 8x8 systolic array. **Not yet connected to the LeNet datapath.** |
+| `noc/mentor/` | Our mentor's NoC LeNet (activation NoC + streaming pooling + systolic MAC rows) and its baseline. Bit-exact with the original, 1.023x fewer clocks; see `noc/mentor/README.md`. |
+| `power/` | Vivado power study: energy per digit for the baseline, the NoC design, the NoC design with the NoC removed, and ours, from simulated switching activity. See `power/README.md`. |
 | `experiments/32bit/` | A 32-bit-weight variant of the baseline. |
 | `docs/` | Interactive walkthrough of the conv1 systolic array, served by GitHub Pages. |
 | `reference/` | CNN notes and the Nexys 4 DDR reference manual. |
@@ -48,5 +50,6 @@ From `systolic/`, with ModelSim Intel Starter Edition 20.1 (to run the baseline,
 - Fix in place, verified bit-exact: conv1's array runs in two passes (`CONV1_PASSES 2`,
   205 DSPs), fc2's inputs are registered. 10,234 clocks per frame (3.61x in clocks).
   Awaiting the next Vivado run.
+- Power: `power/run_power.tcl` measures energy per digit for four designs; awaiting the first run.
 - Next: layer pipelining and fc1 (largest layer, 3,001 clocks); shorten conv2's iterator
   address path, which limits both designs.

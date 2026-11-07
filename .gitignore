@@ -58,3 +58,11 @@ btp_reports_for_aayush*
 # one-off helper scripts in the repo root
 /push_*.bat
 /fix_github.bat
+
+# power study output (power/run_power.tcl); results.csv is kept
+power/out_*/
+
+# mentor's original drops in the root (copied into noc/mentor/)
+/CNN_baseline/
+/CNN_NoC/
+/CNN_NOC/
