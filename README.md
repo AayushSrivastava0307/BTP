@@ -1,4 +1,4 @@
-# LeNet-5 accelerator on FPGA
+# LeNet-5 accelerator/optimisations on FPGA using MNIST Dataset
 
 16-bit fixed-point LeNet-5 (MNIST digits) in Verilog, for the Nexys 4 DDR board
 (Artix-7 XC7A100T-1CSG324C). B.Tech project, IIT Kharagpur:
