@@ -43,13 +43,12 @@ From `systolic/`, with ModelSim Intel Starter Edition 20.1 (to run the baseline,
 
 ## Status
 
-- Vivado (xc7a100t-1, post-route): the baseline datapath reaches ~162 MHz (6.17 ns). The
-  conv1-systolic + fc2-parallel build reached only ~94 MHz (10.59 ns), because ~280
-  multipliers do not fit in 240 DSP blocks and the LUT-built ones are slow. Real-time
-  speedup so far: 2.35x (227.8 us vs 97.1 us per digit); 4.03x is the clock-cycle figure.
-- Fix in place, verified bit-exact: conv1's array runs in two passes (`CONV1_PASSES 2`,
-  205 DSPs), fc2's inputs are registered. 10,234 clocks per frame (3.61x in clocks).
-  Awaiting the next Vivado run.
+- Vivado (xc7a100t-1, post-route, out of context): the baseline datapath reaches 6.17 ns
+  (~162 MHz). The current build (conv1 systolic in two passes, fc2 x12) reaches 6.87 ns
+  (~146 MHz) with every multiplier in a DSP block: 206/240 DSPs, 5,792 LUTs.
+  **Real-time speedup 3.24x** (227.8 us vs 70.3 us per digit); 3.61x is the clock-cycle figure.
+- Its worst path (conv1's pixel-count compare into a DSP input) is fixed, bit-exact.
+  If the next run reaches the baseline's 6.17 ns, the real speedup becomes 3.61x.
 - Power: `power/run_power.tcl` measures energy per digit for four designs; awaiting the first run.
 - Next: layer pipelining and fc1 (largest layer, 3,001 clocks); shorten conv2's iterator
   address path, which limits both designs.

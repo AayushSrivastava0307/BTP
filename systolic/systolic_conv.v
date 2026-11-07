@@ -157,7 +157,16 @@ module systolic_conv #(
 			n       <= n0;
 		end
 
-	wire	[`WDP*INPUT_NUM-1:0]	pix = (n < NPIX) ? qa_data : {(`WDP*INPUT_NUM){1'b0}};
+	// pix_ok == (n < NPIX), worked out one clock early from n0 (n <= n0 every clock), so the
+	// 16-bit compare is not between the n register and the multipliers' A inputs. That
+	// compare was the worst path in Vivado (n_reg -> LUT6 -> LUT2 -> DSP48E1 A, -1.874 ns
+	// at 5 ns). Resets to 1 because n resets to 0. Results are unchanged.
+	reg		pix_ok;
+	always @(`CLK_RST_EDGE)
+		if (`RST)	pix_ok <= 1'b1;
+		else		pix_ok <= (n0 < NPIX);
+
+	wire	[`WDP*INPUT_NUM-1:0]	pix = pix_ok ? qa_data : {(`WDP*INPUT_NUM){1'b0}};
 
 	wire	[`WDP*INPUT_NUM*K-1:0]			lb_q;
 	wire	[0:K-1][0:INPUT_NUM-1][`WD:0]	tap = lb_q;

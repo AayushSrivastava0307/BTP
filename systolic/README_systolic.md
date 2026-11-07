@@ -83,6 +83,31 @@ Real-time speedup must use each design's own post-route clock: today it is
 227.8 us (baseline at 6.17 ns) / 97.1 us (10.59 ns) = 2.35x. If this build closes near the
 baseline's 6.2 ns, it would be about 10,234 x 6.2 ns = 63 us, about 3.6x. Awaiting Vivado.
 
+## Third Vivado round: conv1 in two passes (7 Nov 2026)
+
+`results/vivado_conv1x2pass_5ns_2026-11-07` (post-route, out of context, 5 ns target):
+
+| build | required period | max clock | DSPs | LUTs | FFs | BRAM tiles |
+|---|---|---|---|---|---|---|
+| baseline (same block-RAM ROMs) | 6.17 ns | 162 MHz | 144 | 2,602 | 6,690 | 50.5 |
+| conv1 systolic + fc2 x12 (run 1) | 9.13 ns | 110 MHz | 226 | 40,872 | | |
+| + MUL_PIPE + block-RAM ROMs | 10.59 ns | 94 MHz | 240 | 19,301 | 13,487 | 47 |
+| **+ conv1 two passes** | **6.87 ns** | **146 MHz** | **206** | **5,792** | **10,160** | **49** |
+
+Every multiplier is now in a DSP block (206 of 240, Yosys predicted 205). Real time per
+digit: 10,234 x 6.87 ns = 70.3 us against the baseline's 36,923 x 6.17 ns = 227.8 us,
+**3.24x**.
+
+The ten worst paths are all one path: conv1's pixel counter `n` -> the 16-bit compare
+`n < NPIX` (LUT6, fanout 26) -> the zero gate on the pixel (LUT2) -> the A input of the
+first PE in each ky=4 row (DSP48E1, no input register). 3.07 ns of logic and routing plus
+the DSP's 3.72 ns setup for a combinational multiply.
+
+Fix (this commit, bit-exact on 900 digits, same clocks per layer): the compare is done one
+clock earlier from `n0` into a register `pix_ok`, so only the LUT2 gate is left in front of
+the DSP. That removes about 0.9 ns, which should take conv1 below the baseline's own limit
+(conv2 iterator, 6.17 ns). If it does: 10,234 x 6.17 ns = 63.1 us, **3.61x**. Awaiting Vivado.
+
 ## Vivado results and timing fixes (6 Nov 2026)
 
 First routed run of the current build (Vivado 2025.2, xc7a100tcsg324-1, 5 ns clock, out of context):

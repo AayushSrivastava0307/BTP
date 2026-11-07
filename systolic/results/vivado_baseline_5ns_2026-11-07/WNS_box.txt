@@ -1,0 +1,6 @@
+﻿==================================================================
+ Clock target : 5.000 ns (200.0 MHz)
+ WNS          : -1.167 ns   (>= 0 means timing is met)
+ Fastest clock that works now: about 6.17 ns
+ Reports      : C:/Users/Uday/BTP_github/systolic/vivado_out_5.000ns
+==================================================================
