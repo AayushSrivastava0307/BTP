@@ -1,0 +1,73 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Nov  7 16:01:40 2026
+| Host         : LOQ-AAYUSH running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 2 -file C:/btp_run/power/out_ours_10.000ns/utilization_hier.rpt
+| Design       : lenet
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|            Instance           |             Module            | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| lenet                         |                         (top) |       5770 |       5671 |       0 |   99 | 9458 |     46 |      6 |        206 |
+|   (lenet)                     |                         (top) |         35 |         34 |       0 |    1 |  774 |      0 |      0 |          0 |
+|   conv1                       |                 systolic_conv |        324 |        260 |       0 |   64 |  935 |      1 |      1 |         81 |
+|     (conv1)                   |                 systolic_conv |        202 |        202 |       0 |    0 |  170 |      1 |      1 |          6 |
+|     gen_out[0].gen_ky[0].srow |                  systolic_row |          3 |          3 |       0 |    0 |   96 |      0 |      0 |          5 |
+|     gen_out[0].gen_ky[1].srow |               systolic_row_33 |          3 |          3 |       0 |    0 |   96 |      0 |      0 |          5 |
+|     gen_out[0].gen_ky[2].srow |               systolic_row_34 |          3 |          3 |       0 |    0 |   96 |      0 |      0 |          5 |
+|     gen_out[0].gen_ky[3].srow |               systolic_row_35 |          3 |          3 |       0 |    0 |   96 |      0 |      0 |          5 |
+|     gen_out[0].gen_ky[4].srow |               systolic_row_36 |         10 |         10 |       0 |    0 |   96 |      0 |      0 |          5 |
+|     linebuf                   |                       linebuf |         98 |         34 |       0 |   64 |  285 |      0 |      0 |          0 |
+|   conv2                       |                          conv |       2991 |       2987 |       0 |    4 | 3487 |      0 |      0 |         96 |
+|     out_num[9].acc            |                        acc_17 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[0].acc            |                           acc |        188 |        187 |       0 |    1 |  220 |      0 |      0 |          6 |
+|     out_num[10].acc           |                         acc_3 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[11].acc           |                         acc_4 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[12].acc           |                         acc_5 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[13].acc           |                         acc_6 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[14].acc           |                         acc_7 |        191 |        188 |       0 |    3 |  229 |      0 |      0 |          6 |
+|     out_num[15].acc           |                         acc_8 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[1].acc            |                         acc_9 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[2].acc            |                        acc_10 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[3].acc            |                        acc_11 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[4].acc            |                        acc_12 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[5].acc            |                        acc_13 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[6].acc            |                        acc_14 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[7].acc            |                        acc_15 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|     out_num[8].acc            |                        acc_16 |        186 |        186 |       0 |    0 |  217 |      0 |      0 |          6 |
+|   conv2_buf                   |                   rfdp128x256 |        128 |        128 |       0 |    0 |    0 |      4 |      0 |          0 |
+|     u                         | bhv_1w1r_sram__parameterized1 |        128 |        128 |       0 |    0 |    0 |      4 |      0 |          0 |
+|   conv_fc1                    |          conv__parameterized0 |        537 |        513 |       0 |   24 |  552 |      0 |      0 |         16 |
+|     out_num[0].acc            |           acc__parameterized0 |        523 |        499 |       0 |   24 |  546 |      0 |      0 |         16 |
+|   conv_fc3                    |          conv__parameterized1 |         53 |         51 |       0 |    2 |   99 |      0 |      0 |          1 |
+|     out_num[0].acc            |           acc__parameterized1 |         52 |         50 |       0 |    2 |   99 |      0 |      0 |          1 |
+|   fc2_par                     |                       fc2_par |        550 |        546 |       0 |    4 | 1061 |      5 |      0 |         12 |
+|     (fc2_par)                 |                       fc2_par |        546 |        542 |       0 |    4 |  954 |      0 |      0 |         12 |
+|     u_brom                    |              fc2_par_bias_rom |          4 |          4 |       0 |    0 |  107 |      0 |      0 |          0 |
+|   iterator_FC1                |      iterator__parameterized2 |        112 |        112 |       0 |    0 |   54 |      0 |      0 |          0 |
+|   iterator_conv2              |      iterator__parameterized0 |        768 |        768 |       0 |    0 |   88 |      0 |      0 |          0 |
+|   iterator_fc3                |      iterator__parameterized3 |         80 |         80 |       0 |    0 |   50 |      0 |      0 |          0 |
+|   max_pooling1                |                      max_pool |          8 |          8 |       0 |    0 |  100 |      0 |      0 |          0 |
+|   max_pooling2                |      max_pool__parameterized0 |         20 |         20 |       0 |    0 |  260 |      0 |      0 |          0 |
+|   relu1                       |                          relu |          0 |          0 |       0 |    0 |   97 |      0 |      0 |          0 |
+|   relu2                       |          relu__parameterized0 |          0 |          0 |       0 |    0 |  257 |      0 |      0 |          0 |
+|   wieght_conv1_rom            |              wieght_conv1_rom |         24 |         24 |       0 |    0 |   90 |      0 |      0 |          0 |
+|   wieght_conv2_rom            |              wieght_conv2_rom |          0 |          0 |       0 |    0 | 1404 |      0 |      0 |          0 |
++-------------------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

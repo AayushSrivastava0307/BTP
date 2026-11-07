@@ -3,16 +3,24 @@
 // records switching activity (a SAIF file) for Vivado's report_power. The same testbench is
 // used for every design, so the power numbers compare like with like.
 //
-// Defines (set by run_power.tcl):
+// Settings come from tb_settings.vh, written by run_power.tcl next to this file:
 //     PERIOD_NS   clock period in ns; must equal the clock Vivado is given
-//     DUT_NOC     top is lenet_noc (mentor's NoC design); otherwise lenet
-// Plusargs:
-//     +YUV=<path to test_900.yuv>   +FRAMES=<1..50>   +OUT=<file for the result line>
+//     FRAMES      digits to run (1..50)
+//     DUT_NOC     defined: top is lenet_noc (noc/); otherwise lenet
+// (A header file rather than -d NAME=VALUE / plusargs: on Windows the simulator launchers
+// are .bat files, which split arguments at '='.)
+// Optional plusargs still override: +YUV=<file> +FRAMES=<n> +OUT=<file>.
 //
 // Self-check: every prediction is compared with the baseline's (all builds are bit-exact),
 // so a broken compile or a mis-read input file is caught before any power number is used.
+`ifndef NO_TB_SETTINGS
+`include "tb_settings.vh"
+`endif
 `ifndef PERIOD_NS
 `define PERIOD_NS 10
+`endif
+`ifndef FRAMES
+`define FRAMES 10
 `endif
 module tb_power;
     reg clk = 0;
@@ -42,7 +50,7 @@ module tb_power;
     integer frames, f, j, fd, fo, value, started, total, errors;
     reg [8*512-1:0] yuv, outf;
     initial begin
-        if (!$value$plusargs("FRAMES=%d", frames)) frames = 10;
+        if (!$value$plusargs("FRAMES=%d", frames)) frames = `FRAMES;
         if (!$value$plusargs("YUV=%s", yuv)) yuv = "test_900.yuv";
         if (!$value$plusargs("OUT=%s", outf)) outf = "frames.txt";
         if (frames < 1 || frames > 50) begin $display("FRAMES must be 1..50"); $fatal(1); end

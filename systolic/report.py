@@ -15,7 +15,7 @@ import struct
 import sys
 from datetime import datetime
 
-LABELS = os.path.join("tensorflow", "MNIST_data", "MNIST_data",
+LABELS = os.path.join("..", "original", "tensorflow", "MNIST_data", "MNIST_data",
                       "t10k-labels-idx1-ubyte.gz")
 LINE_RE = re.compile(r"T\s*(\d+)==process a frame\s+(\d+),\s*digit\s+(\d+)")
 

@@ -1,69 +1,43 @@
-# ModelSim build artifacts
-work_*/
-vsim.wlf
-*.wlf
-*.vstf
-vish_stacktrace.vstf
-
-# generated stimulus (rebuild with: python png_to_yuv.py)
-test_900f.yuv
-
-# simulation output
-result_*.log
-predictions.txt
-conv1_dump.txt
-simulation_report.md
-
-# Python
-__pycache__/
-*.pyc
-
-# ---- added by reorganize_btp.ps1 ----
-# ModelSim / Quartus build output (regenerated on every run)
+# Simulator / Quartus / Vivado output
 work/
 work_*/
 db/
 output_files/
+obj/
+.Xil/
+vivado_out*/
+power/out_*/
 transcript
 *.wlf
 *.vstf
-# Jupyter
-.ipynb_checkpoints/
-# Google Drive sync temp folder
-.tmp.driveupload/
-# one-off reorganisation helpers
-reorganize_btp.ps1
-run_reorganize.bat
-reorganize_log.txt
-reorganize_finish.ps1
-run_finish.bat
-finish_log.txt
-
-# Verilator build (systolic/verilator/run_verilator.sh)
-obj/
-lenet_roms_sim.v
-build.log
-
-# Vivado (systolic/run_vivado.tcl)
-vivado_out*/
-.Xil/
 vivado*.log
 vivado*.jou
 *.str
+clockInfo.txt
+dfx_runtime.txt
+build.log
 
-# Vivado reports dropped in the root (copies kept in systolic/results/)
-btp_vivado_reports*
-btp_reports_for_aayush*
-btp_reports_*/
+# Generated files
+test_900f.yuv
+lenet_roms_sim.v
+result_*.log
+predictions.txt
+conv1_dump.txt
+simulation_report.md
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
 
-# one-off helper scripts in the repo root
-/push_*.bat
-/fix_github.bat
+# Google Drive sync folders
+.tmp.driveupload/
+.tmp.drivedownload/
 
-# power study output (power/run_power.tcl); results.csv is kept
-power/out_*/
-
-# mentor's original drops in the root (copied into noc/mentor/)
+# Local drops and one-off scripts in the repo root
+/btp_vivado_reports*/
+/btp_reports*/
 /CNN_baseline/
 /CNN_NoC/
-/CNN_NOC/
+/push_*.bat
+/fix_github.bat
+/cleanup_github.bat
+/_cleanup/

@@ -4,8 +4,8 @@
 # From the Vivado Tcl Shell, in this folder:
 #     vivado -mode batch -source run_power.tcl -tclargs <design> [period_ns] [frames]
 #
-#   design     baseline    mentor's baseline (= the original LeNet, reformatted)
-#              noc         mentor's NoC design: activation NoC + streaming pooling + systolic MACs
+#   design     baseline    baseline (noc/baseline, = the original LeNet)
+#              noc         NoC design (noc/): activation NoC + streaming pooling + systolic MACs
 #              noc_bypass  the same NoC design with the NoC taken out (activation_noc_bypass.v)
 #              ours        our systolic/ build (conv1 systolic in 2 passes, fc2 x12, MUL_PIPE)
 #   period_ns  clock period, default 10 (100 MHz). Use the same value for every design.
@@ -33,8 +33,8 @@ if {$argc >= 3} { set frames [lindex $argv 2] }
 
 set here [file normalize [file dirname [info script]]]
 set root [file normalize [file join $here ..]]
-set mentor_base [file join $root noc mentor baseline]
-set mentor_noc  [file join $root noc mentor noc]
+set noc_base    [file join $root noc baseline]
+set noc_dir     [file join $root noc]
 set sys         [file join $root systolic]
 # all four use the block-RAM ROM file (same contents as lenet_roms.v, checked word by word)
 set roms        [file join $sys lenet_roms_bram.v]
@@ -45,7 +45,7 @@ switch $design {
     baseline {
         set top lenet
         set files [list global.v bhv_1w1r_sram.v bhvsrams.v cnn.v lenet.v]
-        set srcdir $mentor_base
+        set srcdir $noc_base
         set extra  [list $roms]
     }
     noc {
@@ -53,7 +53,7 @@ switch $design {
         set tbdef DUT_NOC
         set files [list global.v bhv_1w1r_sram.v bhvsrams.v cnn.v systolic_array.v \
                         streaming_pool.v activation_noc.v lenet_noc.v]
-        set srcdir $mentor_noc
+        set srcdir $noc_dir
         set extra  [list $roms]
     }
     noc_bypass {
@@ -61,7 +61,7 @@ switch $design {
         set tbdef DUT_NOC
         set files [list global.v bhv_1w1r_sram.v bhvsrams.v cnn.v systolic_array.v \
                         streaming_pool.v lenet_noc.v]
-        set srcdir $mentor_noc
+        set srcdir $noc_dir
         set extra  [list $roms [file join $here activation_noc_bypass.v]]
     }
     ours {
@@ -112,8 +112,14 @@ proc tool {name args} {
 
 puts "== 1/3 $design: simulating $frames digits at $period ns for switching activity"
 cd [file join $out sim]
-set defs [list -d FPGA_0_XILINX -d PERIOD_NS=$period]
-if {$tbdef ne ""} { lappend defs -d $tbdef }
+# Settings go in a header, not on the command line: xvlog/xelab/xsim are .bat files on
+# Windows, and a .bat splits its arguments at '=' (so -d PERIOD_NS=10 broke apart).
+set fh [open [file join $src tb_settings.vh] w]
+puts $fh "`define PERIOD_NS $period"
+puts $fh "`define FRAMES $frames"
+if {$tbdef ne ""} { puts $fh "`define $tbdef" }
+close $fh
+set defs [list -d FPGA_0_XILINX]
 set simfiles {}
 foreach f [concat $rtl tb_power.v] { lappend simfiles ../src/$f }
 tool xvlog -sv -i ../src {*}$defs {*}$simfiles
@@ -125,8 +131,7 @@ puts $fh "run -all"
 puts $fh "close_saif"
 puts $fh "quit"
 close $fh
-tool xsim pwr -tclbatch saif.tcl -testplusarg FRAMES=$frames \
-     -testplusarg YUV=test_900.yuv -testplusarg OUT=frames.txt
+tool xsim pwr -tclbatch saif.tcl
 
 if {![file exists frames.txt] || ![file exists activity.saif]} {
     puts "ERROR: simulation did not finish. See [file join [pwd] xsim.log]"

@@ -103,10 +103,28 @@ The ten worst paths are all one path: conv1's pixel counter `n` -> the 16-bit co
 first PE in each ky=4 row (DSP48E1, no input register). 3.07 ns of logic and routing plus
 the DSP's 3.72 ns setup for a combinational multiply.
 
-Fix (this commit, bit-exact on 900 digits, same clocks per layer): the compare is done one
-clock earlier from `n0` into a register `pix_ok`, so only the LUT2 gate is left in front of
-the DSP. That removes about 0.9 ns, which should take conv1 below the baseline's own limit
-(conv2 iterator, 6.17 ns). If it does: 10,234 x 6.17 ns = 63.1 us, **3.61x**. Awaiting Vivado.
+Fix 1: the compare is done one clock earlier from `n0` into a register `pix_ok`, so only
+the LUT2 gate is left in front of the DSP. Bit-exact, same clocks.
+
+Vivado with fix 1 (`vivado_out_5.000ns`, 7 Nov, run on Aayush's PC): WNS -2.223 ns (7.22 ns),
+206 DSPs, 5,797 LUTs. The old path is gone; the next one is the PE itself. Each conv1 PE
+multiplies and adds in one clock with no register inside the DSP, and Vivado chained the
+last PE's DSP into the row sum `rsum` through the cascade port: 2.71 ns of DSP logic plus
+3.03 ns of routing into the next DSP's PCIN setup.
+
+Fix 2 (`MUL_PIPE`, pe.v `MP`): each PE registers its product (`m`, no reset, the DSP's M
+register) and adds it on the next clock, like `cnn.v` and `fc2_par` already do. Every
+product is then one clock older, so each row gives the same window sum one clock later;
+`systolic_conv` adds 1 to `LAT` and `STREAM_N`. Bit-exact on 900 digits in both reset
+styles; conv1 2,128 -> 2,130 clocks, 10,236 per frame. With the multiply split from the
+add, conv1 should drop below the baseline's own limit (conv2 iterator, 6.17 ns). If it
+does: 10,236 x 6.17 ns = 63.2 us, **3.60x**.
+
+Vivado with fix 2 (`results/vivado_pemulpipe_5ns_2026-11-07`): WNS -0.884 ns, so **5.88 ns
+(170 MHz)**; 206 DSPs, 5,799 LUTs, 11,447 FFs, 49 BRAM tiles. conv1 is no longer among the
+worst paths; the limit is conv2's iterator address logic, the same path that limits the
+baseline (6.17 ns in its own run). Time per digit 10,236 x 5.88 ns = **60.2 us, 3.78x** the
+baseline's 227.8 us (3.6x if both are held to 6.17 ns).
 
 ## Vivado results and timing fixes (6 Nov 2026)
 

@@ -14,7 +14,9 @@
 //
 // p_out wraps at `WDP*2 exactly like q_mac_acc in cnn.v, which is what keeps
 // the result bit-identical to the baseline.
-module pe (
+module pe #(
+	parameter MP = 0		// 1: register the product before the add (DSP M register), see below
+	)(
 	input									clk,
 	input									rstn,
 	input									en,
@@ -44,9 +46,24 @@ module pe (
 		end
 
 	// multiplies d_in, not d_mid: d_mid/d_out only hand the sample onward
-	always @(`CLK_RST_EDGE)
-		if (`RST)			p_out <= 0;
-		else if (en)		p_out <= p_in + $signed(d_in) * $signed(w);
+	generate
+		if (MP == 0) begin : mac1
+			always @(`CLK_RST_EDGE)
+				if (`RST)			p_out <= 0;
+				else if (en)		p_out <= p_in + $signed(d_in) * $signed(w);
+		end else begin : mac2
+			// Product registered first (no reset, so it maps onto the DSP's M register),
+			// then added. Every PE's product is one en-clock older than before, so with
+			// p_out(j,t) = p_out(j-1,t-1) + w[j]*x(t-2-2j) the row computes exactly the
+			// same window sum one clock later. systolic_conv adds MP to its latency.
+			reg	signed	[`WDP*2-1:0]	m;
+			always @(posedge clk)
+				if (en)				m <= $signed(d_in) * $signed(w);
+			always @(`CLK_RST_EDGE)
+				if (`RST)			p_out <= 0;
+				else if (en)		p_out <= p_in + m;
+		end
+	endgenerate
 
 endmodule
 
@@ -54,7 +71,8 @@ endmodule
 // K PEs chained into one kernel row.  Emits the dot product of that row
 // against the K pixels ending at the sample that entered K clocks ago.
 module systolic_row #(
-	parameter K = 5
+	parameter K  = 5,
+	parameter MP = 0		// passed to every pe
 	)(
 	input									clk,
 	input									rstn,
@@ -75,7 +93,7 @@ module systolic_row #(
 	genvar i;
 	generate
 		for (i = 0; i < K; i = i + 1) begin : gen_pe
-			pe pe(
+			pe #(.MP(MP)) pe(
 				.clk		(clk),
 				.rstn		(rstn),
 				.en			(en),

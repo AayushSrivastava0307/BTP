@@ -5,10 +5,10 @@ activity from a real simulation of MNIST digits (not Vivado's default guess):
 
 | Name | What it is | Why it is in the study |
 |---|---|---|
-| `baseline` | mentor's baseline (`noc/mentor/baseline/`, = the original LeNet) | reference point |
-| `noc` | mentor's NoC design (`noc/mentor/noc/`): activation NoC + streaming pooling + systolic MAC rows with zero-skipping | the design being evaluated |
+| `baseline` | baseline (`noc/baseline/`, = the original LeNet) | reference point |
+| `noc` | NoC design (`noc/`): activation NoC + streaming pooling + systolic MAC rows with zero-skipping | the design being evaluated |
 | `noc_bypass` | the same NoC design with the NoC taken out (`activation_noc_bypass.v`); everything else identical | separates what the **NoC itself** costs or saves from what streaming pooling and zero-skipping do |
-| `ours` | `systolic/` as committed (conv1 systolic in 2 passes, fc2 x12, MUL_PIPE) | our design |
+| `ours` | `systolic/` as committed (conv1 systolic in 2 passes, fc2 x12, MUL_PIPE) | the systolic accelerator |
 
 All four give bit-identical predictions (checked on 900 digits in Verilator; the testbench
 here re-checks every digit it runs).
@@ -31,6 +31,22 @@ Each run can take 30–60 minutes (the simulation step is the slow part; use few
    same options as `systolic/run_vivado.tcl`.
 3. **Power**: loads the activity file and runs `report_power`, then
    energy per digit = total power × (clocks per digit × clock period).
+
+## Results (7 Nov 2026, 100 MHz, 10 digits)
+
+`results/results.csv`, with the full reports per design in `results/<design>/`.
+
+| Design | Power (dynamic) | Time per digit | Energy per digit |
+|---|---|---|---|
+| baseline | 210 mW (123) | 369 µs | 77.5 µJ |
+| noc | 138 mW (52) | 361 µs | 49.8 µJ |
+| noc_bypass | 169 mW (83) | 361 µs | 61.0 µJ |
+| ours | 350 mW (263) | 102 µs | 35.8 µJ |
+
+The NoC block itself: 4 mW with the NoC vs 3 mW for the same banks without it, plus 374 LUTs
+and 740 flip-flops. Activity matched only 14–27% of nets (RTL simulation), so differences
+under ~30 mW are not reliable; noc and noc_bypass miss 100 MHz (WNS -0.75 ns, in the
+NoC design's systolic array, not the NoC).
 
 ## What comes out
 

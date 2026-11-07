@@ -1,0 +1,42 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Nov  7 15:55:28 2026
+| Host         : LOQ-AAYUSH running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 2 -file C:/btp_run/power/out_noc_bypass_10.000ns/utilization_hier.rpt
+| Design       : lenet_noc
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------+--------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+|       Instance       |             Module             | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP Blocks |
++----------------------+--------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+| lenet_noc            |                          (top) |       5336 |       4978 |     356 |    2 | 11259 |     41 |      5 |        137 |
+|   (lenet_noc)        |                          (top) |         31 |         31 |       0 |    0 |   803 |      0 |      0 |          0 |
+|   activation_network |                 activation_noc |        358 |        358 |       0 |    0 |     0 |      5 |      3 |          0 |
+|   conv2              | systolic_array__parameterized0 |       1457 |       1456 |       0 |    1 |  3897 |      0 |      0 |        112 |
+|   conv_fc1           | systolic_array__parameterized1 |        336 |        335 |       0 |    1 |  3848 |      0 |      0 |         17 |
+|   fused_pool1        |                 streaming_pool |        529 |        433 |      96 |    0 |   251 |      0 |      0 |          0 |
+|   fused_pool2        | streaming_pool__parameterized0 |       1346 |       1086 |     260 |    0 |   569 |      0 |      0 |          0 |
+|   iterator_FC1       |       iterator__parameterized1 |        107 |        107 |       0 |    0 |    53 |      0 |      0 |          0 |
+|   iterator_conv1     |                       iterator |         99 |         99 |       0 |    0 |    44 |      0 |      0 |          0 |
+|   iterator_conv2     |       iterator__parameterized0 |        764 |        764 |       0 |    0 |    72 |      0 |      0 |          0 |
+|   iterator_fc2       |       iterator__parameterized2 |        111 |        111 |       0 |    0 |    57 |      0 |      0 |          0 |
+|   iterator_fc3       |       iterator__parameterized3 |         82 |         82 |       0 |    0 |    50 |      0 |      0 |          0 |
+|   wieght_conv1_rom   |               wieght_conv1_rom |         90 |         90 |       0 |    0 |    90 |      0 |      0 |          0 |
+|   wieght_conv2_rom   |               wieght_conv2_rom |          1 |          1 |       0 |    0 |  1404 |      0 |      0 |          0 |
++----------------------+--------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

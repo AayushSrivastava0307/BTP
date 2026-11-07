@@ -1,0 +1,62 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Nov  7 15:44:14 2026
+| Host         : LOQ-AAYUSH running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 2 -file C:/btp_run/power/out_baseline_10.000ns/utilization_hier.rpt
+| Design       : lenet
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|       Instance      |             Module            | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++---------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| lenet               |                         (top) |       2597 |       2568 |       0 |   29 | 5170 |     48 |      5 |        144 |
+|   (lenet)           |                         (top) |         35 |         34 |       0 |    1 |  830 |      0 |      0 |          0 |
+|   conv2             |          conv__parameterized0 |       1005 |       1001 |       0 |    4 | 1503 |      0 |      0 |        112 |
+|     out_num[9].acc  |        acc__parameterized0_20 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[0].acc  |           acc__parameterized0 |         68 |         64 |       0 |    4 |  108 |      0 |      0 |          7 |
+|     out_num[10].acc |         acc__parameterized0_6 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[11].acc |         acc__parameterized0_7 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[12].acc |         acc__parameterized0_8 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[13].acc |         acc__parameterized0_9 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[14].acc |        acc__parameterized0_10 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[15].acc |        acc__parameterized0_11 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[1].acc  |        acc__parameterized0_12 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[2].acc  |        acc__parameterized0_13 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[3].acc  |        acc__parameterized0_14 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[4].acc  |        acc__parameterized0_15 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[5].acc  |        acc__parameterized0_16 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[6].acc  |        acc__parameterized0_17 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[7].acc  |        acc__parameterized0_18 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|     out_num[8].acc  |        acc__parameterized0_19 |         62 |         62 |       0 |    0 |   93 |      0 |      0 |          7 |
+|   conv2_buf         |                   rfdp128x256 |        128 |        128 |       0 |    0 |    0 |      4 |      0 |          0 |
+|     u               | bhv_1w1r_sram__parameterized1 |        128 |        128 |       0 |    0 |    0 |      4 |      0 |          0 |
+|   conv_fc1          |          conv__parameterized1 |         58 |         34 |       0 |   24 |   55 |      0 |      0 |         24 |
+|     out_num[0].acc  |           acc__parameterized1 |         27 |          3 |       0 |   24 |   50 |      0 |      0 |         24 |
+|   iterator_FC1      |      iterator__parameterized3 |        118 |        118 |       0 |    0 |   54 |      0 |      0 |          0 |
+|   iterator_conv1    |                      iterator |        102 |        102 |       0 |    0 |   45 |      0 |      0 |          0 |
+|   iterator_conv2    |      iterator__parameterized1 |        770 |        770 |       0 |    0 |  118 |      0 |      0 |          0 |
+|   iterator_fc2      |      iterator__parameterized4 |        110 |        110 |       0 |    0 |   58 |      0 |      0 |          0 |
+|   iterator_fc3      |      iterator__parameterized5 |         83 |         83 |       0 |    0 |   50 |      0 |      0 |          0 |
+|   max_pooling1      |                      max_pool |          8 |          8 |       0 |    0 |  100 |      0 |      0 |          0 |
+|   max_pooling2      |      max_pool__parameterized0 |         20 |         20 |       0 |    0 |  260 |      0 |      0 |          0 |
+|   relu1             |                          relu |          0 |          0 |       0 |    0 |   97 |      0 |      0 |          0 |
+|   relu2             |          relu__parameterized0 |          0 |          0 |       0 |    0 |  257 |      0 |      0 |          0 |
+|   wieght_conv1_rom  |              wieght_conv1_rom |          0 |          0 |       0 |    0 |   90 |      0 |      0 |          0 |
+|   wieght_conv2_rom  |              wieght_conv2_rom |          1 |          1 |       0 |    0 | 1404 |      0 |      0 |          0 |
++---------------------+-------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

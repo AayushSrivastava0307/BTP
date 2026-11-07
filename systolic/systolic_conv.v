@@ -49,8 +49,13 @@ module systolic_conv #(
 	localparam	NTAP     = K * K;
 	// pixels for NPIX clocks, then flush; n trails cnt by the two clocks of
 	// address+SRAM latency
-	localparam	STREAM_N = NPIX + 2*K + 2;
-	localparam	LAT      = 2*(K-1);
+`ifdef MUL_PIPE
+	localparam	MP       = 1;	// each PE registers its product first (pe.v): one more clock
+`else
+	localparam	MP       = 0;
+`endif
+	localparam	STREAM_N = NPIX + 2*K + 2 + MP;
+	localparam	LAT      = 2*(K-1) + MP;
 	localparam	OPP      = OUTPUT_NUM / PASSES;	// output maps computed per pass
 	localparam	NOUT_PIX = OUT_W * OUT_H;
 
@@ -203,7 +208,7 @@ module systolic_conv #(
 					assign w_ld_row[j] = wld_v && (wtap == ky*K + (K-1-j));
 				end
 
-				systolic_row #(.K(K)) srow(
+				systolic_row #(.K(K), .MP(MP)) srow(
 					.clk	(clk),
 					.rstn	(rstn),
 					.en		(feed_v),

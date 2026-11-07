@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 // activation_noc_bypass.v -- ablation for the power study.
 //
-// Same ports and the same six scratchpad banks as the mentor's activation_noc.v, but with
+// Same ports and the same six scratchpad banks as activation_noc.v, but with
 // the network taken out: every producer writes its bank directly, the way the baseline
 // writes its SRAMs. No ingress registers, no destination field, no round-robin arbiter,
 // no 6-to-1 crossbar muxes.
@@ -31,7 +31,7 @@ module activation_noc (
 `endif
     // synthesis translate_on
 
-    wire [5:0] occupied = 6'b0;          // nothing is ever held (kept for the mentor's testbench)
+    wire [5:0] occupied = 6'b0;          // nothing is ever held (kept for compare_designs' testbench)
     assign in_ready        = 6'b111111;
     assign delivered_valid = in_valid & {6{rstn}};
     assign delivered_addr  = in_addr;
